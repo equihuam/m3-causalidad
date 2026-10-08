@@ -1,0 +1,46 @@
+---
+title: "Diseño general del curso"
+subtitle: "Causalidad, diseño experimental e inteligencia artificial"
+format: 
+  html: 
+    embed-resources: true
+lang: es
+---
+
+# Sentido del curso
+
+M3 es un curso intensivo de posgrado de nueve días, con jornadas de aproximadamente cuatro a cinco horas. Su propósito es que el estudiante formule una pregunta causal, justifique una comparación y delimite qué puede concluir con la evidencia disponible. La reproducibilidad permite que otras personas examinen el análisis que sostiene esa conclusión.
+
+El proyecto propio articula el recorrido. Una cuartilla inicial conserva el punto de partida; las actividades introducen contrafactuales, supuestos, DAG, diseños y análisis; la propuesta final y la reflexión muestran qué cambió o se mantuvo y por qué. Los casos comunes permiten practicar antes de transferir decisiones al proyecto. Si aún no existen datos propios, un micromundo simulado sirve para demostrar el procedimiento, sin presentarlo como evidencia del sistema real.
+
+# Fundamento y práctica
+
+El [marco epistemológico](marco-epistemologico-ia-causalidad.qmd) desarrolla las distinciones entre plausibilidad, evidencia, inferencia y causalidad. La IA ayuda a explorar alternativas y formular críticas; cada afirmación que se incorpore al argumento requiere un respaldo adecuado. Las actividades se pueden realizar con recursos gratuitos, respuestas preparadas y revisión por pares.
+
+La práctica sigue un ciclo de plantear, predecir, intervenir, observar y explicar, y transferir. Se protege la predicción previa y se conserva la versión que produjo cada resultado. El estudiante aprende a distinguir el DAG causal del grafo de dependencias computacionales y a comprobar que reconstruir un cálculo no basta para justificar su interpretación.
+
+# Objetivos y productos: una referencia común
+
+Los [objetivos de aprendizaje y productos](../../01-estudiantes/00-curso/programa-del-curso.qmd) se mantienen en el programa estudiantil. Ésa es la referencia compartida para evitar listas divergentes entre documentos. La [secuencia docente](contenido-tematico-y-experiencia-de-aprendizaje.qmd) explica cómo se practican durante las nueve jornadas.
+
+| Producto | Función pedagógica |
+|---|---|
+| Cuartilla inicial | Conservar una línea base, sin exigir dominio previo |
+| Bitácora analítica y registros de ejecución | Documentar decisiones y vincularlas con versiones, pruebas y resultados |
+| Ejercicios y minirreportes | Recibir retroalimentación antes de integrar la entrega final |
+| Propuesta final con anexo reproducible | Defender una estrategia de investigación y un cálculo reconstruible |
+| Reflexión individual | Explicar cambios y continuidades con evidencia del proceso |
+
+La [guía estudiantil de bitácora](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd) contiene la plantilla operativa. La bitácora del responsable del curso registra el diseño pedagógico y permanece separada.
+
+# Evaluación
+
+La [rúbrica estudiantil](../../01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd) describe los niveles de desempeño; los [fundamentos docentes](evaluacion/rubrica-proyecto-y-reflexion.qmd) explican su aplicación. Se distinguen calidad causal y técnica, reconstrucción del cálculo, trazabilidad de decisiones y reflexión. Mantener una hipótesis después de examinarla puede demostrar tanto aprendizaje como modificarla.
+
+La ponderación sigue siendo orientativa. La depuración del texto no convierte los pesos propuestos en decisiones aprobadas ni agrega productos evaluables.
+
+# Alcance de la implementación
+
+R/RStudio y Quarto sostienen los talleres disponibles. La [competencia de reproducibilidad](competencia-reproducibilidad-analitica.qmd) define qué debe demostrar el estudiante y las condiciones para el piloto de orquestación. Snakemake es la propuesta tecnológica del borrador; su ejemplo ejecutable y su entorno todavía requieren desarrollo y prueba. La reconstrucción completa de un Quarto puede practicarse con los materiales actuales; la actualización selectiva de un flujo exige un motor preparado.
+
+La [arquitectura de actividades](arquitectura-actividades-rstudio.qmd) distingue talleres disponibles y extensiones. El curso no presupone completar todo el repertorio propuesto. La [síntesis de decisiones](decisiones-y-evolucion-del-curso.qmd) permite consultar el estado del rediseño sin recorrer todo su historial.

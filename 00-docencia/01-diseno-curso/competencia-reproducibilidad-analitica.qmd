@@ -1,0 +1,72 @@
+---
+title: "Competencia transversal: reproducibilidad analítica"
+subtitle: "Alcance, evidencias y condiciones de implementación"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Competencia y alcance
+
+**Decisión adoptada:** incorporar reproducibilidad con énfasis transversal en los nueve días. **Propuestas del borrador:** tiempos, ponderación y piloto de orquestación. La [bitácora](../00-bitacora/bitacora-maestra.qmd) distingue su autoría y estado.
+
+El estudiante formulará, ejecutará, documentará y auditará un proceso analítico sencillo con dependencias explícitas, de modo que otra persona pueda reconstruir un resultado con datos, código, parámetros y entorno identificados. Justificará las decisiones y distinguirá reconstrucción computacional de validez causal.
+
+El producto es un anexo de la propuesta final. Puede utilizar datos propios o un caso simulado del curso; en este último debe declarar que demuestra un procedimiento y no aporta evidencia empírica sobre el proyecto real. Las distinciones entre reproducibilidad, replicación, robustez y los tres tipos de representación se desarrollan en el [marco epistemológico](marco-epistemologico-ia-causalidad.qmd).
+
+# Evidencias observables
+
+| Habilidad | Evidencia que se revisa |
+|---|---|
+| Explicitar dependencias | Tabla o DAG computacional con entradas, transformaciones y salidas; flechas diferenciadas de las causales |
+| Identificar una versión | Código, datos o generador, configuración y entorno localizables |
+| Reconstruir | Un par ejecuta desde una copia limpia y compara el resultado bajo un criterio previo |
+| Comprobar un cambio | Predicción de pasos afectados, nueva ejecución e interpretación de lo observado |
+| Justificar | Entrada de bitácora enlazada con ejecución, resultado y afirmación |
+
+Se selecciona **un resultado principal**, como una tabla, estimación o figura. Debe acompañarse de un resumen numérico comprobable; una imagen visualmente semejante no basta. Pueden conservarse otras salidas para interpretar, sin convertirlas en auditorías adicionales obligatorias.
+
+# Integración en las jornadas
+
+La [secuencia de nueve días](contenido-tematico-y-experiencia-de-aprendizaje.qmd) es la referencia para acciones y tiempos. Los 250 minutos propuestos se distribuyen dentro de las prácticas y cierres existentes. Se trabaja sobre un caso computacional acumulativo; no se exige automatizar todos los talleres.
+
+Las primeras jornadas conservan pregunta, predicción, parámetros y representaciones. Los días 5–7 conectan esos registros con una reconstrucción y una prueba de cambio. El día 8 un par audita el resultado, y el día 9 se integra la versión final con una reflexión. Los talleres de bloques y parcela dividida son extensiones según necesidades y tiempo disponible.
+
+# Herramientas y nivel de exigencia
+
+R/RStudio y Quarto son la base disponible. Se propone un piloto pequeño de **Snakemake** que invoque scripts de R y permita leer reglas, anticipar dependencias y comprobar ejecución selectiva. No se requiere construir un motor propio ni aprender infraestructura distribuida. El [tutorial oficial](https://snakemake.readthedocs.io/en/stable/tutorial/basics.html) es una referencia de desarrollo docente.
+
+`targets` permanece como alternativa para valorar antes del curso si la instalación de otro entorno obstaculiza el aprendizaje. No se propone enseñar ambos motores simultáneamente. La elección todavía requiere piloto y decisión documentada.
+
+Se distinguen dos pruebas:
+
+- **Reconstrucción completa:** ejecutar nuevamente el análisis desde entradas conservadas y sin salidas o cachés reutilizables. Puede practicarse con un Quarto completado.
+- **Actualización selectiva:** comprobar que un motor repite sólo los trabajos que su declaración de dependencias requiere ante un cambio. Exige un flujo operativo; una reconstrucción completa no demuestra este comportamiento.
+
+La prueba de cambio siempre pide anticipar consecuencias y comprobarlas. La ejecución selectiva se evalúa sólo después de enseñarla y proporcionar un entorno funcional. No se exige una capacidad que el material disponible aún no permite practicar.
+
+# Paquete y procedencia
+
+La [ficha estudiantil](../../01-estudiantes/01-guias/ficha-entrega-reproducible.qmd) es el índice de la entrega. Enlaza el README, las entradas, el código, la configuración, el entorno, el resultado y el acta del par. La [bitácora analítica](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd) explica decisiones y enlaza registros de ejecución. No se requiere copiar la misma información en los tres documentos.
+
+El entorno debe identificarse y acompañarse de instrucciones de preparación o restauración probadas. Un listado de versiones describe lo utilizado; no prueba que pueda restaurarse. `renv` puede ayudar con los paquetes de R, pero también deben identificarse R, Quarto, el motor y las dependencias del sistema. Véanse [renv](https://rstudio.github.io/renv/articles/renv.html) y [despliegue de Snakemake](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html).
+
+Git puede identificar la versión y sus cambios. Una copia o archivo comprimido identificado es una contingencia válida; no se requieren ramas avanzadas ni publicar en una plataforma. El criterio es recuperar los archivos efectivamente utilizados.
+
+Antes de la auditoría se acuerda una tolerancia numérica apropiada a la escala del resultado y qué identificadores o conteos deben coincidir exactamente. No se exige identidad binaria del HTML. Una reparación crea una nueva versión y una nueva prueba, vinculadas con el fallo anterior.
+
+# Apoyo de IA
+
+Los agentes pueden proponer código, reglas, verificaciones o documentación. El estudiante revisa la contribución y conserva la versión aceptada y su comprobación. Durante cada reconstrucción se ejecuta código fijo; una reparación se registra aparte. Repetir un prompt no garantiza obtener el mismo insumo: cualquier respuesta usada como entrada debe guardarse con su procedencia disponible.
+
+La vía sin IA utiliza código inicial, pistas y revisión por pares. Se evalúa explicación y comprobación, no velocidad de generación ni acceso a servicios pagos.
+
+# Estado y condiciones para impartir la práctica
+
+Están disponibles los talleres Quarto, la ficha, la bitácora y el protocolo de auditoría. Sigue pendiente el ejemplo ejecutable de orquestación: scripts separados, configuración, entorno restaurable y resultados de referencia. El [inventario de desarrollo](../03-desarrollo/README.md) conserva ese estado.
+
+Antes de la clase, el docente debe probar instalación, reconstrucción desde cero, cambios de entradas y configuración, recuperación de salidas y validación de datos. El informe debe consumir los resultados actuales sin regenerar silenciosamente otra muestra. Se registrarán tiempo de instalación, bloqueos y capacidad de explicar dependencias.
+
+Si falla la infraestructura, se ofrece un equipo preparado o se reprograma la prueba. No se declara éxito por observar una demostración ni se penaliza una limitación técnica ajena al estudiante. La decisión sobre el motor dependerá del piloto; la competencia de reproducibilidad permanece como objetivo.

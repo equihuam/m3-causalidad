@@ -1,0 +1,28 @@
+project:
+  type: book
+
+profile:
+  group:
+    - [docente, estudiante]
+
+book:
+  title: "Causalidad, diseño experimental e inteligencia artificial"
+  language: es
+  search: true
+  page-navigation: true
+  sidebar:
+    style: docked
+    collapse-level: 1
+
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-copy: true
+
+execute:
+  freeze: false
+  error: false

@@ -1,0 +1,23 @@
+project:
+  type: default  # "website", "book" o "default" para documentos sueltos
+
+# Opciones generales del sitio
+website:
+  title: "Mi Proyecto Quarto"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: about.qmd
+        text: Acerca de
+    right:
+      - icon: github
+        href: https://github.com/usuario/repositorio
+
+# Configuración de formato de salida
+format:
+  html:
+    theme: cosmo       # Tema Bootstrap (ej: cosmo, litera, minty, etc.)
+    toc: true          # Muestra tabla de contenidos
+    toc-depth: 2       # Profundidad de la tabla de contenidos
+    number-sections: false

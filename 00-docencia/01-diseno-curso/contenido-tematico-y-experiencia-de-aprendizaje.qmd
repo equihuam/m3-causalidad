@@ -1,0 +1,431 @@
+---
+title: "Contenido temático y experiencia de aprendizaje"
+subtitle: "Propuesta curricular para nueve días de causalidad, diseño experimental e inteligencia artificial"
+format:
+  html:
+    toc: true
+lang: es
+---
+
+# Cómo utilizar esta secuencia
+
+Esta propuesta organiza los nueve días alrededor de una pregunta propia que gana precisión, supuestos explícitos y evidencia. El [programa estudiantil](../../01-estudiantes/00-curso/programa-del-curso.qmd) concentra objetivos y productos; aquí se desarrollan las decisiones didácticas de cada jornada.
+
+**Estado:** la prioridad de reproducibilidad fue adoptada por el responsable del curso. La distribución de tiempos y las ponderaciones permanecen como propuestas. Los 250 minutos de reproducibilidad indicados abajo están incluidos en prácticas y cierres; no son horas adicionales. Las duraciones de talleres completos orientan su selección, no se suman como obligaciones simultáneas.
+
+La progresión es pregunta → contrafactual → DAG → identificación → diseño → análisis → auditoría → propuesta revisada. El [marco epistemológico](marco-epistemologico-ia-causalidad.qmd) fundamenta las distinciones; la [arquitectura de actividades](arquitectura-actividades-rstudio.qmd) separa el núcleo disponible de las extensiones.
+
+# Arquitectura de cada jornada
+
+La [competencia de reproducibilidad analítica](competencia-reproducibilidad-analitica.qmd) atraviesa la secuencia. Se conservan RStudio, Quarto y los casos existentes; el piloto Snakemake está propuesto y requiere un flujo preparado antes de la clase. Los tiempos indicados por día forman parte de las prácticas y cierres, no son horas adicionales. Se trabaja un solo caso computacional acumulativo y no se exige automatizar todos los talleres.
+
+Para sostener el carácter intensivo, cada día conserva una estructura reconocible:
+
+1. **Problema de apertura:** caso, afirmación o discrepancia que haga necesaria la idea del día.
+2. **Construcción conceptual:** exposición breve, discusión y formalización suficiente.
+3. **Práctica guiada:** aplicación a un caso compartido donde puedan compararse decisiones.
+4. **Transferencia al proyecto:** trabajo sobre la pregunta propia del estudiante.
+5. **Contraste:** revisión por pares, IA, fuente, simulación o argumento alternativo.
+6. **Cierre trazable:** producto breve y, cuando corresponda, entrada en la bitácora.
+
+Esta estructura no exige usar IA todos los días. La herramienta se incorpora sólo cuando realiza una función pedagógica identificable.
+
+# Secuencia temática de nueve días
+
+## Día 1 — ¿Qué estamos tratando de explicar?
+
+### Pregunta orientadora
+
+¿Qué significa afirmar que algo causa otra cosa y en qué se diferencia esa afirmación de describir, asociar o predecir?
+
+### Objetivos del día
+
+El estudiante:
+
+- establece una línea base de su razonamiento;
+- identifica el tipo de pregunta que está formulando;
+- distingue asociación, predicción y causalidad;
+- reconoce la diferencia entre una pregunta interesante y una pregunta investigable;
+- inicia una bitácora como registro de evolución, no como diario de actividades.
+
+### Contenido temático
+
+- causalidad como problema epistemológico;
+- descripción, asociación, predicción, intervención y explicación;
+- unidad de análisis, población, exposición o intervención, resultado y tiempo;
+- afirmaciones y evidencia necesaria;
+- introducción a plausibilidad, evidencia, inferencia y causalidad.
+
+### Experiencia de aprendizaje
+
+Cada estudiante redacta una cuartilla sobre una pregunta de su proyecto. Después clasifica distintas formulaciones según el tipo de afirmación que contienen y revisa su pregunta sin buscar todavía una versión perfecta.
+
+Una breve comparación con una reformulación producida por IA puede mostrar que mejorar la fluidez no equivale a precisar el contenido causal. La misma comparación puede realizarse por pares.
+
+### Evidencia de aprendizaje
+
+- cuartilla inicial sin calificación sumativa;
+- primera formulación de la pregunta;
+- identificación provisional de qué contaría como evidencia;
+- primera entrada relevante en la bitácora.
+
+### Reproducibilidad integrada — 15 minutos
+
+Crear una carpeta de proyecto, un README y una versión identificada de la cuartilla original. Diferenciar fuentes, código y resultados. Conservar la línea base y registrar cambios posteriores sin sobrescribirla. **Evidencia:** estructura de archivos y primera versión recuperable.
+
+Dentro de este bloque, el docente modela una entrada y cada estudiante crea `bitacora-analitica.qmd` o `.md` en su proyecto: autor, fecha, pregunta inicial, supuestos y enlace a la versión de partida. No copia la bitácora del docente.
+
+## Día 2 — El contrafactual que sostiene la pregunta
+
+### Pregunta orientadora
+
+¿Qué habría ocurrido con el resultado si la exposición o intervención hubiera sido diferente?
+
+### Objetivos del día
+
+El estudiante:
+
+- expresa el contraste contrafáctico de su pregunta;
+- reconoce el problema fundamental de la inferencia causal;
+- distingue efectos individuales, promedios y comparaciones observables;
+- identifica por qué una comparación disponible puede no representar el contrafactual relevante.
+
+### Contenido temático
+
+- resultados potenciales y contraste causal;
+- intervención, exposición y versiones del tratamiento;
+- consistencia y comparabilidad en lenguaje conceptual;
+- diferencia entre observar dos grupos y justificar una comparación;
+- imaginación contrafáctica disciplinada por supuestos.
+
+### Experiencia de aprendizaje
+
+Los estudiantes formulan el mundo observado y el mundo alternativo implicados por casos sencillos y por su propio proyecto. Construyen contraejemplos donde la misma asociación admite explicaciones causales distintas.
+
+La IA puede generar escenarios alternativos; el estudiante debe clasificarlos como posibles, plausibles o respaldados y señalar qué los restringiría.
+
+### Evidencia de aprendizaje
+
+- enunciado contrafáctico del proyecto;
+- unidad, intervención y resultado delimitados;
+- lista inicial de problemas de comparación.
+
+### Reproducibilidad integrada — 15 minutos
+
+Usar únicamente el bloque generador del factorial como simulación breve, sin impartir todavía el taller completo: registrar mecanismo, parámetros y semilla. Anticipar y comprobar la repetición con iguales entradas; distinguir cambiar la semilla de cambiar el mecanismo. Una intervención en el programa sólo representa un contrafactual causal bajo una definición explícita del micromundo. **Evidencia:** configuración y predicción registradas.
+
+## Día 3 — Mecanismos, alternativas y representaciones causales
+
+### Pregunta orientadora
+
+¿Qué tendría que ocurrir para que la causa propuesta produjera el resultado y qué otras estructuras podrían explicarlo?
+
+### Objetivos del día
+
+El estudiante:
+
+- propone mecanismos sin confundirlos con evidencia demostrada;
+- construye e interpreta DAG sencillos;
+- diferencia causa común, mediador, colisionador y variable irrelevante para una pregunta específica;
+- compara modelos causales alternativos.
+
+### Contenido temático
+
+- mecanismos y cadenas causales;
+- nodos, flechas y significado causal de un DAG;
+- causas comunes, mediación y colisión;
+- dependencia del DAG respecto de conocimiento y supuestos;
+- equivalencia observacional y alternativas causales.
+
+### Experiencia de aprendizaje
+
+A partir de una narrativa compartida, los grupos construyen más de un DAG compatible y discuten qué conocimiento permitiría elegir entre ellos. Después elaboran un primer DAG de su proyecto.
+
+La IA puede proponer variables o flechas adicionales. Su contribución se utiliza para ampliar el espacio de posibilidades; cada incorporación debe justificarse y no se acepta por mera plausibilidad.
+
+### Evidencia de aprendizaje
+
+- primer DAG comentado;
+- explicación verbal del mecanismo;
+- al menos una estructura causal alternativa;
+- registro de una decisión o incertidumbre en la bitácora.
+
+### Reproducibilidad integrada — 20 minutos
+
+En la introducción a Dagitty, conservar la definición textual del DAG causal y dibujar por separado las dependencias para generar su salida. Explicar qué representan nodos y flechas en cada caso. **Evidencia:** dos grafos con leyendas distintas y versión del argumento causal.
+
+## Día 4 — Confusión, sesgo y condiciones de identificación
+
+### Pregunta orientadora
+
+¿Qué impide interpretar causalmente la comparación disponible?
+
+### Objetivos del día
+
+El estudiante:
+
+- identifica caminos no causales relevantes;
+- explica la confusión en términos sustantivos y gráficos;
+- reconoce riesgos de ajustar por mediadores o colisionadores;
+- distingue medir muchas variables de justificar un conjunto de ajuste;
+- formula los supuestos de identificación que necesita.
+
+### Contenido temático
+
+- confusión y caminos abiertos;
+- criterio de puerta trasera en nivel introductorio;
+- selección, colisión, medición y temporalidad;
+- intercambioabilidad y positividad en lenguaje aplicado;
+- identificación como propiedad de pregunta, supuestos y datos, no de una técnica aislada.
+
+### Experiencia de aprendizaje
+
+Los estudiantes comparan propuestas de ajuste que producen conclusiones distintas y justifican cuáles variables controlar. Aplican el razonamiento a su DAG y distinguen entre variables necesarias para la inferencia y variables útiles sólo para precisión o descripción.
+
+### Evidencia de aprendizaje
+
+- conjunto de ajuste propuesto y justificado;
+- lista explícita de supuestos de identificación;
+- amenaza principal a la interpretación causal del proyecto.
+
+### Reproducibilidad integrada — 20 minutos
+
+Conservar dos especificaciones analíticas identificadas sobre los mismos datos, asociadas con conjuntos de ajuste justificados. Registrar cuál corresponde al estimando y cuál se usa como contraste crítico. **Evidencia:** tabla de especificación, supuesto y salida; explicar que repetir un ajuste incorrecto no lo valida.
+
+## Día 5 — El experimento como construcción de una comparación
+
+### Pregunta orientadora
+
+¿Qué resuelve la asignación aleatoria y qué problemas deja intactos?
+
+### Objetivos del día
+
+El estudiante:
+
+- relaciona aleatorización con intercambioabilidad;
+- distingue asignación aleatoria de muestreo aleatorio;
+- define unidad experimental, tratamiento, respuesta y réplica;
+- reconoce pseudorreplicación, interferencia, incumplimiento y pérdidas;
+- vincula validez interna y externa con decisiones concretas.
+
+### Contenido temático
+
+- lógica de la asignación aleatoria;
+- control, replicación, bloqueo y enmascaramiento;
+- unidad experimental y unidad de observación;
+- interferencia y versiones del tratamiento;
+- cumplimiento, atrición y fidelidad de implementación;
+- validez interna, validez externa y población objetivo.
+
+### Experiencia de aprendizaje
+
+Los grupos diseñan un experimento para un caso común, intercambian protocolos e intentan detectar comparaciones inválidas. Luego determinan si su pregunta admite una intervención experimental y qué compromisos prácticos o éticos implica.
+
+La IA puede funcionar como revisora adversarial del protocolo, pero sus objeciones deben traducirse a amenazas identificables y decisiones de diseño.
+
+### Evidencia de aprendizaje
+
+- esquema de experimento defendible o explicación de por qué no lo es;
+- definición de la unidad experimental;
+- estrategia de asignación, control y medición;
+- amenazas todavía no resueltas.
+
+### Reproducibilidad integrada — 30 minutos
+
+Utilizar el factorial como caso común: guardar configuración, asignación, datos y minirreporte. Reconstruir desde una sesión nueva con rutas relativas y entorno identificado. Los 30 minutos forman parte de la práctica guiada. **Evidencia:** primera reconstrucción y registro técnico; la semilla no sustituye el control de versiones ni del entorno.
+
+## Día 6 — Diseños y comparaciones cuando no podemos aleatorizar
+
+### Pregunta orientadora
+
+¿Qué comparación puede sostener una inferencia cuando la intervención no se asigna al azar?
+
+### Objetivos del día
+
+El estudiante:
+
+- reconoce la lógica de diseños observacionales y cuasiexperimentales;
+- selecciona una estrategia por el problema de identificación que resuelve;
+- distingue ajuste estadístico de justificación causal;
+- evita prometer más de lo que permiten los supuestos y los datos.
+
+### Contenido temático
+
+- estudios observacionales y experimentos naturales;
+- ajuste por covariables, emparejamiento y ponderación como familias conceptuales;
+- discontinuidad, diferencias en diferencias y variables instrumentales como lógicas de comparación;
+- temporalidad, tendencias y controles negativos;
+- sensibilidad a confusión no medida;
+- relación entre diseño posible y alcance de la afirmación.
+
+### Experiencia de aprendizaje
+
+Se comparan varios diseños candidatos para una misma pregunta. El objetivo no es dominar todas sus estimaciones, sino identificar qué fuente de variación explota cada uno, cuál es su supuesto crítico y qué evidencia permitiría examinarlo.
+
+Cada estudiante selecciona una estrategia principal y una alternativa realista para su proyecto.
+
+### Evidencia de aprendizaje
+
+- tabla de diseño, comparación, supuesto crítico y amenaza;
+- elección argumentada de una estrategia;
+- reformulación de la pregunta si el diseño disponible no identifica la pregunta original.
+
+### Reproducibilidad integrada — 30 minutos
+
+Leer el flujo preparado del caso factorial: generación, validación, estimación e informe. Completar entradas, salidas y decisiones de cada paso, y predecir el plan de ejecución. Se conserva la comparación conceptual de diseños del día; no se agregan implementaciones de cada método. **Evidencia:** tabla de dependencias y plan previsto.
+
+## Día 7 — Del diseño al análisis y del resultado a la inferencia
+
+### Pregunta orientadora
+
+¿Qué parte de la conclusión proviene de los datos, cuál del análisis y cuál de los supuestos?
+
+### Objetivos del día
+
+El estudiante:
+
+- define un estimando coherente con su pregunta;
+- relaciona diseño, datos, análisis e interpretación;
+- distingue incertidumbre estadística de incertidumbre causal;
+- reconoce el papel de análisis de sensibilidad y comprobaciones;
+- evita interpretar significación estadística como identificación causal.
+
+### Contenido temático
+
+- estimando, estimador y estimación;
+- efectos promedio y heterogeneidad relevante;
+- precisión, incertidumbre y compatibilidad con datos;
+- modelos estadísticos al servicio del diseño;
+- análisis de sensibilidad, robustez y especificaciones alternativas;
+- reproducibilidad del análisis.
+
+### Experiencia de aprendizaje
+
+Mediante datos pequeños, resultados simulados o salidas ya preparadas, los estudiantes comparan cómo cambia una conclusión al modificar el estimando, el ajuste o un supuesto. No se busca un recorrido exhaustivo de software, sino interpretar la cadena inferencial.
+
+La IA puede ayudar a explicar o revisar código. El estudiante conserva los datos y el código fuera del chat, ejecuta el análisis y comprueba que la interpretación corresponda al resultado real.
+
+### Evidencia de aprendizaje
+
+- definición del estimando principal;
+- bosquejo del plan de análisis;
+- separación explícita entre incertidumbre estadística, causal y sustantiva;
+- prueba o análisis de sensibilidad prioritario.
+
+### Reproducibilidad integrada — 60 minutos
+
+Si el piloto está preparado, ejecutar el flujo con el motor seleccionado, leer entradas y salidas y modificar una regla guiada. Cambiar un parámetro declarado, anticipar qué trabajos deberán repetirse y comparar con el plan efectivo. En una copia de práctica, retirar una salida generada y reconstruirla sin alterar las entradas originales. **Evidencia:** registro de ejecución, comparación previsto/observado y versión del resultado. El motor y el ejemplo deben estar probados antes de la clase; véanse las [condiciones del piloto](competencia-reproducibilidad-analitica.qmd). Mientras no estén disponibles, practicar reconstrucción completa y cambio de parámetros con el Quarto del factorial, indicando que esa prueba no demuestra actualización selectiva. Ésta sólo será evaluable tras una práctica en un entorno preparado.
+
+## Día 8 — Auditoría epistemológica de afirmaciones e IA
+
+### Pregunta orientadora
+
+¿Qué sabemos, qué estamos infiriendo y qué sólo parece convincente?
+
+### Objetivos del día
+
+El estudiante:
+
+- clasifica el estatus epistemológico de afirmaciones;
+- detecta hechos inventados, precisión falsa y saltos inferenciales;
+- diseña verificaciones proporcionales a la importancia de cada afirmación;
+- audita argumentos propios y generados por IA;
+- actualiza racionalmente su grado de confianza.
+
+### Contenido temático
+
+- posibilidad, plausibilidad, hipótesis, evidencia e inferencia;
+- alucinación como producción insuficientemente anclada;
+- tipos de afirmaciones y recursos de prueba;
+- fuentes primarias, triangulación, cálculo, simulación y contraejemplos;
+- diferencia entre verificar una cita y justificar una inferencia causal;
+- trazabilidad del cambio de confianza.
+
+### Experiencia de aprendizaje
+
+Se realiza la actividad de auditoría epistemológica existente. Después, cada estudiante selecciona afirmaciones centrales de su propuesta y construye un mapa que conecte afirmación, evidencia, supuesto, alternativa y prueba pendiente.
+
+La actividad debe poder realizarse con una respuesta proporcionada por el docente, aunque ninguna plataforma esté disponible.
+
+### Evidencia de aprendizaje
+
+- auditoría clasificada y justificada;
+- plan de verificación de afirmaciones críticas;
+- entrada de bitácora que documente un cambio o una decisión de confianza.
+
+### Reproducibilidad integrada — 45 minutos
+
+Realizar la [auditoría de reproducibilidad](../../01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.qmd) como parte de la auditoría del día. Sus diez minutos de revisión de la inferencia se integran con la auditoría epistemológica; no se repite el análisis de la misma afirmación. Otro equipo reconstruye una tabla o figura desde una copia limpia y aplica el criterio de comparación acordado. Examinar por separado la afirmación causal. **Evidencia:** acta de reconstrucción, diagnóstico de incidencias y correcciones identificadas.
+
+## Día 9 — Integración, defensa y reconstrucción del aprendizaje
+
+### Pregunta orientadora
+
+¿Qué afirmación causal puedo defender ahora, bajo qué supuestos y con qué límites?
+
+### Objetivos del día
+
+El estudiante:
+
+- integra pregunta, contrafactual, DAG, diseño, análisis y evidencia;
+- comunica el alcance y los límites de su propuesta;
+- responde objeciones sin ocultar incertidumbre;
+- compara su planteamiento final con la línea base;
+- reconstruye cambios y continuidades mediante evidencia de su proceso.
+
+### Contenido temático
+
+- coherencia de la cadena pregunta–diseño–evidencia–inferencia;
+- proporcionalidad entre conclusión y respaldo;
+- comunicación de supuestos y límites;
+- revisión por pares y defensa argumentada;
+- prerregistro, bitácora y reporte final como registros distintos;
+- continuidad del proyecto después del curso.
+
+### Experiencia de aprendizaje
+
+Cada estudiante presenta una defensa breve de su propuesta. Los pares formulan una objeción causal, una pregunta sobre evidencia y una pregunta sobre alcance. El estudiante revisa su documento final y utiliza entradas concretas de la bitácora para explicar qué cambió, qué se mantuvo y por qué.
+
+La IA puede ayudar a ensayar objeciones o revisar claridad. La responsabilidad por la versión final, sus fuentes y sus afirmaciones permanece en el estudiante.
+
+### Evidencia de aprendizaje
+
+- propuesta final;
+- DAG y estrategia de diseño justificados;
+- mapa de afirmaciones, evidencia y límites;
+- reflexión final apoyada en la bitácora;
+- paquete de continuidad para el siguiente paso del proyecto.
+
+### Reproducibilidad integrada — 15 minutos
+
+Entregar el anexo ejecutable y la [ficha de reconstrucción](../../01-estudiantes/01-guias/ficha-entrega-reproducible.qmd). Durante la defensa, rastrear una afirmación hasta un resultado y sus entradas; explicar un cambio de configuración y una limitación causal. **Evidencia:** versión final, respuesta a la auditoría y procedimiento recuperable sin el chat original.
+
+# Progresión del proyecto del estudiante
+
+La secuencia produce un solo proyecto que gana estructura y restricciones:
+
+| Día | Transformación principal | Producto acumulativo | Evidencia de reproducibilidad |
+|---|---|---|---|
+| 1 | De interés general a pregunta examinable | Cuartilla inicial | Versión original y README |
+| 2 | De pregunta a contraste causal | Enunciado contrafáctico | Configuración y semilla del caso común |
+| 3 | De explicación única a estructuras alternativas | DAG comentado | DAG causal textual y dependencias computacionales separadas |
+| 4 | De asociación a condiciones de identificación | Supuestos y conjunto de ajuste | Especificaciones identificadas |
+| 5 | De intervención imaginada a experimento posible | Esquema experimental | Primera reconstrucción del minirreporte |
+| 6 | De limitación práctica a comparación defendible | Diseño principal y alternativo | Tabla de entradas y salidas |
+| 7 | De diseño a estrategia analítica | Estimando y plan de análisis | Flujo ejecutado y cambio comprobado |
+| 8 | De argumento plausible a afirmaciones auditadas | Plan de evidencia y verificación | Acta de reconstrucción por pares |
+| 9 | De piezas separadas a propuesta defendible | Propuesta y reflexión finales | Anexo ejecutable identificado |
+
+No todos los proyectos terminarán con un diseño plenamente identificable. Reconocer que la pregunta debe acotarse, que falta evidencia o que un supuesto no es defendible constituye un resultado intelectualmente válido cuando está bien argumentado.
+
+# Criterios para ajustar la carga
+
+Seleccionar casos que obliguen a tomar y explicar una decisión. El factorial sostiene la práctica computacional común; bloques y parcela dividida amplían la discusión cuando el tiempo y los proyectos lo justifican. El día 6 compara lógicas de diseño, sin exigir programar cada estimador.
+
+Las exposiciones breves preceden al trabajo guiado y a la transferencia. Se conserva la cuartilla original y se cierra cada jornada preguntando qué cambia en el proyecto y qué sigue incierto. No se exige una entrada narrativa diaria si no existe una decisión relevante; sí se conservan las ejecuciones utilizadas como evidencia.
+
+# Evaluación y condiciones de uso
+
+La [rúbrica](../../01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd) distingue calidad del argumento, trazabilidad, reflexión y reproducibilidad. Los pesos y los tiempos se confirmarán antes de evaluar. La [guía docente de evaluación](evaluacion/rubrica-proyecto-y-reflexion.qmd) explica cómo evitar doble calificación de la misma evidencia.
+
+No todos los proyectos terminarán con una relación identificable. Reconocer qué supuesto falla, qué evidencia falta o cómo debe acotarse la pregunta constituye aprendizaje cuando está bien argumentado. La sofisticación técnica y una mayor seguridad al afirmar causalidad no son criterios de éxito.

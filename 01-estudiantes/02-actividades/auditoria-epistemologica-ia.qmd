@@ -1,0 +1,65 @@
+---
+title: "Actividad: auditoría epistemológica de una respuesta de IA"
+subtitle: "De la plausibilidad a la evidencia"
+format: html
+lang: es
+---
+
+# Qué vas a hacer
+
+Examinarás una respuesta para distinguir qué afirma, qué respaldo tiene y qué permitiría interpretarla causalmente. La tarea es justificar una evaluación, no acumular errores encontrados.
+
+Trabaja con el texto indicado por el docente. Si no se proporciona otro, utiliza la [respuesta preparada sobre germinación](controversias-ia/01-germinacion-y-causalidad.qmd), respetando el orden de revelación de la información. No necesitas consultar una plataforma. Después aplicarás el procedimiento a una afirmación de tu propuesta o minirreporte.
+
+# 1. Separar afirmaciones y anticipar su respaldo
+
+Divide el texto en afirmaciones evaluables: una cifra, una referencia, un mecanismo, una comparación o una recomendación. Selecciona al menos tres, incluida una que tenga consecuencias para la interpretación causal.
+
+Para cada una distingue:
+
+| Dimensión | Qué escribir |
+|---|---|
+| Tipo | Descripción, dato, referencia, hipótesis, predicción, inferencia o recomendación |
+| Respaldo inicial | Plausible sin contraste, respaldada bajo condiciones explícitas, incierta o contradicha por evidencia |
+| Alcance causal | Qué efecto se afirma, qué comparación lo sostendría y qué supuestos requiere |
+
+Estas dimensiones no son una escala de certeza. «Hipótesis» indica una función de la afirmación; «respaldada» indica su relación con evidencia. Si escribes «verificada», especifica qué comprobaste y mediante qué procedimiento.
+
+Antes de buscar resultados, registra cuál te parece más convincente y por qué.
+
+# 2. Elegir y realizar comprobaciones
+
+Para las tres afirmaciones, identifica la evidencia disponible y una prueba adecuada. Realiza lo que permitan los materiales y distingue pruebas completadas de pendientes.
+
+- **Cifra o cálculo:** reconstruye la operación y comprueba unidades y denominadores. Un porcentaje correcto no establece causalidad.
+- **Referencia, si la hay:** comprueba existencia y datos bibliográficos, y revisa si el contenido sostiene la atribución. Una cita real puede estar mal utilizada.
+- **Interpretación causal:** identifica contrafactual, asignación, causas comunes, selección y alcance. Una prueba estadística no sustituye esta revisión.
+- **Hipótesis o recomendación:** explicita el supuesto y qué observación o contraejemplo la debilitaría.
+
+En el caso de germinación puedes comprobar las proporciones con los conteos suministrados y examinar qué permite concluir cada etapa del protocolo. Si no tienes acceso a una fuente necesaria, registra esa limitación; no supongas que la afirmación es falsa ni que está verificada.
+
+# 3. Actualizar el juicio
+
+Completa una sola tabla de trabajo. Puedes enlazarla desde la bitácora, sin transcribirla.
+
+| Afirmación y tipo | Respaldo inicial | Supuesto o evidencia necesaria | Prueba realizada y resultado | Respaldo final y confianza | Pendiente |
+|---|---|---|---|---|---|
+| | | | | | |
+
+La confianza puede aumentar, disminuir o mantenerse. Explica el motivo; no se exige un número. Distingue «no encontré respaldo» de «encontré evidencia que la contradice».
+
+Si una afirmación es incorrecta, puedes formular una hipótesis nueva inspirada en ella, pero identifica la reformulación. La utilidad de esa nueva hipótesis no valida la afirmación original.
+
+# 4. Reformular y discutir
+
+Escribe un párrafo que separe lo observado, lo inferido, los supuestos y lo todavía incierto. Incluye una alternativa relevante y el siguiente contraste que ayudaría a distinguirla. Si usas un DAG, explica qué flechas provienen del protocolo y cuáles requieren justificación adicional.
+
+Intercambia la revisión con otra pareja. Cuando discrepen, localicen si el desacuerdo está en los datos, los supuestos, el tipo de afirmación o el criterio de respaldo. Revisa tu conclusión a partir de esa discusión.
+
+# 5. Conservar la evidencia
+
+Enlaza la tabla y la reformulación desde una entrada de tu [bitácora analítica](../01-guias/guia-bitacora-analitica.qmd). Usa su plantilla común para registrar decisión, evidencia y cambio o continuidad de confianza. Si ejecutaste código, enlaza también la versión y su registro.
+
+En el día 8, la [auditoría de reproducibilidad](auditoria-reproducibilidad-analitica.qmd) aplica esta revisión a la afirmación vinculada con el resultado reconstruido. Sus diez minutos de examen causal forman parte de ese trabajo; reutiliza la tabla y la entrada pertinentes, sin producir un segundo registro idéntico.
+
+Se valora precisión al separar afirmaciones, adecuación de las comprobaciones y proporcionalidad entre respaldo y conclusión, conforme a la [rúbrica](../04-evaluacion/rubrica-proyecto-y-reflexion.qmd).

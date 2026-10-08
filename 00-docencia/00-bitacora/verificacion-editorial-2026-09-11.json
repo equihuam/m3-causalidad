@@ -1,0 +1,14 @@
+[
+  {
+    "perfil": "estudiante",
+    "paginas": 20,
+    "enlaces": 1201,
+    "errores": []
+  },
+  {
+    "perfil": "docente",
+    "paginas": 40,
+    "enlaces": 3071,
+    "errores": []
+  }
+]

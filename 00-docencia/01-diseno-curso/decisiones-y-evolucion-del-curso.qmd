@@ -1,0 +1,36 @@
+---
+title: "Decisiones y evolución del curso"
+subtitle: "Memoria conceptual del proyecto M3"
+format: html
+lang: es
+---
+
+# Estado del rediseño
+
+Esta síntesis orienta la lectura del proyecto. La [bitácora docente](../00-bitacora/bitacora-maestra.qmd) conserva la fuente, autoría y estado de cada decisión; este capítulo no constituye un segundo registro histórico.
+
+El curso mantiene la pregunta del estudiante como hilo conductor. El rediseño conecta su evolución conceptual con un análisis que otra persona pueda reconstruir. La IA interviene como apoyo a la exploración y la crítica, con alternativas gratuitas y trabajo por pares.
+
+# Acuerdos y propuestas
+
+| Aspecto | Estado | Documento de referencia |
+|---|---|---|
+| Priorizar reproducibilidad en los nueve días | Decisión del responsable del curso | [Competencia transversal](competencia-reproducibilidad-analitica.qmd) |
+| Separar bitácora docente y analítica estudiantil | Decisión del responsable del curso | [Registro de decisiones](../00-bitacora/bitacora-maestra.qmd) y [guía estudiantil](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd) |
+| Organizar por destinatario y publicar dos ediciones | Decisión del responsable del curso | [Organización y perfiles](../../README.md) |
+| Depurar repeticiones e inconsistencias | Solicitud del responsable del curso; revisión editorial implementada | [Informe de revisión](../00-bitacora/revision-editorial-2026-09-11.md) |
+| Distribución de 250 minutos y pesos de evaluación | Propuestas del borrador, pendientes de confirmación | [Secuencia](contenido-tematico-y-experiencia-de-aprendizaje.qmd) y [fundamentos de evaluación](evaluacion/rubrica-proyecto-y-reflexion.qmd) |
+| Piloto Snakemake, con `targets` como alternativa docente | Propuesta; ejemplo ejecutable y entorno pendientes | [Desarrollo](../03-desarrollo/README.md) |
+| Ampliación de la serie de talleres | Extensiones posibles, no compromisos de cobertura | [Arquitectura](arquitectura-actividades-rstudio.qmd) |
+
+# Qué cambió en la lectura
+
+El programa estudiantil concentra objetivos y productos; la secuencia docente explica cómo enseñarlos. La rúbrica estudiantil contiene los descriptores y su capítulo docente conserva sólo fundamentos de aplicación. La guía de bitácora, el registro técnico y la ficha final tienen funciones complementarias: justificar, identificar ejecuciones e indexar la entrega.
+
+El marco epistemológico desarrolla las distinciones conceptuales; las actividades las utilizan sin reproducirlo completo. Los antecedentes se consultan después del material de enseñanza y conservan su condición histórica. Las versiones anteriores permanecen respaldadas.
+
+# Pendientes sustantivos
+
+Antes de impartir el curso, confirmar ponderaciones y carga real, preparar el entorno y probar la reconstrucción independiente. La actualización selectiva de un flujo sólo puede enseñarse y evaluarse cuando exista un ejemplo operativo. El [inventario de desarrollo](../03-desarrollo/README.md) reúne estas condiciones.
+
+Esta revisión no certifica eficacia pedagógica ni funcionamiento de un piloto todavía inexistente. Distingue materiales disponibles, propuestas y evidencias de validación para que la siguiente iteración parta de un estado claro.

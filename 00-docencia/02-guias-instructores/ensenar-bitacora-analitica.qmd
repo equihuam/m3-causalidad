@@ -1,0 +1,35 @@
+---
+title: "Enseñar y revisar la bitácora analítica del estudiante"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Separación de responsabilidades
+
+La [bitácora de diseño del curso](../00-bitacora/bitacora-maestra.qmd) registra decisiones del responsable del curso. La [bitácora analítica del estudiante](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd) es una competencia que debe enseñarse y practicarse. No se entregan ni evalúan como un mismo documento.
+
+# Modelar, acompañar y retirar apoyo
+
+1. **Día 1:** mostrar una entrada breve sobre una pregunta científica, no sobre el diseño del curso. Señalar autor, versión y diferencia entre propuesta, resultado y decisión. Entregar la plantilla y pedir al estudiante su registro inicial.
+2. **Días 2–3:** detener la actividad antes de ejecutar y pedir que escriban la predicción. Después, completar resultado e interpretación. Hacer visible que una predicción discrepante puede ser informativa.
+3. **Días 4–6:** revisar una entrada por equipo. Pedir que otro estudiante encuentre el archivo y la versión que la sustentan. Dar retroalimentación sobre el vínculo faltante, sin corregir retrospectivamente la predicción.
+4. **Día 7:** modelar un fallo y una reparación como dos ejecuciones relacionadas. Si hay un flujo preparado, mostrar qué completa el motor automáticamente; en la reconstrucción de Quarto, mostrar qué información conserva el registro y qué justificación debe redactar el investigador.
+5. **Día 8:** usar la bitácora durante la auditoría por pares. Registrar toda ayuda oral necesaria: revela instrucciones o dependencias todavía implícitas.
+6. **Día 9:** pedir que seleccionen entradas para explicar su reflexión y la procedencia de un resultado. No exigir que hayan cambiado de hipótesis.
+
+El acompañamiento utiliza los cierres y bloques de reproducibilidad ya previstos; no agrega horas al programa.
+
+# Retroalimentación breve
+
+| Pregunta al revisar | Si falta |
+|---|---|
+| ¿Se sabe quién decidió, cuándo y antes o después de ver resultados? | Pedir atribución y momento; marcar reconstrucciones retrospectivas |
+| ¿Está explicado por qué se eligió esa alternativa? | Solicitar supuesto, evidencia o razón pertinente |
+| ¿Se localiza la versión y la ejecución? | Completar el enlace al registro y al paquete, no copiar todo el código |
+| ¿Se distingue lo observado de su interpretación? | Separar resultado, plausibilidad y alcance causal |
+| ¿El par pudo reconstruir? | Registrar incidencia, reparación y nueva prueba; no inferir éxito del aspecto del informe |
+
+No puntuar por extensión ni por cantidad de entradas. No duplicar la calificación: trazabilidad juzga el razonamiento documentado; reproducibilidad, la reconstrucción demostrada; reflexión, la explicación de la evolución. Mantener las oportunidades de revisión previstas en la rúbrica.

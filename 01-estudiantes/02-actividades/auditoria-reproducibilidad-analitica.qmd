@@ -1,0 +1,69 @@
+---
+title: "Auditoría de reproducibilidad analítica"
+subtitle: "Reconstruir un resultado y examinar su interpretación"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito y ubicación
+
+Actividad del día 8, preparada durante los días 5 a 7. Duración orientativa: 45 minutos dentro del bloque de auditoría. Se combina con la [auditoría epistemológica](auditoria-epistemologica-ia.qmd); ambas evalúan dimensiones distintas de una misma afirmación.
+
+**Resultado esperado:** otro equipo reconstruye una salida seleccionada e identifica qué demuestra la coincidencia computacional y qué supuesto causal permanece abierto.
+
+# Material que necesitas
+
+- Tu minirreporte completado del factorial, bloques o parcela dividida, con código y entradas.
+- La [ficha de entrega](../01-guias/ficha-entrega-reproducible.qmd), iniciada antes del día 8.
+- El entorno y las instrucciones de reconstrucción utilizados durante las prácticas.
+- Un resultado de referencia y el criterio acordado para compararlo.
+
+Utiliza el procedimiento trabajado en clase. Distingue reconstruir un documento completo de demostrar actualización selectiva de un flujo; registra cuál de esas pruebas realizaste.
+
+# 1. Anticipar — 5 minutos
+
+Intercambien la versión entregada y lean el README sin ejecutar. Señalen:
+
+- qué resultado esperan obtener;
+- qué entradas y entorno necesita;
+- qué dependencia podría faltar;
+- qué criterio permitirá decidir si coincide.
+
+El equipo autor observa; no proporciona instrucciones orales que sustituyan documentación faltante. Toda ayuda necesaria se registra.
+
+# 2. Reconstruir — 15 minutos
+
+Trabajen en una copia independiente, desde una sesión nueva y sin resultados o cachés reutilizables. Conserven los originales y las entradas; no hagan borrados sobre el proyecto autor.
+
+Ejecuten exclusivamente las instrucciones entregadas. Registren resultado, comando y entorno efectivo. Si hay un fallo, localicen su causa antes de pedir a un agente que cambie el proyecto.
+
+Comparen el resultado principal seleccionado y sus valores de comprobación con el criterio acordado. La coincidencia del aspecto de una página HTML no basta para establecer que se reconstruyó el cálculo.
+
+# 3. Diagnosticar y corregir — 10 minutos
+
+Clasifiquen la incidencia: entrada ausente, ruta personal, objeto de sesión, versión de paquete, semilla, dependencia omitida o instrucción insuficiente. Si no hay incidencia, rastreen una cifra del informe hasta sus entradas.
+
+Registren la corrección en una nueva versión y repitan la parte afectada. Distingan fallo reproducible del análisis y problema de infraestructura. Si no se resuelve dentro del bloque, entreguen un diagnóstico y acuerden una nueva ejecución en un equipo preparado; no marquen la reconstrucción como exitosa.
+
+# 4. Auditar la inferencia — 10 minutos
+
+Seleccionen una afirmación del informe. Clasifiquen plausibilidad, evidencia, inferencia y causalidad. Expliquen por qué repetir el resultado no valida automáticamente la selección de variables, la unidad experimental o la generalización.
+
+Si trabajaron parcela dividida, utilicen su modelo ingenuo como contraste; de lo contrario, examinen una limitación del factorial. Un modelo puede ser ejecutable y reconstruible aunque su tratamiento de la dependencia sea inadecuado. No presupongan que el modelo más complejo resuelve cualquier amenaza causal.
+
+# 5. Cerrar — 5 minutos
+
+Completen el acta dentro de la ficha y enlácenla desde la entrada de bitácora correspondiente. Si ya registraron allí la auditoría epistemológica, integren esta evidencia sin duplicar la entrada.
+
+Utilicen su [bitácora analítica del estudiante](../01-guias/guia-bitacora-analitica.qmd): identifiquen autor y revisor, enlacen la ejecución auditada, registren la incidencia y la nueva versión si hubo reparación. Conserven la entrada inicial y añadan el resultado de la revisión; no conviertan retrospectivamente una ejecución fallida en exitosa. Después completen:
+
+> Pudimos reconstruir __________ bajo __________. Esto respalda __________, pero la interpretación causal todavía requiere __________.
+
+# Evaluación y ruta sin IA
+
+Utilizar el criterio 8 de la [rúbrica](../04-evaluacion/rubrica-proyecto-y-reflexion.qmd). Se valora reconstrucción comprobada, dependencias explícitas, diagnóstico y explicación. No se evalúa velocidad de programación ni coincidencia con una conclusión causal prefijada.
+
+La IA es opcional. Una reparación sugerida por un agente se revisa, se identifica como cambio y se ejecuta nuevamente. Sin IA se utiliza revisión por pares y pistas docentes. Una limitación técnica ajena al estudiante exige reprogramar la prueba, no suponer éxito ni penalizar su razonamiento.

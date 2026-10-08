@@ -1,0 +1,58 @@
+---
+title: "Guía de continuidad para trabajar con IA en modalidad gratuita"
+subtitle: "Cómo conservar el control del trabajo cuando una plataforma alcanza sus límites"
+format:
+  html:
+    toc: true
+lang: es
+---
+
+# Mantener el trabajo fuera del chat
+
+El curso puede completarse sin contratar servicios de IA. Guarda documentos, datos y código en tu proyecto; utiliza la [bitácora analítica](guia-bitacora-analitica.qmd) para conservar decisiones. Un chat ayuda a trabajar, pero no es el único registro del proceso.
+
+# Elegir cómo continuar
+
+| Situación | Acción útil |
+|---|---|
+| Aparece un límite de uso | Lee qué función está afectada y si el aviso indica cuándo se restablece. Puedes esperar o seguir con recursos locales |
+| El chat funciona, pero falla la carga o el análisis de archivos | Comparte un fragmento pertinente, la estructura de los datos o el código y su error; ejecuta localmente el procedimiento |
+| La conversación mezcla instrucciones o pierde contexto | Revisa tus archivos, prepara el paquete de continuidad y abre una conversación nueva |
+| La consulta es demasiado amplia | Formula una tarea concreta con objetivo, contexto indispensable y formato esperado |
+| La plataforma no está disponible | Trabaja con las respuestas preparadas, documentación o revisión por pares; otra plataforma gratuita es opcional |
+
+Las condiciones de acceso cambian. Usa el aviso de la plataforma para diagnosticar y no supongas que abrir otro chat restablece una cuota de la cuenta. No necesitas mantener cuentas de respaldo para completar las actividades.
+
+# Paquete de continuidad
+
+Prepara este resumen sólo cuando necesites retomar o transferir una tarea. Enlaza tus archivos en lugar de copiar toda la historia.
+
+```markdown
+## Estado para retomar el trabajo
+Objetivo actual:
+Contexto indispensable:
+Decisiones vigentes y enlace a su justificación:
+Supuestos provisionales:
+Evidencia y archivos relevantes, con su versión:
+Cambio reciente y dudas abiertas:
+Tarea concreta siguiente:
+Restricciones:
+```
+
+Comprueba cualquier resumen generado por IA: puede confundir una propuesta con una decisión o atribuir resultados que no se obtuvieron. El paquete describe el estado actual; la bitácora conserva su evolución. No son dos diarios que debas mantener en paralelo.
+
+Para retomar un cálculo, localiza además entradas, configuración, entorno y comando. La [ficha de entrega](ficha-entrega-reproducible.qmd) puede servir de índice cuando ya esté iniciada. Una respuesta de IA que funcione como entrada debe guardarse; repetir el prompt no garantiza el mismo contenido.
+
+# Formular una consulta acotada
+
+Por ejemplo:
+
+> Estoy diseñando un experimento ecológico. Considero A como tratamiento, Y como respuesta y Z como posible confusor. Examina si mi interpretación de Z es coherente. Explicita el supuesto que necesitaría justificar y distingue plausibilidad de evidencia.
+
+Si comparas respuestas de distintas herramientas, examina supuestos y fuentes. Coincidencia entre respuestas no equivale a verificación independiente; discrepancia no se resuelve eligiendo la más convincente.
+
+# Continuar sin IA
+
+Puedes contrastar hipótesis con un compañero, revisar un DAG, consultar fuentes, ejecutar código o formular una predicción. Conserva la misma operación intelectual y su evidencia. Antes de pedir otra respuesta, identifica qué falta resolver y qué recurso puede hacerlo.
+
+Comparte únicamente información apropiada para el servicio utilizado: un fragmento o datos simulados suelen bastar para discutir código. Evita transferir datos confidenciales y verifica antes de incorporar cualquier contribución al proyecto. Si una reparación modifica el código, registra la versión y vuelve a comprobar el resultado.

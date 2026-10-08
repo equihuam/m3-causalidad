@@ -1,0 +1,66 @@
+---
+title: "Inicio"
+---
+
+::: {.content-visible when-profile="docente"}
+
+# Un libro para diseñar, enseñar y aprender {.unnumbered}
+
+Este libro reúne el proyecto del curso intensivo de nueve días sobre causalidad, diseño experimental e inteligencia artificial. Permite recorrer los documentos desde un índice común, conservando su organización por destinatario.
+
+El hilo conductor es una pregunta científica que se vuelve más precisa al explicitar contrafactuales, supuestos, comparaciones y evidencia. La IA apoya la exploración y la crítica; la responsabilidad de comprobar y justificar las afirmaciones permanece en quien investiga.
+
+> La creatividad expande el espacio de posibilidades; la evidencia lo restringe.
+
+## Recorrido de la edición docente
+
+| Parte | Destinatarios | Contenido |
+|---|---|---|
+| [Docencia](00-docencia/README.md) | Responsable del curso e instructores | Diseño, reflexiones pedagógicas, decisiones, guías de facilitación, desarrollo y antecedentes |
+| [Estudiantes](01-estudiantes/README.md) | Alumnos | Programa, objetivos, guías, talleres, controversias, auditorías, lecturas y evaluación |
+
+El recorrido comienza con diseño y facilitación, continúa con los materiales estudiantiles y termina con memoria, desarrollo y organización. Esta última parte conserva decisiones y antecedentes sin interrumpir las instrucciones de enseñanza. La barra lateral contiene los documentos en ese orden. Puedes buscar términos en el libro y avanzar entre capítulos con los enlaces al pie de cada página.
+
+## Para preparar el curso
+
+Comienza por el [diseño general](00-docencia/01-diseno-curso/diseno-general-curso.qmd) y la [secuencia de nueve días](00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd). Consulta las guías de facilitación y la [bitácora del responsable del curso](00-docencia/00-bitacora/bitacora-maestra.qmd), que distingue decisiones adoptadas y propuestas en revisión.
+
+## Para recorrer los materiales de aprendizaje
+
+El [programa estudiantil](01-estudiantes/00-curso/programa-del-curso.qmd) presenta objetivos y productos. La [guía de bitácora analítica](01-estudiantes/01-guias/guia-bitacora-analitica.qmd) explica cómo registrar decisiones y enlazarlas con versiones, ejecuciones y resultados. Los [talleres y actividades](01-estudiantes/02-actividades/README.md) conectan esa práctica con problemas causales concretos.
+
+## Reproducibilidad y juicio causal
+
+Distinguimos plausibilidad, evidencia, inferencia y causalidad. Reconstruir un cálculo permite examinar su procedencia; no valida automáticamente el diseño ni la interpretación causal. El DAG computacional y el DAG causal representan relaciones diferentes.
+
+Las actividades pueden realizarse con herramientas gratuitas y revisión por pares. El [desarrollo del ejemplo de orquestación](00-docencia/03-desarrollo/README.md) conserva su estado pendiente: organizar los documentos como libro no equivale a implementar ese flujo.
+
+## Alcance de esta edición
+
+Esta edición docente reúne el libro completo. La edición estudiantil se compila por separado con el perfil `estudiante` y contiene únicamente los materiales de aprendizaje.
+
+:::
+
+::: {.content-visible when-profile="estudiante"}
+
+# Causalidad, diseño experimental e inteligencia artificial {.unnumbered}
+
+Bienvenido al curso intensivo de nueve días. Aquí encontrarás el programa, las guías, las actividades, las lecturas y los criterios de evaluación.
+
+## Tu recorrido
+
+1. Revisa el [programa y los objetivos de aprendizaje](01-estudiantes/00-curso/programa-del-curso.qmd).
+2. Inicia tu [bitácora analítica](01-estudiantes/01-guias/guia-bitacora-analitica.qmd).
+3. Trabaja con los [talleres y actividades](01-estudiantes/02-actividades/README.md) indicados en cada sesión.
+4. Consulta las [lecturas](01-estudiantes/03-lecturas/README.md) y la [rúbrica](01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd).
+5. Prepara un análisis que otra persona pueda reconstruir siguiendo la [ficha de entrega reproducible](01-estudiantes/01-guias/ficha-entrega-reproducible.qmd).
+
+## Reproducibilidad y juicio causal
+
+Registra decisiones, versiones, datos, supuestos y ejecuciones. Distingue plausibilidad, evidencia, inferencia y causalidad: reconstruir un cálculo no demuestra por sí mismo una relación causal. El DAG computacional y el DAG causal representan relaciones diferentes.
+
+La IA es una herramienta de exploración y crítica. Puedes completar las actividades con herramientas gratuitas y revisión por pares; consulta la [guía de continuidad](01-estudiantes/01-guias/guia-continuidad-ia-free-tier.qmd).
+
+Usa el índice lateral, la búsqueda y los enlaces al pie para recorrer el libro. Las fuentes Quarto editables acompañan los capítulos para trabajar con el código de los talleres.
+
+:::

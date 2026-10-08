@@ -1,0 +1,198 @@
+---
+title: "Taller 1: experimento factorial completamente aleatorizado"
+subtitle: "Fertilización, agua e interacción en biomasa vegetal"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+execute:
+  warning: false
+  message: false
+---
+
+# Propósito
+
+Utilizar un experimento factorial \(2 \times 2\) para distinguir efectos aditivos e interacción, relacionando la asignación, el proceso generador, el modelo lineal y el alcance causal de la conclusión.
+
+**Duración sugerida:** 100 minutos.  
+**Organización:** parejas. Una persona conduce RStudio; la otra audita las decisiones. Intercambien funciones a la mitad.
+
+# Situación
+
+Queremos estudiar la biomasa seca de plántulas después de seis semanas. Manipulamos:
+
+- fertilización: `sin` y `con`;
+- disponibilidad de agua: `baja` y `alta`.
+
+Asignamos al azar una combinación a cada maceta. Cada maceta contiene una planta y constituye una unidad experimental.
+
+# 1. Pregunta causal
+
+Completa antes de ejecutar el análisis:
+
+> ¿Cuál es el efecto de __________ sobre __________ después de __________, y cómo cambia ese efecto cuando __________?
+
+Identifica:
+
+- unidad experimental:
+- tratamientos:
+- variable de respuesta:
+- población o contexto al que aspiras a referirte:
+
+# 2. Predicción previa
+
+Sin generar todavía los datos, dibuja en papel perfiles de medias para:
+
+1. efectos aditivos;
+2. sinergia: la fertilización produce un efecto mayor con agua alta;
+3. antagonismo: el efecto de fertilizar se reduce con agua alta.
+
+Escribe tu predicción para el escenario que consideras ecológicamente más plausible y explica por qué. No se calificará que coincida con la simulación.
+
+> **Predicción:** Escribe aquí.
+
+# 3. Diseño y mecanismo generador
+
+El siguiente código construye 48 macetas, 12 por combinación, y aleatoriza el orden experimental.
+
+```{r}
+set.seed(2401)
+
+diseno <- expand.grid(
+  fertilizante = c("sin", "con"),
+  agua = c("baja", "alta"),
+  replica = seq_len(12)
+)
+
+diseno <- diseno[sample(seq_len(nrow(diseno))), ]
+diseno$maceta <- seq_len(nrow(diseno))
+row.names(diseno) <- NULL
+
+head(diseno)
+with(diseno, table(fertilizante, agua))
+```
+
+Usaremos este micromundo:
+
+\[
+Y_i = 20 + 5F_i + 8A_i + 7F_iA_i + \varepsilon_i,
+\qquad \varepsilon_i \sim N(0, 4^2).
+\]
+
+`F` y `A` valen 0 o 1. Interpreta los cuatro números antes de ejecutar el bloque siguiente.
+
+- `20` representa:
+- `5` representa:
+- `8` representa:
+- `7` representa:
+
+```{r}
+F <- as.integer(diseno$fertilizante == "con")
+A <- as.integer(diseno$agua == "alta")
+
+diseno$media_verdadera <- 20 + 5 * F + 8 * A + 7 * F * A
+diseno$biomasa <- rnorm(nrow(diseno), diseno$media_verdadera, sd = 4)
+```
+
+# 4. Explorar antes de modelar
+
+```{r}
+library(ggplot2)
+
+ggplot(diseno, aes(agua, biomasa, colour = fertilizante)) +
+  geom_point(position = position_jitter(width = 0.08, height = 0, seed = 2401),
+             alpha = 0.55) +
+  stat_summary(aes(group = fertilizante), fun = mean,
+               geom = "line", linewidth = 1) +
+  stat_summary(aes(group = fertilizante), fun = mean,
+               geom = "point", size = 3) +
+  labs(x = "Disponibilidad de agua", y = "Biomasa seca",
+       colour = "Fertilización") +
+  theme_minimal(base_size = 12)
+```
+
+Antes de ajustar el modelo:
+
+- ¿qué diferencia estimas entre fertilizar y no fertilizar con agua baja?
+- ¿qué diferencia estimas con agua alta?
+- ¿las líneas paralelas serían compatibles con el mecanismo simulado?
+
+# 5. Modelo lineal
+
+Completa y ejecuta:
+
+```{r}
+#| eval: false
+modelo_factorial <- lm(________ ~ ________ * ________, data = diseno)
+summary(modelo_factorial)
+anova(modelo_factorial)
+```
+
+Después de tu intento, contrasta la fórmula con este ejemplo de apoyo:
+
+```{r}
+modelo_factorial <- lm(biomasa ~ fertilizante * agua, data = diseno)
+summary(modelo_factorial)
+```
+
+Calcula medias predichas para las cuatro combinaciones sin usar paquetes adicionales:
+
+```{r}
+nuevos <- expand.grid(
+  fertilizante = c("sin", "con"),
+  agua = c("baja", "alta")
+)
+
+pred <- predict(modelo_factorial, newdata = nuevos, interval = "confidence")
+cbind(nuevos, round(pred, 2))
+```
+
+# 6. Intervenir en el micromundo
+
+Elige una modificación:
+
+- reemplaza `7` por `0` para producir aditividad;
+- reemplaza `7` por `-7` para producir antagonismo;
+- aumenta `sd = 4` a `sd = 9` sin cambiar los efectos;
+- reduce las réplicas de 12 a 4.
+
+Antes de ejecutar, escribe qué resultado esperas que cambie y qué parte del proceso causal permanece igual.
+
+> **Predicción de la intervención:** Escribe aquí.
+
+Vuelve a generar los datos, la gráfica y el modelo. Describe si ocurrió lo esperado.
+
+# 7. Interpretación
+
+Redacta un párrafo que responda:
+
+1. ¿qué efecto de fertilización estás interpretando?;
+2. ¿por qué no basta con informar un único “efecto principal” si hay interacción?;
+3. ¿qué papel cumple la aleatorización en la interpretación causal?;
+4. ¿qué parte del resultado se debe al azar de esta realización?
+
+> **Interpretación:** Escribe aquí.
+
+# 8. Límites y transferencia
+
+La simulación conoce el mecanismo generador. Un experimento real no.
+
+- menciona una amenaza de implementación o medición ausente del micromundo;
+- explica qué población de plantas no queda representada automáticamente;
+- formula una posible interacción relevante para tu propio proyecto.
+
+> **Límite principal:** Escribe aquí.
+
+# Minirreporte
+
+Prepara una versión de lectura en HTML siguiendo la [pauta común](README.md). Conserva las fuentes ejecutables en tu proyecto y selecciona para el informe:
+
+1. pregunta causal;
+2. predicción previa;
+3. diseño y unidades;
+4. un resultado principal y sus valores de comprobación; puedes acompañarlo de una gráfica o tabla complementaria;
+5. interpretación causal;
+6. límites y transferencia.
+
+No agregues portada, índice adicional ni decoración. El objetivo es que otra persona pueda reconstruir tu argumento y ejecutar tu análisis.

@@ -1,0 +1,13 @@
+---
+title: "Antecedentes del curso"
+---
+
+# Exportaciones de participación
+
+Estas exportaciones de Vevox son insumos para revisar la experiencia anterior del curso. Se conservan como archivos de trabajo docente, no como datos de los análisis que se entregan a estudiantes.
+
+- [Bienvenida](vevox/2026-m3-bienvenida_2026-02-07_12-00-0600.xlsx).
+- [Epistemología](vevox/2026-m3-epistemología_2026-01-31_12-59-0600.xlsx).
+- [Prueba estadística de hipótesis](vevox/2026-m3-Prueba_estadística_de_hipótesis_2026-01-27_15-41-0600.xlsx).
+
+Las [lecturas del curso](../../01-estudiantes/03-lecturas/README.md) están organizadas en el paquete estudiantil. Los [documentos históricos y respaldos](../99-archivo/README.md) permanecen en el archivo docente.

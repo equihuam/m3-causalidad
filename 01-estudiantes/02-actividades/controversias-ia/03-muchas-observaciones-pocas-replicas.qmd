@@ -1,0 +1,162 @@
+---
+title: "Controversia 3: muchas observaciones, pocas réplicas"
+subtitle: "Pseudorreplicación y seguridad artificial"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito
+
+Identificar la unidad experimental a partir de la asignación y evaluar una respuesta de IA que confunde cantidad de observaciones con cantidad de réplicas independientes.
+
+**Duración sugerida:** 70 minutos.  
+**Organización:** parejas.  
+**Nivel:** después de distinguir unidad experimental y unidad de observación; parcela dividida es un apoyo opcional.
+
+# Situación
+
+Un equipo estudia el efecto de iluminación nocturna sobre actividad de insectos.
+
+# Miniprotocolo
+
+Se seleccionaron cuatro sitios:
+
+- dos sitios recibieron iluminación nocturna;
+- dos permanecieron oscuros;
+- en cada sitio se colocaron diez trampas;
+- las trampas se revisaron durante siete noches;
+- la base contiene 280 registros: \(4 \times 10 \times 7\).
+
+La iluminación se aplicó al sitio completo durante todo el estudio.
+
+# Respuesta prefabricada de IA
+
+> El estudio cuenta con un tamaño de muestra considerable de 280 observaciones, lo que debería proporcionar buena potencia para detectar el efecto de la iluminación. Puede ajustarse un modelo con actividad como respuesta e iluminación como predictor, incorporando noche y trampa como covariables o efectos aleatorios para controlar la variación repetida. Debido a que hay 140 observaciones iluminadas y 140 oscuras, los grupos están balanceados. Si el efecto de iluminación resulta significativo después de controlar por noche y trampa, puede concluirse que la luz modifica la actividad de los insectos.
+
+Esta respuesta fue construida para el ejercicio.
+
+# Ronda 1 — Inventario de cantidades
+
+Sin discutir todavía el modelo, completen:
+
+- número de filas:
+- número de mediciones:
+- número de trampas:
+- número de noches:
+- número de sitios:
+- número de asignaciones independientes de iluminación:
+- unidad que recibió el tratamiento:
+- unidad donde se observó la respuesta:
+
+¿Cuáles de estas cantidades utiliza la respuesta de IA como si fueran equivalentes?
+
+# Ronda 2 — Defensa y auditoría
+
+## Defensa de la respuesta
+
+Una persona explica por qué 280 observaciones contienen información real y por qué no deberían descartarse.
+
+## Auditoría
+
+La otra explica por qué esas observaciones no crean 280 réplicas del tratamiento.
+
+Intercambien papeles. La conclusión conjunta debe conservar ambas ideas.
+
+# Ronda 3 — Estructura causal y jerárquica
+
+Dibujen:
+
+```text
+iluminación asignada al sitio
+└── trampas dentro del sitio
+    └── mediciones repetidas por noche
+```
+
+Identifiquen factores no observados que podrían diferir entre los cuatro sitios y producir actividad diferente aunque la luz no tuviera efecto.
+
+¿Un efecto aleatorio de sitio crea nuevas réplicas de iluminación? Expliquen.
+
+# Escenario A — Asignación sin aleatorizar
+
+> El equipo eligió para iluminación los dos sitios próximos al camino, que también tenían menor cobertura de dosel. Los otros dos quedaron oscuros. No hubo asignación aleatoria.
+
+- ¿qué problema introduce esta información?;
+- ¿puede separarse estadísticamente el efecto de iluminación del tipo de sitio con sólo esta asignación?;
+- ¿qué parte de la respuesta de IA resulta ahora más débil?
+
+**Confianza en una conclusión causal:** ____ / 100.
+
+# Escenario B — Diseño alternativo con pares
+
+Este escenario sustituye al A: compara dos protocolos posibles, no dos relatos acumulativos del mismo experimento.
+
+> La iluminación se asignó lanzando una moneda dentro de cada uno de dos pares de sitios previamente emparejados por cobertura, distancia al camino y composición vegetal. En cada par, un sitio recibió luz y otro oscuridad.
+
+- ¿qué mejora?;
+- ¿cuántos sitios, sitios por tratamiento y decisiones aleatorias dentro de pares hay?;
+- ¿qué limita todavía la precisión y la generalización?;
+- actualicen su confianza.
+
+**Confianza después de B:** ____ / 100.
+
+# Ronda 4 — Evaluar modelos propuestos
+
+Clasifiquen cada propuesta:
+
+```r
+lm(actividad ~ iluminacion, data = datos)
+```
+
+```r
+lme(actividad ~ iluminacion,
+    random = ~ 1 | sitio/trampa,
+    data = datos)
+```
+
+```r
+lme(actividad ~ iluminacion + noche,
+    random = ~ 1 | par/sitio/trampa,
+    data = datos)
+```
+
+Para cada una pregunten:
+
+1. ¿qué dependencia representa?;
+2. ¿qué aspecto del diseño no puede reparar?;
+3. ¿cuál sería compatible con la información A?;
+4. ¿cuál sería compatible con la información B?;
+5. ¿qué incertidumbre debería dominar la inferencia sobre iluminación?
+
+Son esquemas conceptuales, no modelos listos para adoptar. Con sólo dos pares, estimar una varianza aleatoria de par es especialmente limitado; también hay que justificar la estructura temporal y la distribución de la respuesta. No es necesario ejecutar los modelos para responder.
+
+# Corregir la respuesta de IA
+
+Redacten una respuesta alternativa de 120 palabras como máximo. Debe incluir:
+
+- por qué 280 observaciones sí son útiles;
+- por qué no son 280 réplicas independientes;
+- cuál es la unidad experimental;
+- qué papel puede cumplir un modelo mixto;
+- qué no puede corregir el modelo;
+- qué conclusión permitiría cada versión de la asignación.
+
+# Diseño siguiente
+
+Propongan una mejora realista:
+
+- número o selección de sitios;
+- estrategia de asignación;
+- uso de pares o bloques;
+- duración y número de trampas;
+- población a la que se desea generalizar.
+
+Expliquen qué recurso invertirían primero si el presupuesto fuera limitado. Más trampas, más noches y más sitios no resuelven el mismo problema.
+
+# Cierre individual
+
+Completa:
+
+> Antes confundía __________ con __________. Ahora entiendo que la réplica del tratamiento se determina por __________. Un modelo mixto puede __________, pero no puede __________.

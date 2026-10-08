@@ -1,0 +1,226 @@
+---
+title: "Bitácora de decisiones de diseño del curso"
+subtitle: "Registro del responsable del curso: decisiones, motivos y evolución"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito y autoría
+
+Esta es la **bitácora del responsable del curso**. Registra las decisiones que toma al rediseñar los nueve días: qué conserva, qué cambia, por qué y con qué consecuencias para materiales y evaluación. Se mantiene el nombre de archivo `bitacora-maestra.qmd` para conservar la continuidad de las referencias del proyecto.
+
+El asistente puede redactar y mantener el registro, pero no atribuir sus propias propuestas al responsable del curso. Cada entrada distingue **quién decide**, **quién registra**, **fuente de la decisión** y **estado**. Una modificación de archivos realizada por el asistente demuestra implementación, no aceptación de todos sus detalles pedagógicos.
+
+La bitácora que llevan los alumnos tiene otra función y ubicación: [guía y plantilla de bitácora analítica del estudiante](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd). No se escriben reflexiones estudiantiles ni registros de ejecución de alumnos en este archivo.
+
+# Cómo mantener este registro
+
+Registrar cuando el responsable del curso adopte, revise o descarte un objetivo, contenido, secuencia, actividad, criterio de evaluación o decisión tecnológica. Conservar el motivo, la alternativa considerada cuando esté disponible y los documentos afectados. No inventar retrospectivamente motivos o fechas: señalar «no documentado» si faltan.
+
+Estados de decisión: **adoptada**, **propuesta**, **en revisión**, **descartada** o **antecedente sin confirmación documentada**. El estado de implementación es independiente: pendiente, parcial o implementada. Una decisión adoptada puede estar pendiente de ejecución; una propuesta puede estar incorporada en un borrador y seguir siendo propuesta.
+
+Las correcciones se agregan con fecha y referencia a la entrada anterior; no se borra la evolución. `decisiones-y-evolucion-del-curso.qmd` funciona como síntesis temática y enlaza esta bitácora, no como un segundo registro cronológico autónomo.
+
+```markdown
+## DC-AAAAMMDD-01 — Fecha — Tema
+**Decide:** responsable del curso / todavía sin decisión.
+**Registra:** persona o asistente que redacta la entrada.
+**Fuente:** instrucción, reunión o documento; cita breve o referencia recuperable.
+**Estado de decisión:**
+**Situación y alternativas:**
+**Decisión o propuesta concreta:**
+**Motivo expresado / fundamento:** distinguir lo dicho de una interpretación del asistente.
+**Consecuencias y documentos afectados:**
+**Estado de implementación:**
+**Revisión de entrada anterior / pendientes:**
+```
+
+# Decisiones con fuente explícita en la conversación actual
+
+## DC-20260910-01 — 2026-09-10 — Priorizar reproducibilidad en los nueve días
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «vamos a revisar la propuesta que tenemos para los 9 días y agreguemos esta competencia en forma adecuada. El énfasis será reproducibilidad».
+
+**Estado de decisión:** adoptada para el énfasis y la integración de la competencia.
+
+**Decisión:** revisar el proyecto e incorporar la reproducibilidad a la propuesta de nueve días.
+
+**Motivo expresado:** formar estudiantes capaces de formular procesos analíticos reproducibles. Se retoma la conversación sobre flujos existentes y apoyo de agentes de IA.
+
+**Implementación:** se modificaron programa, objetivos y materiales; el ejemplo ejecutable sigue pendiente. La progresión detallada, los 250 minutos y la ponderación del 15 % fueron elaborados por el asistente como propuesta curricular, no confirmados expresamente por el responsable del curso.
+
+## DC-20260910-02 — 2026-09-10 — Separar las dos bitácoras
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Bitácora mía sobre decisiones de diseño del curso» y «Llevar una bitácora de apoyo a la reproducibilidad como competencia que aprendan los alumnos. Hay que hacer explícito como lo deben hacer los alumnos».
+
+**Estado de decisión:** adoptada.
+
+**Situación:** este archivo mezclaba una guía para alumnos con entradas de diseño del curso. La entrada previa sobre reproducibilidad tampoco separaba el acuerdo general de los detalles propuestos por el asistente.
+
+**Decisión:** reservar este archivo a decisiones del responsable del curso y crear instrucciones propias para la bitácora analítica del estudiante.
+
+**Motivo expresado:** asegurar que se distingan ambos usos y explicitar cómo deben llevarla los alumnos.
+
+**Implementación:** se separaron documentos, se creó una guía con plantilla, ejemplo y registro técnico enlazado, y se actualizaron las referencias del programa, actividades, ficha y rúbrica. La organización concreta de la guía es una implementación del asistente de esta instrucción y puede revisarse.
+
+**Preservación:** la versión mixta completa se conserva en [el archivo histórico](../99-archivo/bitacora-mixta-antes-separacion-2026-09-10.qmd); sus instrucciones estudiantiles están sustituidas por la guía actual. Las entradas históricas de diseño se conservan debajo sin atribuirles una aprobación nueva.
+
+## DC-20260910-03 — 2026-09-10 — Organizar el proyecto por destinatario
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Debe haber un conjunto de carpetas mías y para los instructores» con reflexiones y decisiones pedagógicas y didácticas, y «El otro paquete debe contener todo lo que se le entregará directamente a los estudiantes».
+
+**Estado de decisión:** adoptada para la separación por destinatario.
+
+**Motivo expresado:** mejorar comprensión y usabilidad del proyecto.
+
+**Implementación del asistente:** `00-docencia/` y `01-estudiantes/`, con índices propios. Docencia conserva diseño, decisiones, facilitación, desarrollo y antecedentes. Estudiantes reúne programa y objetivos, guías, actividades, lecturas y evaluación. Se separaron orientaciones internas de la rúbrica y de la auditoría, conservando respaldo y trazabilidad de las fuentes.
+
+**Alcance:** la organización de carpetas no cambia permisos de acceso ni adopta nuevos pesos de evaluación. El ejemplo Snakemake continúa pendiente de desarrollo y no se presenta como entregable disponible.
+
+**Documentación:** [mapa de migración](migracion-estructura-2026-09-10.md) y [estructura canónica](../../README.md). La nomenclatura concreta y la distribución de subcarpetas son decisiones de implementación del asistente al ejecutar la instrucción.
+
+## DC-20260911-01 — 2026-09-11 — Organizar el proyecto como libro Quarto
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Quiero habilitar que todo este proyecto se organice como un libro Quarto», con configuración, `index.qmd` general y documentos en sus secciones; el proyecto de RStudio ya existe.
+
+**Estado de decisión:** adoptada.
+
+**Implementación:** transformar `_quarto.yml` de configuración inicial a libro HTML, crear `index.qmd`, organizar dos partes por destinatario e incorporar los documentos activos y los índices Markdown. Las lecturas y antecedentes binarios son recursos, y las fuentes históricas permanecen identificadas como archivo. La salida se genera en `_book/` y el archivo RStudio existente se conserva.
+
+**Criterio de uso:** edición integral para trabajar sobre el curso; no se presenta como entrega exclusivamente estudiantil. La organización de las fuentes por destinatario permanece vigente. No se modifican objetivos ni ponderaciones.
+
+**Preservación:** copia del YAML anterior en `00-docencia/99-archivo/quarto-antes-libro-2026-09-11.yml`. Las opciones de formato HTML y orden de capítulos son decisiones de implementación del asistente.
+
+# Propuestas curriculares pendientes de decisión explícita
+
+## PC-20260910-01 — Detalles de la integración de reproducibilidad
+
+**Propone y registra:** asistente. **Decide:** responsable del curso; decisión específica todavía no registrada.
+
+**Estado de decisión:** propuesta incorporada al borrador de trabajo.
+
+Incluye 250 minutos distribuidos, 15 % de reproducibilidad y redistribución de otros pesos, factorial como caso común y condiciones del piloto Snakemake con alternativa docente `targets`. El interés del responsable del curso en Snakemake está expresado en la conversación; no se infiere por ello aprobación de cada detalle de implementación.
+
+**Documentos:** [competencia](../01-diseno-curso/competencia-reproducibilidad-analitica.qmd), [programa](../01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd) y [rúbrica](../01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.qmd).
+
+**Aclaración de la entrada histórica del 2026-09-10:** sus apartados «Evaluación» y «Carga» describen lo que el asistente incorporó; deben leerse con este estado de propuesta. Se conservan para no borrar el rastro del cambio.
+
+# Antecedentes de diseño preservados
+
+Las entradas siguientes proceden del archivo anterior. Conservan redacción y fechas históricas. En esta revisión no se dispone de la instrucción original que confirme individualmente todas las decisiones de agosto: se mantienen como **antecedentes sin confirmación documentada en esta conversación**, no se niegan ni se reafirman retrospectivamente. Para septiembre prevalecen las precisiones de autoría y estado anteriores.
+
+## 2026-08-25 — Maduración de la guía de continuidad en modalidad gratuita
+
+**Situación inicial:** La guía para trabajar con IA sin salir del *free tier* se encontraba en `01-estudiantes/02-actividades`, aunque funcionaba como material de consulta y no como actividad. Conservaba referencias internas de una conversación y combinaba principios estables con datos volátiles sobre proveedores.
+
+**Decisión:** Reubicarla en `01-estudiantes/01-guias` con el nombre `guia-continuidad-ia-free-tier.qmd` y reformularla como guía de continuidad tecnológica para estudiantes.
+
+**Justificación:** El propósito pedagógico no es enseñar a maximizar una cuota particular, sino conservar el control y la trazabilidad del trabajo cuando cambia un chat, modelo o plataforma. La guía distingue ahora entre paquete de continuidad y bitácora maestra, incorpora la vía sin IA y evita depender de cifras que cambian con el tiempo.
+
+**Pendiente relacionado:** Desarrollar por separado una matriz actualizable de capacidades y límites prácticos de las plataformas gratuitas que se decida utilizar durante el curso.
+
+## 2026-08-25 — Primera formulación del mapa temático de nueve días
+
+**Situación inicial:** El repositorio contenía el marco epistemológico, los objetivos generales, una actividad de auditoría y una rúbrica, pero no una progresión que conectara esos componentes en una experiencia de aprendizaje realizable.
+
+**Decisión:** Elaborar `00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd` como puente entre el marco conceptual y el futuro calendario detallado.
+
+**Criterio organizador:** Mantener el proyecto del estudiante como columna vertebral y recorrer de manera acumulativa pregunta, contrafactual, representación causal, identificación, diseño, análisis, auditoría e integración.
+
+**Consecuencia didáctica:** La relación entre generación de posibilidades, plausibilidad, evidencia e inferencia no constituye un módulo aislado. Reaparece en cada jornada y determina el uso de IA, las actividades de contraste y los cierres de bitácora.
+
+**Pendiente:** Revisar colaborativamente la carga y las prioridades de cada jornada antes de convertir este mapa en programación horaria y materiales para estudiantes.
+
+## 2026-08-25 — Alcance estadístico y rediseño de los talleres en RStudio
+
+**Evidencia revisada:** Sitio del curso 2026, presentaciones publicadas, talleres de diseños completamente aleatorizados, DAG, efectos mixtos y medidas repetidas, tres lecturas y exportaciones de las intervenciones Vevox.
+
+**Diagnóstico:** Los materiales anteriores contienen una base conceptual y técnica valiosa, pero la extensión de la presentación epistemológica y las secuencias largas de código resuelto pueden desplazar decisiones que debería tomar el estudiante. Vevox produce participación, aunque conviene usarlo con mayor selectividad para predicciones, decisiones bajo supuestos y revisión de confianza.
+
+**Decisión de alcance:** Concentrar la práctica estadística en el modelo lineal normal, con una introducción acotada a modelos lineales mixtos y apoyo de `dagitty`. Utilizar ejemplos y simulaciones de diseños ecológicos completamente aleatorizados, factoriales, bloques, parcela dividida y medidas repetidas. Excluir como núcleo los casos multivariados y métodos de *machine learning*.
+
+**Decisión didáctica:** Organizar los talleres como ciclos de plantear, predecir, intervenir, observar, explicar y transferir. Las simulaciones se presentarán como micromundos controlados que permiten conocer el mecanismo generador sin confundirlo con el funcionamiento del sistema real.
+
+**Documento resultante:** `00-docencia/01-diseno-curso/arquitectura-actividades-rstudio.qmd`.
+
+**Siguiente paso:** Desarrollar tres prototipos detallados —factorial completamente aleatorizado, bloques y parcela dividida— antes de completar toda la serie.
+
+## 2026-08-25 — Minirreportes Quarto como parte de los prototipos
+
+**Duda didáctica:** Incorporar un reporte Quarto en cada taller puede conectar código, resultados y argumento, pero también puede distraer si exige aprender simultáneamente demasiadas decisiones de formato.
+
+**Decisión provisional:** Probar una plantilla breve e idéntica en los tres prototipos. El estudiante no crea el documento desde cero: completa seis componentes —pregunta, predicción, diseño, resultado, interpretación y límite— y renderiza un HTML autocontenido.
+
+**Criterio de evaluación:** No evaluar decoración, complejidad técnica ni cantidad de código. Observar si el formato mejora la reconstrucción de la cadena pregunta–diseño–modelo–evidencia–inferencia y cuánto tiempo técnico consume.
+
+**Implementación:** Se crearon tres actividades en `01-estudiantes/02-actividades/talleres-rstudio/` y una guía docente con pistas, resultados esperados y criterios para decidir posteriormente si Quarto debe mantenerse como formato acumulativo.
+
+## 2026-08-25 — Prototipos de controversias con respuestas prefabricadas de IA
+
+**Necesidad identificada:** Los talleres en RStudio desarrollan práctica de diseño y análisis, pero no bastan para alimentar progresivamente la capacidad de debatir respuestas de IA antes de aplicarla al proyecto propio.
+
+**Decisión:** Crear una hebra paralela de expedientes breves con situación, pregunta, miniprotocolo, respuesta prefabricada de IA e información revelada por etapas. La consulta en vivo queda como extensión posterior, no como requisito.
+
+**Prototipos:** Germinación e inferencia causal; ajuste de todas las variables; y pseudorreplicación con muchas observaciones y pocas asignaciones independientes.
+
+**Estructura didáctica:** Trabajo en parejas con defensa y auditoría, intercambio de papeles, actualización explícita de confianza y reformulación conjunta.
+
+**Propósito:** Practicar en casos ajenos y protegidos antes de auditar el texto inicial y el proyecto propio.
+
+**Ubicación:** `01-estudiantes/02-actividades/controversias-ia/`.
+
+**Pendiente:** Probar duración, riqueza de la discusión y dificultad antes de integrar definitivamente los expedientes al calendario de nueve días.
+
+## 2026-08-25 — Introducción a Dagitty mediante interfaz web y RStudio
+
+**Duda inicial:** Elegir entre Dagitty en línea o el paquete de R para una primera actividad.
+
+**Decisión:** Utilizar ambas interfaces con funciones distintas. Comenzar visualmente en la web y transportar el mismo DAG como texto a RStudio y Quarto. Mantener rutas alternativas sólo web y sólo R para asegurar continuidad.
+
+**Justificación:** La interfaz web reduce la carga de sintaxis durante el primer contacto; RStudio aporta reproducibilidad, comparación de modelos y trazabilidad. La transferencia entre ambas hace visible que el DAG es un argumento transportable y no un dibujo dependiente de una plataforma.
+
+**Actividad:** `01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.qmd`.
+
+## 2026-09-10 — Reproducibilidad analítica como competencia transversal
+
+**Evidencia revisada:** Estructura completa del repositorio, planificación, rúbrica, arquitectura RStudio, prototipos, controversias y guía de continuidad. Se identificaron títulos y resúmenes de las tres lecturas y estructura y preguntas de resumen de las tres exportaciones Vevox. Las carpetas de materiales docentes, estudiantes y ejemplos estaban vacías. Los archivos existentes aparecían sin seguimiento en Git; no se hicieron commits ni se sustituyeron los antecedentes.
+
+**Diagnóstico:** La trazabilidad epistemológica está desarrollada, pero la reproducibilidad computacional estaba concentrada en el día 7 y carecía de un producto y un criterio de evaluación propios. Los Quarto con semillas ofrecen una base, pero no prueban reconstrucción independiente.
+
+**Decisión:** Integrar una progresión en los nueve días, desde versiones y configuración hasta dependencias, ejecución y auditoría por pares. Conservar RStudio y Quarto; utilizar Snakemake en un piloto pequeño con scripts de R y sin motor propio. `targets` permanece como alternativa docente si la fricción del entorno impide el objetivo; no se enseñarán ambos simultáneamente.
+
+**Evaluación:** Incorporar 15 % para reproducibilidad analítica, restando cinco puntos a pregunta, diseño y uso de IA. Conservar reflexión (15 %), trazabilidad (10 %) y evidencia (15 %). No exigir datos propios ni acceso a IA paga; aceptar un micromundo explícitamente identificado como demostración.
+
+**Carga:** 250 minutos orientativos distribuidos dentro de prácticas y cierres existentes, sin añadir un décimo día. Reducir demostraciones repetidas y variaciones de formato. Los tiempos requieren piloto.
+
+**Distinción central:** El DAG causal, el DAG computacional y el mapa inferencial expresan relaciones distintas. Reconstruir un resultado no establece causalidad.
+
+**Materiales:** Nueva competencia e inventario por carpeta, ficha estudiantil y actividad de auditoría; actualización de objetivos, secuencia, arquitectura, evaluación y conexiones con guías existentes.
+
+**Pendiente de implementación:** Construir y probar el ejemplo ejecutable en `00-docencia/03-desarrollo/`, incluyendo Snakefile, scripts, configuración, entorno restaurable, resultados de referencia y pruebas de cambio. La revisión curricular no certifica todavía ese flujo.
+
+
+## 2026-09-11 — DC-20260911-02: dos ediciones mediante perfiles Quarto
+
+**Quién decide:** Responsable del curso (usuario).
+
+**Fuente:** Solicitud explícita de dos ediciones, docente completa y estudiantil con lo necesario para las actividades, mediante Quarto project profiles.
+
+**Estado:** Decisión adoptada; configuración implementada por el asistente.
+
+**Decisión:** Generar dos libros a partir de las mismas fuentes: edición docente completa y edición estudiantil con programa, guías, actividades, lecturas y evaluación.
+
+**Implementación del asistente:** Perfiles `docente` y `estudiante`, capítulos y recursos separados, portada condicionada por perfil y salidas `_book/docente/` y `_book/estudiante/`. Docente es el perfil predeterminado. El proyecto RStudio se conserva. La entrega estudiantil utiliza su salida completa, sin contenido docente, antecedentes ni respaldos.
+
+**Alcance:** Cambia la publicación y distribución; no modifica objetivos, actividades ni evaluación. Configuración anterior preservada en `00-docencia/99-archivo/quarto-antes-perfiles-2026-09-11.yml`.

@@ -1,0 +1,61 @@
+---
+title: "Arquitectura de actividades y talleres en RStudio"
+subtitle: "Práctica causal con modelos lineales, simulación y diseños ecológicos"
+format:
+  html:
+    toc: true
+lang: es
+---
+
+# Función de los talleres
+
+Los talleres conectan historia causal, diseño, mecanismo generador, modelo e interpretación. RStudio permite explorar micromundos en los que los parámetros se conocen por construcción. El estudiante predice, modifica una decisión, comprueba sus consecuencias y explica qué puede transferir a su proyecto.
+
+La [secuencia docente](contenido-tematico-y-experiencia-de-aprendizaje.qmd) determina el lugar de cada práctica. Este capítulo orienta su selección y desarrollo; las pistas y resultados esperados están en la [guía de facilitación](../02-guias-instructores/guia-docente-prototipos.qmd).
+
+# Alcance disponible y extensiones
+
+El núcleo utiliza modelos lineales normales, factores, interacciones, contrastes y relación entre diseño y unidad experimental. El taller de parcela dividida introduce efectos mixtos con `nlme::lme`. `dagitty` apoya la representación causal. No se requiere otro repertorio de software para ejecutar los talleres actuales.
+
+| Material disponible | Problema que permite trabajar | Uso propuesto |
+|---|---|---|
+| [Introducción a Dagitty](../../01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.qmd) | Consecuencias de supuestos causales explícitos | Día 3, con transferencia al ajuste del día 4 |
+| [Factorial](../../01-estudiantes/02-actividades/talleres-rstudio/01-factorial-completamente-aleatorizado.qmd) | Interacción y contraste entre tratamientos | Caso computacional acumulativo de días 5–7 |
+| [Bloques](../../01-estudiantes/02-actividades/talleres-rstudio/02-bloques-aleatorizados.qmd) | Aleatorización restringida y precisión | Extensión según necesidades del grupo |
+| [Parcela dividida](../../01-estudiantes/02-actividades/talleres-rstudio/03-parcela-dividida.qmd) | Unidades de asignación y dependencia | Extensión; contraste posible en la auditoría |
+
+Las duraciones de cada taller corresponden a la actividad completa; no se suman automáticamente al programa ni obligan a impartir todos. La introducción de medidas repetidas, un taller de DAG con simulación y un integrador experimental siguen siendo posibilidades de desarrollo. No se presentan como materiales terminados ni como cobertura obligatoria de nueve días.
+
+# Ciclo de trabajo
+
+1. **Plantear:** identificar pregunta, unidades, tratamiento, resultado y comparación.
+2. **Predecir:** anticipar un patrón, estimación o consecuencia antes de ver la salida.
+3. **Intervenir:** modificar un parámetro, mecanismo o decisión analítica identificados.
+4. **Observar y explicar:** ejecutar, contrastar con la predicción y relacionar el resultado con el diseño.
+5. **Transferir:** justificar qué cambia en el proyecto propio y qué límite conserva el micromundo.
+
+Se ofrecen pistas conceptuales, después una estructura de código y finalmente un ejemplo comentado. Los bloques resueltos de los talleres sirven como andamiaje; se consultan después del intento. La comprensión se observa en la decisión y su interpretación, no en copiar una fórmula.
+
+# Minirreporte y reconstrucción
+
+Los talleres de análisis comparten seis apartados: pregunta, predicción, diseño y unidades, resultado, interpretación y límites. La [pauta estudiantil](../../01-estudiantes/02-actividades/talleres-rstudio/README.md) define la entrega común. Dagitty adapta esa estructura a una salida gráfica o textual.
+
+El archivo de trabajo conserva código, configuración y notas. El minirreporte selecciona el argumento que se comunica, sin borrar las fuentes necesarias para reconstruirlo. Para el anexo final se elige un resultado principal y se enlaza la ficha; no se crea una ficha completa por cada ejercicio.
+
+El factorial permite practicar semillas, versiones y reconstrucción desde una sesión nueva. En bloques se comparan modelos sobre los mismos datos. En parcela dividida se distingue un cálculo ejecutable de una representación adecuada de las unidades. El futuro piloto de orquestación separará generación, validación, estimación e informe conforme a la [competencia transversal](competencia-reproducibilidad-analitica.qmd).
+
+# Lecturas y discusión
+
+Las [tres lecturas](../../01-estudiantes/03-lecturas/README.md) tienen consignas estudiantiles únicas. El docente las recupera para conectar transparencia de los DAG, contexto del conocimiento y límites de la modelización con una decisión concreta. Se evita sumar un resumen general de cada lectura al proyecto acumulativo.
+
+Las [controversias](../02-guias-instructores/guia-docente-controversias.qmd) complementan los talleres: permiten examinar una respuesta común, defenderla, objetarla y actualizar confianza. La consulta en vivo a IA es una extensión, no un prerrequisito.
+
+Vevox puede recoger predicciones, decisiones bajo supuestos o revisión de confianza. Una votación en papel o discusión por parejas cumple la misma función. Los archivos históricos de participación no acreditan por sí solos la eficacia del rediseño.
+
+# Acompañamiento y piloto didáctico
+
+El docente protege la simplicidad del caso, recoge predicciones, observa errores compartidos y consolida la explicación después del intento. La demostración breve y las pistas graduadas sostienen diferencias de experiencia en R.
+
+Durante el piloto se registran tiempo hasta la primera predicción, bloqueos técnicos, pistas utilizadas y capacidad de conectar resultado e inferencia. Si el formato documental consume la sesión, se conserva la estructura argumental y se proporciona apoyo para la reconstrucción en un entorno preparado.
+
+La exposición epistemológica funciona como introducción breve y cápsulas vinculadas a problemas, no como una segunda secuencia completa paralela al curso. Las propuestas históricas más extensas se conservan en los respaldos de diseño. La prioridad de desarrollo es probar un flujo pequeño antes de ampliar la serie de talleres.

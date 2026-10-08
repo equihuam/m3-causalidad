@@ -1,0 +1,164 @@
+---
+title: "Cómo llevar tu bitácora analítica"
+subtitle: "Decisiones, ejecuciones y evidencia para un análisis reproducible"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Qué vas a aprender
+
+Llevarás una **bitácora analítica del estudiante** para que tú y otra persona puedan reconstruir qué decidiste, por qué, qué ejecutaste y qué resultado respalda tu interpretación. También conservarás cómo cambió tu pregunta y tu confianza. La bitácora apoya la reproducibilidad: no reemplaza datos, código ni entorno.
+
+Esta bitácora pertenece a tu proyecto de aprendizaje y se entrega junto con tu trabajo.
+
+# Dónde y quién escribe
+
+Desde el día 1 crea `bitacora-analitica.qmd` o `bitacora-analitica.md` en la raíz de **tu carpeta de proyecto**. Utiliza texto y rutas relativas; no necesitas una cuenta de pago, un agente ni una aplicación especial.
+
+Si trabajan en equipo, pueden mantener una sola bitácora del análisis compartido: cada entrada identifica autor y revisor. Cada estudiante conserva su pregunta inicial y su reflexión individual, enlazando las decisiones compartidas que le conciernen. El papel de autor y revisor se alterna.
+
+Una organización mínima posible es:
+
+```text
+mi-proyecto/
+  README.md
+  bitacora-analitica.qmd
+  datos/
+  codigo/
+  config/
+  entorno/
+  resultados/
+  registros/
+  informe.qmd
+```
+
+Es una convención, no una estructura que debas reproducir si ya tienes otra clara. Conserva estos archivos en tu proyecto de trabajo.
+
+# Cuándo registrar
+
+| Momento | Qué dejas por escrito |
+|---|---|
+| Antes del primer análisis | Pregunta inicial, supuestos, datos o mecanismo de simulación, versión de partida y resultado que buscas |
+| Antes de cambiar algo sustantivo | Cambio propuesto, razón, alternativa y predicción de sus consecuencias |
+| Después de ejecutarlo | Identificador de ejecución, evidencia obtenida, diferencia respecto de la predicción y decisión |
+| Ante un fallo que impide reconstruir | Paso que falló, mensaje o registro, diagnóstico, reparación y nueva prueba |
+| Ante evidencia o crítica relevante | Afirmación examinada, fuente o contraste, estatus y cambio de confianza |
+| Al recibir revisión por pares | Qué logró reconstruir el otro equipo, qué ayuda necesitó y qué se corrigió |
+
+Reserva aproximadamente cinco minutos del cierre ya previsto para revisar si hubo algo relevante. No es obligatorio inventar una decisión cada día. Si no cambió nada, no necesitas una entrada narrativa nueva. Sí conserva un registro técnico de cada ejecución usada como evidencia o entrega, aunque la decisión se mantenga.
+
+No registres cada clic, cada comando exploratorio ni todo el chat. Registra una modificación de datos, exclusiones, fórmula, semilla, entorno o dependencias cuando afecte un resultado que conservarás. Una corrección técnica puede ser esencial para reproducir aunque no cambie la conclusión causal.
+
+# Tres piezas conectadas
+
+| Pieza | Pregunta que responde | Contenido |
+|---|---|---|
+| Entrada de bitácora | ¿Por qué decidimos esto y qué aprendimos? | Predicción, alternativas, evidencia, decisión y límites |
+| Registro de ejecución | ¿Con qué se obtuvo este resultado y cómo repetirlo? | Versiones, entradas, parámetros, entorno, comando, estado y salidas |
+| Ficha de entrega | ¿Dónde está lo necesario para reconstruir la versión final? | Índice e instrucciones para el revisor; enlaces a las dos piezas anteriores |
+
+Usa identificadores sencillos: `B-001` para entradas y `E-001` para ejecuciones. Una entrada puede enlazar varias ejecuciones y una ejecución puede informar varias decisiones. Evita copiar una misma configuración en distintos lugares: enlaza el archivo y su versión.
+
+# Plantilla de entrada: copiar y completar
+
+```markdown
+## B-001 — AAAA-MM-DD — Título de la decisión
+
+**Autor / revisor:**
+**Pregunta o afirmación examinada:**
+**Versión de partida:** commit o paquete identificado.
+**Qué suponíamos y con qué confianza:**
+**Cambio propuesto, razón y alternativa:**
+**Predicción ANTES de ejecutar o consultar resultados:**
+
+**Ejecuciones y evidencia:** E-001; enlaces a registro, tabla, figura o fuente.
+**Qué ocurrió DESPUÉS:**
+**Interpretación y límite causal:** distinguir plausibilidad, evidencia e inferencia.
+**Decisión y estado:** propuesta / probada / adoptada / descartada / pendiente.
+**Confianza posterior y justificación:** puede mantenerse; no exige un número.
+**Uso de IA y comprobación humana:** o «sin IA».
+**Siguiente paso / relación con otra entrada:**
+```
+
+Para una decisión conceptual sin ejecución computacional, escribe «no aplica» en ejecuciones y cita la evidencia o el razonamiento pertinente. Si aún no ejecutaste la prueba, deja el resultado como **pendiente**. No llenes la predicción después de ver el resultado ni atribuyas a una fuente algo que sólo sugirió la IA.
+
+# Registro técnico mínimo
+
+Por cada ejecución que conservarás como evidencia, crea por ejemplo `registros/E-001.md` con:
+
+```markdown
+# E-001 — AAAA-MM-DD HH:MM — zona horaria
+Autor:
+Entrada de bitácora relacionada: B-001
+Versión exacta del código y flujo: commit o paquete identificado.
+Datos: rutas, origen y versión o huella; si son simulados, generador.
+Configuración: ruta y versión; parámetros y semillas utilizados.
+Entorno efectivo: R, paquetes, Quarto y motor si se utiliza.
+Restauración: archivo de entorno e instrucciones probadas.
+Directorio de trabajo y comando o secuencia exacta:
+Tipo: reconstrucción completa / ejecución parcial / reutilización de resultados.
+Estado: finalizada / fallida / no ejecutada.
+Salidas: rutas de tabla, figura e informe; registro del motor si existe.
+Comprobación: valor esperado, obtenido, tolerancia y conclusión.
+Incidencia y nueva ejecución relacionada:
+```
+
+Un log automático puede completar parte de esta información. Revísalo y enlázalo; no hace falta transcribirlo entero. Un listado de versiones no demuestra que el entorno se pueda restaurar. La reutilización de salidas tampoco demuestra una reconstrucción completa.
+
+Si cambias archivos sin registrar un commit, conserva una copia identificada del código y configuración que efectivamente ejecutaste. Una etiqueta como «última versión» no permite saber qué archivo produjo el resultado.
+
+# Ejemplo didáctico completado: bloques
+
+Este ejemplo muestra cómo redactar; sus identificadores y rutas son ilustrativos, **no acreditan una ejecución realizada en este repositorio**. No uses los valores esperados como si fueran resultados observados.
+
+## B-002 — Ejemplo — Representar los bloques en el análisis
+
+**Autor / revisor:** pareja A / pareja B.
+
+**Pregunta:** ¿Cómo cambia la estimación del efecto de tratamiento al representar el bloqueo del experimento?
+
+**Partida:** paquete didáctico `v01`, datos simulados guardados una sola vez. Mantendremos los mismos datos y semillas para comparar modelos.
+
+**Supuesto y confianza:** la asignación ocurrió dentro de bloques; considero defendible representar esa estructura. La magnitud de la mejora de precisión es incierta.
+
+**Cambio y alternativa:** comparar `respuesta ~ tratamiento` con `respuesta ~ tratamiento + bloque`. El modelo con bloque se justifica por el diseño; no se elige por producir un valor p menor.
+
+**Predicción previa:** bajo el micromundo con heterogeneidad entre bloques espero menor incertidumbre al incluirlos; el parámetro causal generador no cambia.
+
+**Evidencia:** `E-002`, tabla de errores estándar y registro de ejecución; en este ejemplo hipotético la tabla muestra menor error estándar con bloque y la comprobación confirma que ambos ajustes usaron las mismas filas.
+
+**Decisión:** adoptar el modelo que representa el diseño y conservar el otro como contraste pedagógico. La reconstrucción por pares queda pendiente y no se declara lograda.
+
+**Confianza y límite:** aumenta la confianza en que el código implementa la comparación prevista. Esto no demuestra que un sistema ecológico real tenga el mismo mecanismo ni que todo bloqueo mejore la precisión.
+
+**IA:** sugirió la fórmula; se revisó su correspondencia con la asignación y se ejecutó la comparación. No se utilizó su respuesta como prueba del resultado.
+
+**Siguiente paso:** entregar el paquete y verificar reconstrucción con otro equipo; enlazar el acta a esta entrada.
+
+## Cómo registrar un fallo sin borrarlo
+
+Si `E-002` falla por una ruta absoluta, conserva su estado «fallida». En una entrada nueva o una actualización fechada, explica la corrección a una ruta relativa, identifica `v02` y registra la nueva prueba como `E-003`. No reemplaces retrospectivamente el fallo por «ejecución exitosa». Enlaza qué decisión permanece y qué cambió técnicamente.
+
+# Cómo aprenderás a usarla durante los nueve días
+
+| Días | Práctica guiada |
+|---|---|
+| 1 | El docente modela una entrada; tú registras la pregunta inicial y localizas tus archivos |
+| 2–3 | Separas predicción y observación; conservas semilla, parámetros y DAG causal textual |
+| 4–6 | Registras una decisión de ajuste o diseño y la vinculas con una versión, dependencias y resultado |
+| 7 | Conectas una entrada con el cambio del flujo y sus registros de ejecución |
+| 8 | Un par usa tus enlaces para reconstruir; registras incidencias y correcciones |
+| 9 | Entregas el registro acumulado y seleccionas entradas concretas para justificar tu reflexión |
+
+Estas prácticas se integran en los tiempos ya asignados. La guía no agrega una cuota diaria de texto ni exige llevar un diario personal.
+
+# Entrega y evaluación
+
+Entrega tu bitácora acumulada junto con la [ficha reproducible](ficha-entrega-reproducible.qmd). Señala las entradas que documentan tu punto de partida, una decisión analítica comprobada y la revisión por pares. Son momentos del proceso, no una cuota de entradas: pueden requerir más de una o compartir una entrada bien identificada.
+
+El docente revisará si puede seguir **decisión → versión → ejecución → resultado → interpretación**. En trazabilidad se evalúa la justificación de las decisiones; en reproducibilidad, la reconstrucción del cálculo; en reflexión, tu explicación del cambio o continuidad. Se aplica la [rúbrica del curso](../04-evaluacion/rubrica-proyecto-y-reflexion.qmd), sin evaluar longitud, revelaciones personales, cantidad de prompts ni sofisticación del motor.
+
+Una IA puede ayudarte a ordenar una entrada a partir de tus notas y archivos. Debes comprobar fechas, acciones y resultados: no puede inventar ejecuciones ni reconstruir tu predicción a posteriori. La misma práctica puede realizarse con revisión por pares y texto local, sin IA.

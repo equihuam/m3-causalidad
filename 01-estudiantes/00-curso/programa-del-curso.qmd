@@ -1,0 +1,88 @@
+---
+title: "Causalidad, diseño experimental e inteligencia artificial"
+subtitle: "Programa del curso: nueve días de trabajo científico y análisis reproducible"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Descripción
+
+Este curso intensivo de posgrado te ayudará a formular una pregunta causal, identificar sus supuestos y elegir comparaciones que permitan examinarla. Trabajarás sobre una pregunta de tu proyecto y sobre casos comunes de diseño experimental, simulación y análisis.
+
+El enfoque es epistemológico: preguntaremos qué significa afirmar causalidad y qué evidencia permite sostenerla. La IA servirá para explorar, razonar, criticar y apoyar el trabajo científico. Las afirmaciones que produzca deben verificarse; una explicación plausible no equivale a evidencia.
+
+La reproducibilidad es una competencia transversal. Conservarás datos, código, decisiones y entorno para que otra persona pueda reconstruir un resultado y examinar su interpretación. Un resultado reproducible puede seguir teniendo una interpretación causal incorrecta.
+
+# Duración y forma de trabajo
+
+Nueve jornadas de aproximadamente cuatro a cinco horas. Alternaremos discusión conceptual, predicciones previas, prácticas guiadas, trabajo en parejas y aplicación al proyecto propio. No necesitas servicios de IA pagos; las actividades tienen una vía con materiales preparados o revisión por pares.
+
+# Objetivos de aprendizaje
+
+Al finalizar podrás:
+
+1. **Formular una pregunta causal:** delimitar unidades, exposición o intervención, resultado y contraste contrafáctico; distinguirla de descripción, asociación y predicción.
+2. **Representar y justificar supuestos:** construir DAG sencillos, reconocer mecanismos y alternativas, y explicar qué conocimiento sostiene sus relaciones.
+3. **Elegir comparaciones defendibles:** relacionar la pregunta con diseños experimentales, observacionales o cuasiexperimentales y reconocer amenazas a la identificación y la validez.
+4. **Evaluar afirmaciones:** distinguir plausibilidad, evidencia, inferencia y causalidad; seleccionar verificaciones, triangulación y pruebas apropiadas, y reconocer incertidumbre.
+5. **Trabajar críticamente con IA:** explorar hipótesis y objeciones, verificar contribuciones y mantener el trabajo con herramientas gratuitas, archivos locales o revisión por pares.
+6. **Mantener trazabilidad y continuidad:** registrar decisiones, fuentes, versiones y cambios de interpretación o confianza; transferir el contexto entre herramientas sin depender del chat original.
+7. **Reconstruir y auditar un análisis:** explicitar dependencias, datos, código, parámetros y entorno; comprobar una reconstrucción por otra persona y las consecuencias de un cambio, sin confundirlas con validez causal.
+8. **Argumentar tu aprendizaje:** revisar la pregunta inicial y explicar cambios o continuidades con evidencia de tu proceso.
+
+# Recorrido de los nueve días
+
+| Día | Pregunta de trabajo | Producto que conservarás |
+|---|---|---|
+| 1 | ¿Qué estamos tratando de explicar? | Cuartilla inicial, versión de partida y primera entrada de bitácora |
+| 2 | ¿Qué habría ocurrido bajo otra intervención? | Contraste contrafáctico y parámetros del caso simulado |
+| 3 | ¿Qué mecanismos y alternativas proponemos? | DAG causal comentado y distinción respecto de las dependencias computacionales |
+| 4 | ¿Qué impide interpretar causalmente una asociación? | Supuestos, ajuste justificado y especificaciones identificadas |
+| 5 | ¿Qué comparación construye el experimento? | Diseño, unidades, asignación y reconstrucción de un minirreporte |
+| 6 | ¿Qué comparación es defendible sin aleatorizar? | Diseño principal, alternativa y dependencias del análisis |
+| 7 | ¿Cómo pasamos del diseño al resultado? | Estimando, análisis, cambio comprobado y registro de ejecución |
+| 8 | ¿Qué podemos verificar y reconstruir? | Auditoría de afirmaciones y acta de reconstrucción por pares |
+| 9 | ¿Qué podemos defender y qué cambió? | Propuesta final, anexo reproducible y reflexión argumentada |
+
+El equipo docente indicará el orden de las actividades y el entorno preparado para las prácticas. El recorrido no exige dominar todos los métodos ni automatizar un proyecto completo.
+
+# Productos y tareas
+
+## Pregunta inicial
+
+Escribe una cuartilla con una sola pregunta de tu proyecto: problema, importancia y qué considerarías evidencia. Conserva esta primera versión. Es una línea base, no una prueba de dominio técnico previo.
+
+## Bitácora analítica
+
+Iníciala el primer día con la [guía y plantilla](../01-guias/guia-bitacora-analitica.qmd). Registra decisiones, predicciones, evidencia y cambios de confianza. Cuando ejecutes un análisis que conservarás, enlaza datos, versión, parámetros, entorno y resultados.
+
+## Ejercicios y minirreportes
+
+Realiza las [actividades indicadas](../02-actividades/README.md). En los talleres conserva pregunta, predicción, diseño y unidades, resultados, interpretación y límites. Escribe tu predicción antes de ejecutar. Los casos simulados ayudan a examinar procedimientos; no constituyen por sí solos evidencia empírica de tu proyecto.
+
+## Propuesta final y anexo reproducible
+
+Reformula tu pregunta y relaciona contrafactual, DAG, diseño, estrategia de evidencia y límites. Adjunta un análisis pequeño con instrucciones que otra persona pueda seguir, resultados identificados y la [ficha de reconstrucción](../01-guias/ficha-entrega-reproducible.qmd). Si todavía no tienes datos propios, utiliza un caso del curso y declara su alcance.
+
+## Reflexión final
+
+Compara la pregunta inicial con tu propuesta. Apóyate en entradas de bitácora para explicar qué cambió, qué se mantuvo y por qué. No se evalúa cuánto cambiaste emocionalmente, si abandonaste una hipótesis ni si coincides con el docente.
+
+# Evaluación
+
+Consulta la [rúbrica](../04-evaluacion/rubrica-proyecto-y-reflexion.qmd). Se distinguen calidad causal del planteamiento, evidencia, uso crítico de IA, trazabilidad, reproducibilidad y reflexión. Los pesos indicados son orientativos; el equipo docente comunicará la ponderación definitiva antes de la evaluación.
+
+La revisión por pares ayuda a comprobar el procedimiento. Un fallo registrado y corregido no se oculta: forma parte de la evidencia del trabajo. Se evalúa la capacidad de reconstruir y explicar, no la decoración ni la velocidad de programación.
+
+# Herramientas y continuidad
+
+Usaremos R/RStudio y Quarto en las prácticas, con código guiado y el entorno indicado en clase. Guarda los archivos en tu equipo y utiliza rutas relativas. Para seguir trabajando cuando una plataforma no esté disponible, consulta la [guía de continuidad con IA gratuita](../01-guias/guia-continuidad-ia-free-tier.qmd).
+
+# Lecturas
+
+El [índice de lecturas](../03-lecturas/README.md) relaciona transparencia de los DAG, conocimiento situado y límites de la modelización con decisiones de tu proyecto.
+
+[Volver al inicio del paquete](../README.md).

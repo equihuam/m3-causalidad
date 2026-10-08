@@ -1,0 +1,147 @@
+---
+title: "Bitácora de decisiones de diseño del curso"
+subtitle: "Registro del responsable del curso: decisiones, motivos y evolución"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito y autoría
+
+Esta es la **bitácora del responsable del curso**. Registra las decisiones que toma al rediseñar los nueve días: qué conserva, qué cambia, por qué y con qué consecuencias para materiales y evaluación. Se mantiene el nombre de archivo `bitacora-maestra.qmd` para conservar la continuidad de las referencias del proyecto.
+
+El asistente puede redactar y mantener el registro, pero no atribuir sus propias propuestas al responsable del curso. Cada entrada distingue **quién decide**, **quién registra**, **fuente de la decisión** y **estado**. Una modificación de archivos realizada por el asistente demuestra implementación, no aceptación de todos sus detalles pedagógicos.
+
+La bitácora que llevan los alumnos tiene otra función y ubicación: [guía y plantilla de bitácora analítica del estudiante](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd). No se escriben reflexiones estudiantiles ni registros de ejecución de alumnos en este archivo.
+
+# Cómo mantener este registro
+
+Registrar cuando el responsable del curso adopte, revise o descarte un objetivo, contenido, secuencia, actividad, criterio de evaluación o decisión tecnológica. Conservar el motivo, la alternativa considerada cuando esté disponible y los documentos afectados. No inventar retrospectivamente motivos o fechas: señalar «no documentado» si faltan.
+
+Estados de decisión: **adoptada**, **propuesta**, **en revisión**, **descartada** o **antecedente sin confirmación documentada**. El estado de implementación es independiente: pendiente, parcial o implementada. Una decisión adoptada puede estar pendiente de ejecución; una propuesta puede estar incorporada en un borrador y seguir siendo propuesta.
+
+Las correcciones se agregan con fecha y referencia a la entrada anterior; no se borra la evolución. `decisiones-y-evolucion-del-curso.qmd` funciona como síntesis temática y enlaza esta bitácora, no como un segundo registro cronológico autónomo.
+
+```markdown
+## DC-AAAAMMDD-01 — Fecha — Tema
+**Decide:** responsable del curso / todavía sin decisión.
+**Registra:** persona o asistente que redacta la entrada.
+**Fuente:** instrucción, reunión o documento; cita breve o referencia recuperable.
+**Estado de decisión:**
+**Situación y alternativas:**
+**Decisión o propuesta concreta:**
+**Motivo expresado / fundamento:** distinguir lo dicho de una interpretación del asistente.
+**Consecuencias y documentos afectados:**
+**Estado de implementación:**
+**Revisión de entrada anterior / pendientes:**
+```
+
+# Decisiones con fuente explícita en la conversación actual
+
+## DC-20260910-01 — 2026-09-10 — Priorizar reproducibilidad en los nueve días
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «vamos a revisar la propuesta que tenemos para los 9 días y agreguemos esta competencia en forma adecuada. El énfasis será reproducibilidad».
+
+**Estado de decisión:** adoptada para el énfasis y la integración de la competencia.
+
+**Decisión:** revisar el proyecto e incorporar la reproducibilidad a la propuesta de nueve días.
+
+**Motivo expresado:** formar estudiantes capaces de formular procesos analíticos reproducibles. Se retoma la conversación sobre flujos existentes y apoyo de agentes de IA.
+
+**Implementación:** se modificaron programa, objetivos y materiales; el ejemplo ejecutable sigue pendiente. La progresión detallada, los 250 minutos y la ponderación del 15 % fueron elaborados por el asistente como propuesta curricular, no confirmados expresamente por el responsable del curso.
+
+## DC-20260910-02 — 2026-09-10 — Separar las dos bitácoras
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Bitácora mía sobre decisiones de diseño del curso» y «Llevar una bitácora de apoyo a la reproducibilidad como competencia que aprendan los alumnos. Hay que hacer explícito como lo deben hacer los alumnos».
+
+**Estado de decisión:** adoptada.
+
+**Situación:** este archivo mezclaba una guía para alumnos con entradas de diseño del curso. La entrada previa sobre reproducibilidad tampoco separaba el acuerdo general de los detalles propuestos por el asistente.
+
+**Decisión:** reservar este archivo a decisiones del responsable del curso y crear instrucciones propias para la bitácora analítica del estudiante.
+
+**Motivo expresado:** asegurar que se distingan ambos usos y explicitar cómo deben llevarla los alumnos.
+
+**Implementación:** se separaron documentos, se creó una guía con plantilla, ejemplo y registro técnico enlazado, y se actualizaron las referencias del programa, actividades, ficha y rúbrica. La organización concreta de la guía es una implementación del asistente de esta instrucción y puede revisarse.
+
+**Preservación:** la versión mixta completa se conserva en [el archivo histórico](../99-archivo/bitacora-mixta-antes-separacion-2026-09-10.qmd); sus instrucciones estudiantiles están sustituidas por la guía actual. Las entradas históricas de diseño se conservan en el archivo histórico sin atribuirles una aprobación nueva.
+
+## DC-20260910-03 — 2026-09-10 — Organizar el proyecto por destinatario
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Debe haber un conjunto de carpetas mías y para los instructores» con reflexiones y decisiones pedagógicas y didácticas, y «El otro paquete debe contener todo lo que se le entregará directamente a los estudiantes».
+
+**Estado de decisión:** adoptada para la separación por destinatario.
+
+**Motivo expresado:** mejorar comprensión y usabilidad del proyecto.
+
+**Implementación del asistente:** `00-docencia/` y `01-estudiantes/`, con índices propios. Docencia conserva diseño, decisiones, facilitación, desarrollo y antecedentes. Estudiantes reúne programa y objetivos, guías, actividades, lecturas y evaluación. Se separaron orientaciones internas de la rúbrica y de la auditoría, conservando respaldo y trazabilidad de las fuentes.
+
+**Alcance:** la organización de carpetas no cambia permisos de acceso ni adopta nuevos pesos de evaluación. El ejemplo Snakemake continúa pendiente de desarrollo y no se presenta como entregable disponible.
+
+**Documentación:** [mapa de migración](migracion-estructura-2026-09-10.md) y [estructura canónica](../../README.md). La nomenclatura concreta y la distribución de subcarpetas son decisiones de implementación del asistente al ejecutar la instrucción.
+
+## DC-20260911-01 — 2026-09-11 — Organizar el proyecto como libro Quarto
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** «Quiero habilitar que todo este proyecto se organice como un libro Quarto», con configuración, `index.qmd` general y documentos en sus secciones; el proyecto de RStudio ya existe.
+
+**Estado de decisión:** adoptada.
+
+**Implementación:** transformar `_quarto.yml` de configuración inicial a libro HTML, crear `index.qmd`, organizar dos partes por destinatario e incorporar los documentos activos y los índices Markdown. Las lecturas y antecedentes binarios son recursos, y las fuentes históricas permanecen identificadas como archivo. La salida se genera en `_book/` y el archivo RStudio existente se conserva.
+
+**Criterio de uso:** edición integral para trabajar sobre el curso; no se presenta como entrega exclusivamente estudiantil. La organización de las fuentes por destinatario permanece vigente. No se modifican objetivos ni ponderaciones.
+
+**Preservación:** copia del YAML anterior en `00-docencia/99-archivo/quarto-antes-libro-2026-09-11.yml`. Las opciones de formato HTML y orden de capítulos son decisiones de implementación del asistente.
+
+## DC-20260911-02 — 2026-09-11 — Dos ediciones mediante perfiles Quarto
+
+**Quién decide:** Responsable del curso (usuario).
+
+**Fuente:** Solicitud explícita de dos ediciones, docente completa y estudiantil con lo necesario para las actividades, mediante Quarto project profiles.
+
+**Estado:** Decisión adoptada; configuración implementada por el asistente.
+
+**Decisión:** Generar dos libros a partir de las mismas fuentes: edición docente completa y edición estudiantil con programa, guías, actividades, lecturas y evaluación.
+
+**Implementación del asistente:** Perfiles `docente` y `estudiante`, capítulos y recursos separados, portada condicionada por perfil y salidas `_book/docente/` y `_book/estudiante/`. Docente es el perfil predeterminado. El proyecto RStudio se conserva. La entrega estudiantil utiliza su salida completa, sin contenido docente, antecedentes ni respaldos.
+
+**Alcance:** Cambia la publicación y distribución; no modifica objetivos, actividades ni evaluación. Configuración anterior preservada en `00-docencia/99-archivo/quarto-antes-perfiles-2026-09-11.yml`.
+
+## DC-20260911-03 — 2026-09-11 — Depuración general de los materiales
+
+**Decide:** responsable del curso. **Registra:** asistente.
+
+**Fuente:** solicitud de revisión general para depurar repeticiones, redundancias, inconsistencias e incongruencias argumentales y producir una lectura coherente y fluida; reiterada con «continua».
+
+**Estado de decisión:** adoptada para la revisión editorial. **Implementación:** depuración de las fuentes y reorganización de la lectura por funciones.
+
+**Cambios del asistente:** objetivos concentrados en el programa estudiantil; rúbrica única con fundamentos docentes separados; distinción entre acuerdos y propuestas; requisitos de entrega unificados; correcciones en consignas y tratamiento del respaldo de afirmaciones; antecedentes separados de la lectura de enseñanza. Se conservan los nueve días, los productos y las ponderaciones propuestas.
+
+**Preservación y comprobación:** fuentes previas respaldadas con huellas SHA-256. El [informe editorial](revision-editorial-2026-09-11.md) documenta alcance, hallazgos y comprobaciones. La revisión no certifica el piloto Snakemake ni modifica retrospectivamente decisiones del responsable.
+
+# Propuestas curriculares pendientes de decisión explícita
+
+## PC-20260910-01 — Detalles de la integración de reproducibilidad
+
+**Propone y registra:** asistente. **Decide:** responsable del curso; decisión específica todavía no registrada.
+
+**Estado de decisión:** propuesta incorporada al borrador de trabajo.
+
+Incluye 250 minutos distribuidos, 15 % de reproducibilidad y redistribución de otros pesos, factorial como caso común y condiciones del piloto Snakemake con alternativa docente `targets`. El interés del responsable del curso en Snakemake está expresado en la conversación; no se infiere por ello aprobación de cada detalle de implementación.
+
+**Documentos:** [competencia](../01-diseno-curso/competencia-reproducibilidad-analitica.qmd), [programa](../01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd) y [rúbrica](../01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.qmd).
+
+**Aclaración de la entrada histórica del 2026-09-10:** sus apartados «Evaluación» y «Carga» describen lo que el asistente incorporó; deben leerse con este estado de propuesta. Se conservan en la versión histórica para no borrar el rastro del cambio.
+
+# Antecedentes de diseño preservados
+
+Las entradas históricas de agosto y la primera formulación de reproducibilidad se conservan íntegramente en la [versión anterior de esta bitácora](../99-archivo/bitacora-antes-depuracion-2026-09-11.qmd). Sus decisiones no documentadas y sus propuestas se leen con las precisiones de autoría y estado de este registro. Se trasladó su lectura al archivo para evitar que aparezcan como instrucciones vigentes; no se eliminó su contenido.

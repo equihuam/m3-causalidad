@@ -1,0 +1,47 @@
+---
+title: "Fundamentos docentes de la evaluación"
+subtitle: "Causalidad, diseño experimental e inteligencia artificial"
+format: 
+    html: 
+      embed-resources: true
+lang: es
+---
+
+# Fundamentos de la evaluación
+
+La [rúbrica estudiantil](../../../01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd) es la referencia única para productos, pesos orientativos y descriptores. Este capítulo explica cómo aplicarla; evita reproducir una segunda versión que pueda divergir.
+
+Se evalúan la propuesta final, el anexo analítico y la reflexión individual, apoyados en la cuartilla inicial y la bitácora. Los ejercicios intermedios aportan retroalimentación y evidencia del proceso; no constituyen nuevas entregas sumativas independientes.
+
+# Estado de la ponderación
+
+Los ocho pesos publicados suman 100 %. La propuesta de asignar 15 % a reproducibilidad y redistribuir otros criterios fue elaborada por el asistente y sigue pendiente de confirmación, como consta en [PC-20260910-01](../../00-bitacora/bitacora-maestra.qmd). La decisión adoptada es priorizar reproducibilidad; no se infiere de ella la aprobación de porcentajes concretos.
+
+Antes de evaluar, el responsable del curso debe comunicar pesos y forma de conversión numérica. Mientras tanto la rúbrica puede utilizarse para revisión formativa por niveles.
+
+# Distinguir lo que demuestra cada evidencia
+
+| Dimensión | Pregunta al revisar | Evidencia principal |
+|---|---|---|
+| Pregunta, modelo y diseño | ¿La comparación y los supuestos responden al estimando? | Propuesta y representación causal |
+| Evidencia e incertidumbre | ¿El respaldo permite sostener la afirmación con ese alcance? | Fuentes, resultados y auditoría epistemológica |
+| Uso crítico de IA | ¿Se examinaron las contribuciones o respuestas preparadas con criterio propio? | Afirmaciones auditadas y comprobaciones |
+| Trazabilidad | ¿Se puede reconstruir por qué se decidió? | Bitácora y enlaces a versiones |
+| Reflexión | ¿Se explican cambios o continuidades con evidencia del proceso? | Comparación individual inicial/final |
+| Reproducibilidad | ¿Un par puede reconstruir el cálculo y comprobar un cambio? | Paquete ejecutable, registro y acta |
+
+Una misma entrada puede servir de evidencia para más de una dimensión, pero no se premia dos veces por existir: se observa un desempeño distinto. Por ejemplo, registrar una reparación aporta trazabilidad; ejecutarla y comprobar el resultado aporta reproducibilidad.
+
+# Aplicación formativa
+
+Entregar la rúbrica al inicio para que el estudiante reconozca lo que todavía debe aprender. Durante el curso, comentar decisiones específicas y permitir revisión; al final, contrastar la autoevaluación con evidencia localizable. Ante dos niveles posibles, priorizar la calidad de la justificación sobre cantidad de términos o sofisticación del código.
+
+La reflexión individual puede apoyarse en un análisis compartido. No se exige cambiar de hipótesis, narrar emociones ni coincidir con la interpretación docente. Reconocer que una pregunta no es identificable y explicar por qué puede mostrar un desempeño alto.
+
+# Equivalencia de las rutas
+
+Quien no consulte IA en vivo puede demostrar juicio crítico auditando las respuestas preparadas del curso. La calificación no depende de una cuenta, plataforma o agente.
+
+La reconstrucción completa y la prueba de cambio son observables con los materiales Quarto. La actualización selectiva sólo se evalúa después de haber sido enseñada en un flujo operativo. Una demostración docente no sustituye la ejecución del estudiante. Los problemas de infraestructura requieren apoyo y nueva oportunidad, conservando el fallo y la corrección en el registro.
+
+La [preparación de la auditoría](../../02-guias-instructores/preparar-auditoria-reproducibilidad.qmd) describe las comprobaciones previas. No se exige perfección al primer intento ni se confunde una reconstrucción exitosa con validez causal.

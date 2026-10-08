@@ -1,0 +1,471 @@
+---
+title: "Bitácora maestra"
+subtitle: "Registro de decisiones, evidencia y cambios de confianza"
+format: html
+lang: es
+---
+
+# Propósito
+
+La bitácora maestra documenta el proceso intelectual seguido durante el curso.
+
+No pretende registrar exhaustivamente cada conversación, búsqueda o interacción con herramientas de inteligencia artificial. Su función es conservar aquellas decisiones, dudas, verificaciones y cambios de interpretación que resulten importantes para comprender cómo evolucionó el planteamiento de investigación.
+
+La bitácora funciona simultáneamente como:
+
+- memoria de trabajo;
+- instrumento de trazabilidad;
+- apoyo para la reflexión final;
+- registro del uso crítico de IA;
+- evidencia del proceso de aprendizaje.
+
+# Principio general
+
+Una bitácora científica no sólo registra lo que se hizo.
+
+También debe permitir reconstruir:
+
+> **qué se pensaba, qué ocurrió, qué evidencia apareció y por qué cambió —o no cambió— nuestra confianza.**
+
+Por ello, no es necesario registrar cada paso operativo. Conviene registrar aquellos momentos en los que ocurre un cambio epistemológicamente relevante.
+
+# ¿Cuándo hacer una entrada?
+
+Se recomienda registrar una entrada cuando:
+
+- cambia la pregunta de investigación;
+- se identifica un supuesto que antes estaba implícito;
+- aparece una explicación causal alternativa;
+- se detecta una posible variable de confusión;
+- se modifica un DAG;
+- una fuente modifica la interpretación del problema;
+- se descubre que una afirmación era incorrecta o insuficientemente respaldada;
+- una respuesta de IA requiere verificación;
+- una prueba fortalece o debilita una hipótesis;
+- se decide adoptar o abandonar un diseño;
+- cambia de manera apreciable el grado de confianza en una afirmación;
+- se identifica una incertidumbre importante que permanece abierta.
+
+# Qué no es necesario registrar
+
+Para análisis computacionales se conserva además un registro técnico de entradas, versión de código, parámetros, semillas, entorno, comando y salidas. Este registro permite reconstruir el cálculo y se enlaza desde la bitácora; no exige narrar todas las operaciones. La [ficha reproducible](../03-materiales-estudiantes/ficha-entrega-reproducible.qmd) organiza esos datos. Las decisiones analíticas, incidencias que alteran una interpretación y cambios de confianza sí se explican aquí.
+
+En general no es necesario documentar:
+
+- cada *prompt* utilizado;
+- cada respuesta de IA;
+- cambios menores de redacción;
+- operaciones rutinarias;
+- búsquedas que no modifican el razonamiento;
+- intentos técnicos sin consecuencias conceptuales.
+
+La pregunta práctica es:
+
+> **¿Necesitaría recordar esto para explicar posteriormente por qué mi planteamiento terminó siendo como es?**
+
+Si la respuesta es sí, probablemente merece una entrada.
+
+# Estructura mínima de una entrada
+
+Cada entrada puede utilizar la siguiente estructura.
+
+```yaml
+fecha:
+tema:
+pregunta_o_afirmacion:
+estatus_inicial:
+accion:
+evidencia_o_contraste:
+resultado:
+estatus_final:
+cambio_de_confianza:
+decision:
+pendientes:
+uso_de_ia:
+```
+
+No todos los campos tienen que contener información extensa.
+
+# Explicación de los campos
+
+## Fecha
+
+Fecha de la entrada.
+
+## Tema
+
+Una descripción breve que permita localizar posteriormente el asunto.
+
+Ejemplos:
+
+- posible confusión por edad;
+- mecanismo alternativo;
+- redefinición del resultado;
+- revisión de referencia;
+- diseño experimental inviable.
+
+## Pregunta o afirmación
+
+La idea concreta que se está examinando.
+
+Debe intentarse formularla de manera suficientemente precisa para que posteriormente pueda entenderse qué estaba en discusión.
+
+## Estatus inicial
+
+Cómo se consideraba inicialmente la afirmación.
+
+Por ejemplo:
+
+- posibilidad;
+- plausible;
+- hipótesis;
+- aparentemente respaldada;
+- incierta;
+- asumida sin verificar.
+
+## Acción
+
+Qué se hizo para avanzar.
+
+Por ejemplo:
+
+- consultar una fuente;
+- preguntar a una IA;
+- revisar datos;
+- modificar un DAG;
+- ejecutar un análisis;
+- buscar un contraejemplo;
+- discutir el supuesto.
+
+## Evidencia o contraste
+
+Qué información permitió evaluar la afirmación.
+
+Puede incluir:
+
+- referencia;
+- observación;
+- resultado de cálculo;
+- dato;
+- comparación;
+- experimento;
+- razonamiento;
+- ausencia de evidencia.
+
+## Resultado
+
+Qué se encontró.
+
+Conviene distinguir el resultado de su interpretación.
+
+## Estatus final
+
+Cómo queda clasificada la afirmación después del contraste.
+
+Por ejemplo:
+
+- plausible pero no verificada;
+- descartada;
+- respaldada parcialmente;
+- consistente con los datos;
+- todavía incierta;
+- causalmente no identificable con el diseño actual.
+
+## Cambio de confianza
+
+Registrar cualitativamente cómo cambió la confianza.
+
+Una escala sencilla puede ser:
+
+```text
+disminuyó mucho
+disminuyó
+sin cambio importante
+aumentó
+aumentó mucho
+```
+
+No se busca una falsa precisión numérica.
+
+## Decisión
+
+Qué consecuencia tiene el resultado para el proyecto.
+
+Ejemplos:
+
+- conservar hipótesis;
+- reformular pregunta;
+- buscar datos adicionales;
+- modificar diseño;
+- eliminar afirmación;
+- mantener dos explicaciones alternativas.
+
+## Pendientes
+
+Qué queda por resolver.
+
+## Uso de IA
+
+Registrar brevemente qué función cumplió la IA, cuando corresponda.
+
+Ejemplos:
+
+- generación de alternativas;
+- crítica;
+- búsqueda de posibles confusores;
+- explicación conceptual;
+- apoyo para código;
+- síntesis;
+- revisión de coherencia.
+
+También conviene indicar si alguna afirmación generada por IA tuvo que ser verificada.
+
+# Ejemplo de entrada
+
+```yaml
+fecha: 2026-08-25
+tema: posible efecto de una variable de confusión
+pregunta_o_afirmacion: "X parece causar Y"
+estatus_inicial: plausible
+accion: se construyó un DAG y se solicitaron a la IA mecanismos alternativos
+evidencia_o_contraste: apareció Z como causa común plausible de X y Y; la literatura confirma que Z afecta ambas variables
+resultado: la asociación X-Y podría explicarse parcialmente por Z
+estatus_final: asociación observada, relación causal aún no identificada
+cambio_de_confianza: disminuyó
+decision: incorporar Z al modelo causal y revisar estrategia de identificación
+pendientes: determinar si Z puede medirse adecuadamente
+uso_de_ia: generación de hipótesis alternativas; la existencia del mecanismo se verificó posteriormente en literatura
+```
+
+# La bitácora y la inteligencia artificial
+
+La bitácora no debe convertirse en un registro automático de conversaciones con IA.
+
+El interés está en documentar los momentos en que la IA contribuyó al razonamiento.
+
+Conviene distinguir funciones diferentes.
+
+## Exploración
+
+La IA ayudó a generar:
+
+- hipótesis;
+- mecanismos;
+- variables;
+- alternativas;
+- escenarios.
+
+## Crítica
+
+La IA ayudó a identificar:
+
+- supuestos;
+- inconsistencias;
+- variables omitidas;
+- posibles contraejemplos;
+- amenazas a la validez.
+
+## Producción
+
+La IA ayudó a:
+
+- escribir código;
+- organizar información;
+- producir una tabla;
+- reformular un argumento.
+
+## Verificación
+
+La IA sugirió una afirmación que posteriormente tuvo que contrastarse mediante una fuente, datos o cálculo independiente.
+
+Esta última categoría es particularmente importante.
+
+# Cambios de confianza
+
+Una parte central de la bitácora consiste en hacer explícito que el conocimiento no cambia únicamente porque aparezca una nueva afirmación.
+
+También cambia cuando modificamos racionalmente nuestra confianza en afirmaciones anteriores.
+
+Por ejemplo:
+
+```text
+Al inicio:
+"Estoy bastante seguro de que X es la explicación principal."
+
+Después:
+"X sigue siendo posible, pero ahora reconozco dos mecanismos alternativos y los datos disponibles no permiten distinguirlos."
+```
+
+Este tipo de cambio constituye aprendizaje incluso si la hipótesis original no se abandona completamente.
+
+# Relación con el documento inicial
+
+La primera entrada importante de la bitácora puede derivarse de la cuartilla inicial.
+
+Se recomienda registrar:
+
+```yaml
+pregunta_inicial:
+explicacion_causal_inicial:
+evidencia_que_se_consideraba_necesaria:
+supuestos_reconocidos:
+incertidumbres_iniciales:
+```
+
+No es necesario que el estudiante tenga todavía lenguaje causal formal.
+
+El objetivo es conservar una representación suficientemente fiel de su punto de partida.
+
+# Relación con la reflexión final
+
+Al final del curso la bitácora puede utilizarse para reconstruir la evolución del proyecto.
+
+La reflexión final debería apoyarse en entradas concretas para responder preguntas como:
+
+- ¿qué cambió?
+- ¿qué no cambió?
+- ¿qué supuesto resultó más importante?
+- ¿qué explicación alternativa apareció?
+- ¿qué afirmación perdió respaldo?
+- ¿qué evidencia aumentó mi confianza?
+- ¿qué incertidumbre reconozco ahora que antes no veía?
+- ¿cómo cambió mi uso de la IA?
+
+# Evaluación
+
+La bitácora no se evalúa por extensión.
+
+Tampoco por el número de entradas.
+
+Se valora principalmente:
+
+- relevancia de los eventos registrados;
+- claridad de las decisiones;
+- separación entre afirmación y evidencia;
+- capacidad para reconocer incertidumbre;
+- registro de cambios de confianza;
+- trazabilidad del razonamiento.
+
+Una bitácora breve pero intelectualmente informativa puede ser mejor que una bitácora extensa de actividades rutinarias.
+
+# Plantilla rápida
+
+Para uso cotidiano puede utilizarse esta versión reducida:
+
+```markdown
+## AAAA-MM-DD — Tema
+
+**Qué pensaba:**  
+
+**Qué hice para comprobarlo o explorarlo:**  
+
+**Qué encontré:**  
+
+**Qué cambió en mi interpretación o confianza:**  
+
+**Decisión / siguiente paso:**  
+
+**Papel de la IA, si lo hubo:**  
+```
+
+# Principio final
+
+La bitácora no pretende demostrar que el estudiante siguió un camino perfectamente lineal.
+
+Por el contrario, debe permitir observar revisiones, dudas, caminos abandonados y cambios de interpretación.
+
+La trazabilidad científica no consiste en ocultar la incertidumbre.
+
+Consiste en hacer comprensible cómo razonamos a través de ella.
+
+# Decisiones sobre los materiales del curso
+
+## 2026-08-25 — Maduración de la guía de continuidad en modalidad gratuita
+
+**Situación inicial:** La guía para trabajar con IA sin salir del *free tier* se encontraba en `05-actividades`, aunque funcionaba como material de consulta y no como actividad. Conservaba referencias internas de una conversación y combinaba principios estables con datos volátiles sobre proveedores.
+
+**Decisión:** Reubicarla en `04-guias-cheatsheets` con el nombre `guia-continuidad-ia-free-tier.qmd` y reformularla como guía de continuidad tecnológica para estudiantes.
+
+**Justificación:** El propósito pedagógico no es enseñar a maximizar una cuota particular, sino conservar el control y la trazabilidad del trabajo cuando cambia un chat, modelo o plataforma. La guía distingue ahora entre paquete de continuidad y bitácora maestra, incorpora la vía sin IA y evita depender de cifras que cambian con el tiempo.
+
+**Pendiente relacionado:** Desarrollar por separado una matriz actualizable de capacidades y límites prácticos de las plataformas gratuitas que se decida utilizar durante el curso.
+
+## 2026-08-25 — Primera formulación del mapa temático de nueve días
+
+**Situación inicial:** El repositorio contenía el marco epistemológico, los objetivos generales, una actividad de auditoría y una rúbrica, pero no una progresión que conectara esos componentes en una experiencia de aprendizaje realizable.
+
+**Decisión:** Elaborar `01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd` como puente entre el marco conceptual y el futuro calendario detallado.
+
+**Criterio organizador:** Mantener el proyecto del estudiante como columna vertebral y recorrer de manera acumulativa pregunta, contrafactual, representación causal, identificación, diseño, análisis, auditoría e integración.
+
+**Consecuencia didáctica:** La relación entre generación de posibilidades, plausibilidad, evidencia e inferencia no constituye un módulo aislado. Reaparece en cada jornada y determina el uso de IA, las actividades de contraste y los cierres de bitácora.
+
+**Pendiente:** Revisar colaborativamente la carga y las prioridades de cada jornada antes de convertir este mapa en programación horaria y materiales para estudiantes.
+
+## 2026-08-25 — Alcance estadístico y rediseño de los talleres en RStudio
+
+**Evidencia revisada:** Sitio del curso 2026, presentaciones publicadas, talleres de diseños completamente aleatorizados, DAG, efectos mixtos y medidas repetidas, tres lecturas y exportaciones de las intervenciones Vevox.
+
+**Diagnóstico:** Los materiales anteriores contienen una base conceptual y técnica valiosa, pero la extensión de la presentación epistemológica y las secuencias largas de código resuelto pueden desplazar decisiones que debería tomar el estudiante. Vevox produce participación, aunque conviene usarlo con mayor selectividad para predicciones, decisiones bajo supuestos y revisión de confianza.
+
+**Decisión de alcance:** Concentrar la práctica estadística en el modelo lineal normal, con una introducción acotada a modelos lineales mixtos y apoyo de `dagitty`. Utilizar ejemplos y simulaciones de diseños ecológicos completamente aleatorizados, factoriales, bloques, parcela dividida y medidas repetidas. Excluir como núcleo los casos multivariados y métodos de *machine learning*.
+
+**Decisión didáctica:** Organizar los talleres como ciclos de plantear, predecir, intervenir, observar, explicar y transferir. Las simulaciones se presentarán como micromundos controlados que permiten conocer el mecanismo generador sin confundirlo con el funcionamiento del sistema real.
+
+**Documento resultante:** `01-diseno-curso/arquitectura-actividades-rstudio.qmd`.
+
+**Siguiente paso:** Desarrollar tres prototipos detallados —factorial completamente aleatorizado, bloques y parcela dividida— antes de completar toda la serie.
+
+## 2026-08-25 — Minirreportes Quarto como parte de los prototipos
+
+**Duda didáctica:** Incorporar un reporte Quarto en cada taller puede conectar código, resultados y argumento, pero también puede distraer si exige aprender simultáneamente demasiadas decisiones de formato.
+
+**Decisión provisional:** Probar una plantilla breve e idéntica en los tres prototipos. El estudiante no crea el documento desde cero: completa seis componentes —pregunta, predicción, diseño, resultado, interpretación y límite— y renderiza un HTML autocontenido.
+
+**Criterio de evaluación:** No evaluar decoración, complejidad técnica ni cantidad de código. Observar si el formato mejora la reconstrucción de la cadena pregunta–diseño–modelo–evidencia–inferencia y cuánto tiempo técnico consume.
+
+**Implementación:** Se crearon tres actividades en `05-actividades/prototipos-rstudio/` y una guía docente con pistas, resultados esperados y criterios para decidir posteriormente si Quarto debe mantenerse como formato acumulativo.
+
+## 2026-08-25 — Prototipos de controversias con respuestas prefabricadas de IA
+
+**Necesidad identificada:** Los talleres en RStudio desarrollan práctica de diseño y análisis, pero no bastan para alimentar progresivamente la capacidad de debatir respuestas de IA antes de aplicarla al proyecto propio.
+
+**Decisión:** Crear una hebra paralela de expedientes breves con situación, pregunta, miniprotocolo, respuesta prefabricada de IA e información revelada por etapas. La consulta en vivo queda como extensión posterior, no como requisito.
+
+**Prototipos:** Germinación e inferencia causal; ajuste de todas las variables; y pseudorreplicación con muchas observaciones y pocas asignaciones independientes.
+
+**Estructura didáctica:** Trabajo en parejas con defensa y auditoría, intercambio de papeles, actualización explícita de confianza y reformulación conjunta.
+
+**Propósito:** Practicar en casos ajenos y protegidos antes de auditar el texto inicial y el proyecto propio.
+
+**Ubicación:** `05-actividades/controversias-ia/`.
+
+**Pendiente:** Probar duración, riqueza de la discusión y dificultad antes de integrar definitivamente los expedientes al calendario de nueve días.
+
+## 2026-08-25 — Introducción a Dagitty mediante interfaz web y RStudio
+
+**Duda inicial:** Elegir entre Dagitty en línea o el paquete de R para una primera actividad.
+
+**Decisión:** Utilizar ambas interfaces con funciones distintas. Comenzar visualmente en la web y transportar el mismo DAG como texto a RStudio y Quarto. Mantener rutas alternativas sólo web y sólo R para asegurar continuidad.
+
+**Justificación:** La interfaz web reduce la carga de sintaxis durante el primer contacto; RStudio aporta reproducibilidad, comparación de modelos y trazabilidad. La transferencia entre ambas hace visible que el DAG es un argumento transportable y no un dibujo dependiente de una plataforma.
+
+**Actividad:** `05-actividades/prototipos-rstudio/00-introduccion-dagitty-web-r.qmd`.
+
+## 2026-09-10 — Reproducibilidad analítica como competencia transversal
+
+**Evidencia revisada:** Estructura completa del repositorio, planificación, rúbrica, arquitectura RStudio, prototipos, controversias y guía de continuidad. Se identificaron títulos y resúmenes de las tres lecturas y estructura y preguntas de resumen de las tres exportaciones Vevox. Las carpetas de materiales docentes, estudiantes y ejemplos estaban vacías. Los archivos existentes aparecían sin seguimiento en Git; no se hicieron commits ni se sustituyeron los antecedentes.
+
+**Diagnóstico:** La trazabilidad epistemológica está desarrollada, pero la reproducibilidad computacional estaba concentrada en el día 7 y carecía de un producto y un criterio de evaluación propios. Los Quarto con semillas ofrecen una base, pero no prueban reconstrucción independiente.
+
+**Decisión:** Integrar una progresión en los nueve días, desde versiones y configuración hasta dependencias, ejecución y auditoría por pares. Conservar RStudio y Quarto; utilizar Snakemake en un piloto pequeño con scripts de R y sin motor propio. `targets` permanece como alternativa docente si la fricción del entorno impide el objetivo; no se enseñarán ambos simultáneamente.
+
+**Evaluación:** Incorporar 15 % para reproducibilidad analítica, restando cinco puntos a pregunta, diseño y uso de IA. Conservar reflexión (15 %), trazabilidad (10 %) y evidencia (15 %). No exigir datos propios ni acceso a IA paga; aceptar un micromundo explícitamente identificado como demostración.
+
+**Carga:** 250 minutos orientativos distribuidos dentro de prácticas y cierres existentes, sin añadir un décimo día. Reducir demostraciones repetidas y variaciones de formato. Los tiempos requieren piloto.
+
+**Distinción central:** El DAG causal, el DAG computacional y el mapa inferencial expresan relaciones distintas. Reconstruir un resultado no establece causalidad.
+
+**Materiales:** Nueva competencia e inventario por carpeta, ficha estudiantil y actividad de auditoría; actualización de objetivos, secuencia, arquitectura, evaluación y conexiones con guías existentes.
+
+**Pendiente de implementación:** Construir y probar el ejemplo ejecutable en `07-ejemplos/`, incluyendo Snakefile, scripts, configuración, entorno restaurable, resultados de referencia y pruebas de cambio. La revisión curricular no certifica todavía ese flujo.

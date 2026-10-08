@@ -1,0 +1,153 @@
+---
+title: "Controversia 2: ¿controlar todas las variables?"
+subtitle: "Ajuste estadístico, DAG y supuestos causales"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito
+
+Reconocer que seleccionar variables para un modelo causal exige justificar relaciones y estimandos. Practicar la crítica de una recomendación metodológica plausible pero demasiado general.
+
+**Duración sugerida:** 70 minutos.  
+**Organización:** parejas.  
+**Nivel:** después de introducir DAG, confusión, mediación y colisión.
+
+# Situación
+
+Se estudia si la cobertura de dosel (`D`) reduce el daño foliar causado por herbívoros (`Y`) en plántulas de un bosque.
+
+Se midieron además:
+
+- humedad del suelo (`H`), que influye sobre el establecimiento del dosel y sobre el vigor de las plántulas;
+- vigor previo (`V`), medido antes del daño;
+- producción de compuestos defensivos (`M`), medida después del establecimiento del dosel y antes del daño;
+- supervivencia hasta el final (`S`), afectada tanto por vigor como por daño; el daño sólo se cuantificó con detalle en plantas sobrevivientes.
+
+# Miniprotocolo
+
+Se observaron 240 plántulas distribuidas en 20 sitios. No se manipuló el dosel. El equipo desea estimar el efecto total de la cobertura de dosel sobre el daño foliar.
+
+# Respuesta prefabricada de IA
+
+> Para estimar el efecto independiente de la cobertura de dosel conviene incluir todas las variables disponibles en un modelo múltiple: humedad, vigor, compuestos defensivos, supervivencia y sitio. Controlar simultáneamente estos factores reduce la posibilidad de que la relación entre dosel y daño se deba a variables omitidas. Primero puede ajustarse un modelo completo y después eliminar predictores no significativos para obtener una explicación parsimoniosa. Si el coeficiente del dosel permanece significativo, existiría evidencia robusta de un efecto causal directo.
+
+Esta respuesta fue construida para el ejercicio.
+
+# Ronda 1 — ¿Qué suena razonable?
+
+Antes de criticar, identifiquen dos elementos de la respuesta que podrían resultar útiles o razonables. Después identifiquen la afirmación más peligrosa si fuera aceptada sin examen.
+
+# Ronda 2 — Reconstruir el DAG
+
+Traduzcan la situación a un DAG. Comiencen con estas relaciones propuestas:
+
+```text
+H → D
+H → V
+V → Y
+D → M → Y
+V → S ← Y
+D → Y
+```
+
+Discutan:
+
+1. ¿qué variable representa una causa común relevante?;
+2. ¿qué variable forma parte del mecanismo?;
+3. ¿dónde aparece un colisionador?;
+4. ¿qué implica observar detalladamente `Y` sólo cuando `S = 1`?;
+5. ¿qué flechas adicionales serían plausibles pero no están establecidas?
+
+# Ronda 3 — Auditar cada recomendación
+
+Completen:
+
+| Recomendación de IA | Puede ayudar | Puede perjudicar | Depende de |
+|---|---|---|---|
+| Ajustar por humedad | | | |
+| Ajustar por vigor previo | | | |
+| Ajustar por compuestos defensivos | | | |
+| Ajustar por supervivencia | | | |
+| Incluir sitio | | | |
+| Eliminar predictores no significativos | | | |
+| Interpretar el coeficiente restante como causal | | | |
+
+# Revisión A — Recuperar el estimando
+
+El equipo confirma que desea estimar el **efecto total** del dosel, incluyendo cualquier efecto que opere mediante compuestos defensivos.
+
+- ¿conviene ajustar por `M` para este estimando?;
+- ¿qué efecto intentaría estimarse si se condicionara adecuadamente por `M`?;
+- ¿por qué “efecto independiente” era una formulación ambigua?
+
+# Revisión B — Examinar la selección descrita
+
+El daño detallado sólo existe para las plantas que sobrevivieron. La probabilidad de sobrevivir depende del vigor previo y del daño.
+
+- expliquen el camino que puede abrirse al restringir el análisis a sobrevivientes;
+- ¿agregar `S` como predictor corrige necesariamente la selección?;
+- propongan una estrategia de diseño o medición que hubiera sido preferible.
+
+# Uso de `dagitty`
+
+Construyan una versión del DAG y comparen conjuntos de ajuste. El código es un punto de partida, no una representación definitiva del sistema. Sus conjuntos de ajuste corresponden al DAG sin imponer la selección de sobrevivientes: no certifican identificación en la muestra con `S = 1`. Además, allí `S` es constante y añadirla como predictor no recupera los resultados no observados.
+
+```{r}
+#| eval: false
+library(dagitty)
+
+g <- dagitty("dag {
+  H -> D
+  H -> V
+  V -> Y
+  D -> M
+  M -> Y
+  V -> S
+  Y -> S
+  D -> Y
+}")
+
+exposures(g) <- "D"
+outcomes(g) <- "Y"
+
+adjustmentSets(g, effect = "total")
+adjustmentSets(g, effect = "direct")
+```
+
+Antes de ejecutar, predigan qué variable diferenciará el ajuste para efecto total y directo.
+
+# Debate final
+
+Una persona reformula la recomendación de IA para hacerla metodológicamente defendible. La otra intenta encontrar todavía un supuesto oculto. Intercambien papeles y produzcan una versión conjunta.
+
+La respuesta final debe comenzar:
+
+> No existe un conjunto de variables universalmente correcto porque __________. Para el efecto total definido aquí, proponemos __________ bajo los supuestos __________. Permanecen sin resolver __________.
+
+# Decisión y confianza
+
+Clasifiquen la respuesta prefabricada:
+
+- útil sin cambios;
+- útil con modificaciones importantes;
+- útil sólo como punto de partida;
+- metodológicamente inadecuada.
+
+**Confianza en su recomendación inicial:** ____ / 100.  
+**Confianza después del DAG:** ____ / 100.
+
+Expliquen qué elemento produjo el cambio principal.
+
+# Transferencia
+
+Elijan una variable de su proyecto que normalmente “controlarían”. Escriban:
+
+- por qué entra en el modelo causal;
+- si es anterior o posterior a la exposición;
+- qué camino pretende cerrar;
+- qué camino podría abrir o bloquear indebidamente;
+- qué efecto desean estimar.

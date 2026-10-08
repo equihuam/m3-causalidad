@@ -1,0 +1,26 @@
+---
+title: "Preparar la auditoría de reproducibilidad"
+format:
+  html:
+    toc: true
+lang: es
+---
+
+# Preparación del día 8
+
+La [consigna estudiantil](../../01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.qmd) organiza 45 minutos, incluidos diez para examinar la inferencia. Coordinar ese tramo con la [auditoría epistemológica](../../01-estudiantes/02-actividades/auditoria-epistemologica-ia.qmd), de modo que una misma afirmación no se audite dos veces como tarea independiente.
+
+# Antes de intercambiar proyectos
+
+1. Seleccionar un análisis completado del factorial u otra práctica realizada. Los talleres distribuidos son materiales guiados; su existencia no acredita una entrega estudiantil terminada.
+2. Comprobar que cada equipo haya iniciado la [ficha](../../01-estudiantes/01-guias/ficha-entrega-reproducible.qmd), con un resultado principal, valores de referencia y criterio de comparación previo.
+3. Ensayar instalación o restauración y ejecución desde una copia limpia, sin objetos de sesión ni cachés reutilizables. Ofrecer un entorno preparado cuando sea necesario.
+4. Organizar parejas revisoras y conservar la versión recibida, el acta y cualquier reparación como registros relacionados.
+
+La plantilla de orquestación sigue [pendiente de desarrollo](../03-desarrollo/README.md). Puede practicarse reconstrucción completa con un Quarto; no se presenta como prueba de actualización selectiva. Los antecedentes Vevox no son necesarios para esta actividad.
+
+# Conducir la revisión
+
+Registrar la ayuda oral que haya sido necesaria, porque señala información que debe incorporarse a las instrucciones. Un fallo no resuelto se conserva como tal y origina un diagnóstico y una nueva oportunidad. No aceptar como evidencia de reconstrucción el aspecto de una página ya generada.
+
+Para el examen causal, usar el caso que el grupo haya trabajado. Parcela dividida es un contraste posible, no un prerrequisito encubierto. El acta se completa dentro de la ficha y se enlaza desde la bitácora; la pauta de calificación está en los [fundamentos de evaluación](../01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.qmd).

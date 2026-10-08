@@ -1,0 +1,275 @@
+---
+title: "Taller introductorio: de una historia causal a Dagitty"
+subtitle: "Construir, interrogar y transportar un DAG entre la interfaz web y RStudio"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+execute:
+  warning: false
+  message: false
+---
+
+# Propósito
+
+Aprender las operaciones mínimas de Dagitty sin confundir el uso del programa con la construcción del argumento causal.
+
+Al terminar, la pareja podrá:
+
+- traducir una historia a nodos y flechas;
+- declarar exposición y resultado;
+- reconocer caminos causales y no causales;
+- solicitar conjuntos de ajuste;
+- explicar por qué el programa no decide si una flecha es verdadera;
+- transportar el DAG de la interfaz web a RStudio y conservarlo en Quarto.
+
+**Duración sugerida:** 75 minutos.  
+**Organización:** parejas.  
+**Prerrequisito:** causa común, mediador y colisionador en lenguaje verbal.  
+**Herramientas:** [Dagitty en línea](https://www.dagitty.net/dags.html) y paquete `dagitty` en R.
+
+# Pregunta que organiza el taller
+
+> ¿Qué efecto tiene la cobertura de dosel sobre el daño foliar en plántulas?
+
+Utilizaremos cuatro variables:
+
+- `D`: cobertura de dosel;
+- `Y`: daño foliar;
+- `H`: humedad del suelo;
+- `M`: producción de compuestos defensivos.
+
+# 1. De la historia al argumento
+
+Consideren esta historia provisional:
+
+> La humedad favorece el establecimiento del dosel y también modifica el daño foliar. La cobertura de dosel puede modificar directamente el daño y puede además promover compuestos defensivos que reducen el daño.
+
+Antes de abrir Dagitty, escriban las flechas que la historia propone.
+
+```text
+___ → ___
+___ → ___
+___ → ___
+___ → ___ → ___
+```
+
+Para cada flecha indiquen:
+
+- qué mecanismo expresa;
+- si la historia la afirma o sólo la hace plausible;
+- qué conocimiento o evidencia permitiría defenderla.
+
+# 2. Predicción antes del programa
+
+Sin utilizar una regla automática, respondan:
+
+1. ¿qué camino representa el efecto mediado por compuestos defensivos?;
+2. ¿qué camino puede producir asociación entre dosel y daño aunque el dosel no causara daño?;
+3. si interesa el efecto total del dosel, ¿convendría ajustar por `M`?;
+4. ¿qué variable creen que será necesaria para cerrar el camino no causal?
+
+Conserven sus respuestas. Dagitty servirá para interrogar las consecuencias del DAG, no para reemplazar la predicción.
+
+# 3. Construcción en Dagitty en línea
+
+Abrir [Dagitty](https://www.dagitty.net/dags.html) y crear un modelo nuevo.
+
+## Operaciones mínimas
+
+1. Crear los nodos `D`, `Y`, `H` y `M`.
+2. Dibujar las flechas propuestas por la historia.
+3. Marcar `D` como exposición y `Y` como resultado.
+4. Observar qué caminos identifica la herramienta.
+5. Consultar el conjunto de ajuste sugerido para el efecto total.
+
+No continúen hasta poder señalar en el dibujo:
+
+- camino causal directo;
+- camino causal mediado;
+- camino de puerta trasera;
+- variable de ajuste propuesta.
+
+## Captura del estado útil
+
+Copien la definición textual del modelo que ofrece Dagitty. Debe ser semejante a:
+
+```text
+dag {
+  D [exposure]
+  Y [outcome]
+  H -> D
+  H -> Y
+  D -> M
+  M -> Y
+  D -> Y
+}
+```
+
+El orden visual de los nodos puede variar sin cambiar las relaciones.
+
+# 4. Transportar el DAG a RStudio
+
+Peguen la definición dentro de `dagitty()`.
+
+```{r}
+library(dagitty)
+
+g <- dagitty("dag {
+  D [exposure]
+  Y [outcome]
+  H -> D
+  H -> Y
+  D -> M
+  M -> Y
+  D -> Y
+}")
+
+g
+```
+
+Pregunten por conjuntos de ajuste para el efecto total:
+
+```{r}
+adjustmentSets(g, effect = "total")
+```
+
+Comparen el resultado con su predicción previa.
+
+# 5. Interrogar, no obedecer
+
+Dagitty opera sobre las flechas que ustedes declararon. Comprueben qué ocurre si cambia el argumento causal.
+
+## Variante A — Sin causa común
+
+Eliminen temporalmente `H -> Y`.
+
+```{r}
+g_sin_confusion <- dagitty("dag {
+  D [exposure]
+  Y [outcome]
+  H -> D
+  D -> M
+  M -> Y
+  D -> Y
+}")
+
+adjustmentSets(g_sin_confusion, effect = "total")
+```
+
+- ¿qué cambió en el conjunto de ajuste?;
+- ¿demuestra este resultado que `H` no causa `Y`?;
+- ¿quién asumió la ausencia de esa flecha?
+
+## Variante B — Efecto directo
+
+Consulten el efecto directo en el DAG original:
+
+```{r}
+adjustmentSets(g, effect = "direct")
+```
+
+- ¿por qué aparece `M` en relación con el efecto directo?;
+- ¿qué pregunta distinta estamos formulando?;
+- ¿qué supuesto adicional puede requerir interpretar un efecto directo?
+
+# 6. Una modificación peligrosa
+
+Agreguen una variable `S` afectada tanto por `D` como por `Y`:
+
+```{r}
+g_colision <- dagitty("dag {
+  D [exposure]
+  Y [outcome]
+  H -> D
+  H -> Y
+  D -> M
+  M -> Y
+  D -> Y
+  D -> S <- Y
+}")
+
+g_colision
+```
+
+`S` podría representar, por ejemplo, la probabilidad de que una planta sea incluida en la muestra final.
+
+Discutan:
+
+- ¿qué estructura forma `S`?;
+- ¿por qué ajustar por todas las variables medidas puede ser perjudicial?;
+- ¿qué ocurriría si el análisis incluyera sólo plantas con `S = 1`?
+
+# 7. Comprobar implicaciones
+
+Dagitty también puede mostrar independencias condicionales implicadas por un DAG.
+
+```{r}
+impliedConditionalIndependencies(g)
+```
+
+Respondan:
+
+1. ¿una implicación observacional confirma todo el DAG?;
+2. ¿una contradicción clara entre datos e implicación puede cuestionarlo?;
+3. ¿por qué varios DAG podrían ser compatibles con patrones semejantes?
+
+# 8. Minirreporte Quarto
+
+Seleccionen estos seis apartados para el informe y conserven el archivo de trabajo con el código, siguiendo la [pauta común](README.md):
+
+## Pregunta causal
+
+Una oración.
+
+## DAG y justificación
+
+La definición textual y una justificación breve de cada flecha importante.
+
+## Predicción
+
+El conjunto de ajuste esperado antes de consultar el programa.
+
+## Resultado de Dagitty
+
+El conjunto obtenido para el efecto total y, si se discutió, para el directo.
+
+## Decisión
+
+Qué modelo causal conserva la pareja y qué flecha considera más incierta.
+
+## Límite
+
+Completen:
+
+> Dagitty puede derivar __________ a partir de __________, pero no puede establecer __________ porque __________.
+
+# 9. Transferencia al proyecto propio
+
+Construyan un DAG mínimo de tres a cinco variables para su proyecto:
+
+- una exposición o intervención;
+- un resultado;
+- al menos una causa común posible;
+- opcionalmente un mediador.
+
+No intenten representar todo el sistema. Registren:
+
+- pregunta causal;
+- efecto total o directo de interés;
+- flecha más defendible;
+- flecha más incierta;
+- conocimiento que necesitan consultar.
+
+# Rutas alternativas
+
+## Si no hay conexión a Internet
+
+Realicen todo el taller en RStudio usando los objetos `dagitty()` proporcionados. Dibujen primero el DAG en papel.
+
+## Si RStudio presenta un problema técnico
+
+Realicen construcción, variantes y consulta de conjuntos de ajuste en la interfaz web. Copien la definición textual del DAG en el minirreporte para conservar trazabilidad.
+
+Ambas rutas ejercitan la misma habilidad principal: hacer explícito el modelo causal e interrogar sus consecuencias.

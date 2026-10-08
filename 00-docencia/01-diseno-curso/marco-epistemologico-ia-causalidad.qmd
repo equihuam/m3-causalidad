@@ -1,0 +1,69 @@
+---
+title: "Marco epistemológico: IA, causalidad y evidencia"
+format: 
+  html: 
+    embed-resources: true
+lang: es
+---
+
+# De una explicación plausible a una inferencia defendible
+
+El curso parte de una pregunta: ¿qué permite pasar de una explicación posible a una afirmación causal justificada? Una respuesta puede ser coherente, precisa en su lenguaje y compatible con conocimientos previos, pero carecer de evidencia suficiente. Esta dificultad atraviesa tanto los argumentos científicos como los textos generados por IA.
+
+> **La creatividad expande el espacio de posibilidades; la evidencia lo restringe. La inferencia causal ocurre en la tensión entre ambas.**
+
+La formulación expresa una orientación pedagógica: generar alternativas y someterlas a contraste. La evidencia restringe interpretaciones junto con la lógica, el conocimiento sustantivo y los supuestos del diseño; no elimina por sí sola toda ambigüedad causal.
+
+# IA, plausibilidad y anclaje
+
+Para fines didácticos, los modelos de lenguaje pueden entenderse como sistemas que navegan posibilidades lingüísticas y conceptuales. Esa metáfora permite discutir generación de hipótesis, analogías y mecanismos sin confundir una continuación plausible con una comprobación del mundo. No constituye una explicación técnica exhaustiva del modelo ni implica que su razonamiento sea idéntico al humano.
+
+Las alucinaciones se examinan como producciones insuficientemente ancladas en evidencia: por ejemplo, un dato inventado, una referencia inexistente o una atribución falsa. Conviene distinguirlas de una hipótesis declaradamente especulativa y de un salto inferencial que parte de datos correctos. Los tres casos requieren respuestas diferentes: comprobar el dato, contrastar la hipótesis o revisar la justificación de la conclusión.
+
+Una respuesta útil puede sugerir una posibilidad todavía no respaldada. El estudiante debe conservarla como hipótesis, indicando qué prueba necesita, en vez de promoverla a conclusión o descartarla sólo por su origen.
+
+# Tres preguntas sobre cada afirmación
+
+Las categorías epistemológicas no forman una escalera en la que «inferida» o «causal» equivalgan a mayor certeza. Se examinan dimensiones complementarias:
+
+| Dimensión | Pregunta | Distinciones útiles |
+|---|---|---|
+| Tipo de afirmación | ¿Qué se está diciendo? | Descripción, dato, referencia, hipótesis, predicción, inferencia o recomendación |
+| Respaldo | ¿Qué razones permiten sostenerla? | Plausible sin contraste, respaldada bajo condiciones explícitas, incierta o contradicha por evidencia |
+| Alcance causal | ¿Qué permite interpretar la comparación causalmente? | Estimando, supuestos, diseño, población y amenazas a la identificación |
+
+«Verificada» siempre requiere un complemento: se comprobó una cita, un dato o un cálculo mediante un procedimiento identificado. Verificar una cifra no verifica automáticamente el argumento que la utiliza. Una inferencia puede estar bien o mal respaldada; una hipótesis plausible puede permanecer sin contrastar.
+
+La [auditoría epistemológica estudiantil](../../01-estudiantes/02-actividades/auditoria-epistemologica-ia.qmd) aplica estas preguntas a afirmaciones concretas.
+
+# Contrafactuales y diseño
+
+Preguntar por un efecto causal exige definir qué resultados compararíamos bajo intervenciones o exposiciones alternativas. No observamos ambos resultados potenciales para la misma unidad en la misma ocasión. El diseño y los supuestos justifican qué comparación observable puede informar sobre ese contraste.
+
+El pensamiento contrafáctico conecta imaginación e inferencia: se propone un escenario alternativo y se explican las restricciones que lo hacen científicamente pertinente. La identificación expresa si el efecto definido puede recuperarse de la información observacional bajo los supuestos establecidos. La estimación utiliza datos para cuantificarlo; su precisión no sustituye la identificación.
+
+La aleatorización, el ajuste o un diseño cuasiexperimental deben discutirse por el problema que resuelven y por lo que dejan abierto. Una asociación significativa, una narrativa de mecanismo o un modelo complejo no bastan por sí solos para establecer causalidad.
+
+# Tres representaciones con funciones distintas
+
+| Representación | Nodos o elementos | Significado de la relación |
+|---|---|---|
+| DAG causal | Variables | Supuestos sobre efectos causales directos dentro del modelo |
+| DAG computacional | Tareas o artefactos | Dependencias necesarias para producir una salida |
+| Mapa inferencial | Afirmaciones, evidencia y supuestos | Relaciones de apoyo, objeción o justificación |
+
+No se presupone una correspondencia uno a uno entre estos mapas ni que el inferencial sea acíclico. Cambiar un parámetro del programa sólo representa un contraste causal si el mecanismo simulado y el estimando lo definen de ese modo.
+
+# Reconstruir, contrastar e interpretar
+
+En este curso, **reproducibilidad computacional** significa reconstruir un resultado con las mismas entradas y un procedimiento identificado. **Replicación empírica** examina un hallazgo con nuevos datos. **Robustez** compara resultados bajo decisiones o supuestos alternativos; no convierte en válidas todas las especificaciones consideradas.
+
+La trazabilidad conecta decisiones, versiones, ejecuciones y afirmaciones. Permite examinar por qué se eligió un análisis, mientras que la reconstrucción comprueba que el cálculo puede realizarse nuevamente. Ambas son necesarias para una revisión informada, pero ninguna garantiza por sí sola validez causal.
+
+En una simulación, recuperar un parámetro conocido permite examinar el comportamiento del procedimiento bajo el mecanismo elegido. No demuestra que un sistema real responda a ese mecanismo. La [competencia transversal](competencia-reproducibilidad-analitica.qmd) desarrolla las evidencias computacionales que se practicarán.
+
+# Verificación proporcional y aprendizaje
+
+El recurso de contraste debe corresponder a la afirmación: una fuente original para una atribución, un cálculo reconstruido para una cifra, y una revisión de diseño y supuestos para una interpretación causal. La triangulación requiere examinar la procedencia de las fuentes; repetir una afirmación en varios textos no aporta necesariamente evidencia independiente.
+
+Durante el trabajo, se pide explicitar una predicción, buscar una alternativa relevante, realizar una comprobación y justificar qué confianza merece ahora la afirmación. La [bitácora analítica](../../01-estudiantes/01-guias/guia-bitacora-analitica.qmd) conserva esos momentos. El objetivo es que el estudiante pueda defender tanto una conclusión acotada como el reconocimiento razonado de que todavía falta evidencia.

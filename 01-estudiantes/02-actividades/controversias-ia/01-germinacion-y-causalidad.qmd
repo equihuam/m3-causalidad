@@ -1,0 +1,128 @@
+---
+title: "Controversia 1: germinación y causalidad"
+subtitle: "¿Qué permite afirmar una diferencia observada?"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito
+
+Distinguir observación, asociación, interpretación e inferencia causal. Practicar cómo cambia racionalmente la confianza cuando aparece nueva información.
+
+**Duración sugerida:** 55 minutos.  
+**Organización:** parejas.  
+**Nivel:** inicial.
+
+# Situación
+
+Un equipo evalúa un tratamiento de imbibición para mejorar la germinación de semillas de una especie forestal.
+
+El miniprotocolo informa:
+
+> Se colocaron 20 semillas tratadas y 20 semillas control en cámaras de germinación. Después de 14 días germinaron 18 semillas tratadas y 4 semillas control. Se desea saber si el tratamiento mejora la germinación.
+
+# Respuesta prefabricada de IA
+
+> Los resultados muestran un efecto muy fuerte del tratamiento: germinó 90 % de las semillas tratadas, frente a sólo 20 % del control. La diferencia de 70 puntos porcentuales indica que el tratamiento causó una mejora sustancial en la germinación. Aunque el tamaño de muestra es relativamente pequeño, la magnitud del efecto hace poco probable que la diferencia se deba al azar. Recomendaría aplicar una prueba para comparar proporciones y, si resulta significativa, concluir que el tratamiento es eficaz. También sería conveniente repetir el experimento con más semillas para confirmar el hallazgo.
+
+Esta respuesta fue construida para el ejercicio. No corresponde a una plataforma específica.
+
+# Ronda 1 — Desarmar la respuesta
+
+Sin buscar todavía una respuesta alternativa, separen el texto en afirmaciones.
+
+| Afirmación | Tipo y respaldo actual | Supuesto necesario | ¿Qué habría que comprobar? |
+|---|---|---|---|
+| 90 % frente a 20 % | | | |
+| El efecto es muy fuerte | | | |
+| El tratamiento causó la mejora | | | |
+| Es poco probable que se deba al azar | | | |
+| Una prueba significativa permitiría concluir eficacia | | | |
+| Conviene repetir el experimento | | | |
+
+Utilicen categorías como:
+
+- observación;
+- descripción;
+- valoración sustantiva;
+- inferencia estadística;
+- inferencia causal;
+- recomendación.
+
+Después indica si está respaldada, es plausible sin contraste, permanece incierta o está contradicha. Registra tu confianza inicial antes de recibir información nueva; puedes usar una escala verbal o 0–100, manteniendo la misma escala en las rondas siguientes.
+
+# Ronda 2 — Posiciones opuestas
+
+Una persona defenderá la interpretación más favorable de la respuesta. La otra buscará la explicación alternativa más fuerte.
+
+## Defensa
+
+¿Qué elementos hacen plausible un efecto causal?
+
+## Auditoría
+
+¿Qué mecanismos distintos del tratamiento podrían producir 90 % frente a 20 %?
+
+Después de cinco minutos intercambien papeles. Cada persona debe mejorar el argumento que inicialmente no defendía.
+
+# Información nueva A
+
+El equipo aclara:
+
+> Las semillas tratadas y control procedían del mismo lote. Se numeraron individualmente y una secuencia aleatoria determinó el grupo. Las cámaras se mantuvieron a la misma temperatura y las bandejas cambiaron de posición diariamente.
+
+Respondan:
+
+1. ¿qué explicaciones alternativas pierden fuerza?;
+2. ¿cuáles permanecen?;
+3. ¿qué parte de la respuesta de IA mejora?;
+4. asignen ahora una confianza de 0 a 100 a la afirmación “el tratamiento aumentó la germinación en este experimento”.
+
+**Confianza después de A:** ____ / 100.
+
+# Información nueva B
+
+> Al revisar la bitácora, se descubre que tres semillas control presentaban daño visible antes de la asignación, pero el equipo no registró cuáles eran. Además, el observador sabía qué bandejas habían recibido el tratamiento.
+
+Respondan:
+
+1. ¿el daño previo puede explicar toda la diferencia, parte de ella o no puede saberse?;
+2. ¿qué sesgo podría introducir el observador si el criterio de germinación fuera ambiguo?;
+3. ¿la aleatorización deja de tener valor por estos problemas?;
+4. actualicen su confianza y justifiquen el cambio.
+
+**Confianza después de B:** ____ / 100.
+
+# Ronda 3 — Decisión
+
+Elijan una posición:
+
+- aceptar la conclusión causal;
+- aceptar provisionalmente una conclusión causal acotada;
+- sostener solamente una asociación observada;
+- considerar la evidencia insuficiente para una conclusión útil.
+
+Redacten una conclusión de no más de 80 palabras. Debe distinguir:
+
+- lo observado;
+- lo inferido;
+- la población o situación a la que se refiere;
+- la incertidumbre restante.
+
+# Diseño de una prueba siguiente
+
+Propongan una repetición que responda específicamente a una incertidumbre identificada. No basta escribir “aumentar el tamaño de muestra”.
+
+- cambio de protocolo:
+- problema que intenta resolver:
+- resultado que aumentaría su confianza:
+- resultado que la reduciría:
+
+# Cierre individual
+
+Completa:
+
+> Al inicio interpreté __________. Mi confianza cambió de __________ a __________ porque __________. La prueba estadística podría ayudar a __________, pero no resolvería por sí sola __________.

@@ -1,0 +1,101 @@
+---
+title: "Ficha de entrega y reconstrucción del análisis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Propósito
+
+Inicia esta ficha cuando elijas el análisis que acompañará tu propuesta final y complétala para la auditoría. Es un índice: enlaza el README y los registros donde ya exista la información. No necesitas una ficha completa por cada ejercicio. Otro equipo debe poder reconstruir un resultado principal —tabla, estimación o figura con resumen numérico— y comprender la afirmación asociada. Puedes utilizar datos simulados del curso si tu proyecto todavía no tiene datos; decláralo expresamente.
+
+# Identificación
+
+- Equipo y fecha:
+- Pregunta y estimando:
+- Caso propio o micromundo del curso:
+- Versión entregada (commit o archivo identificado):
+- Resultado principal que se reconstruirá:
+- Afirmación vinculada y localización en el informe:
+
+# Instrucciones de reconstrucción
+
+- Carpeta desde la que se ejecuta:
+- Datos originales, origen, versión o huella de identificación:
+- Configuración y semillas, incluida la generación aleatoria de gráficos si la hay:
+- Código y documento o archivo del flujo (motor sólo si se utiliza):
+- Versiones de R, paquetes, Quarto y motor:
+- Archivo de entorno y procedimiento de restauración:
+- Comando o secuencia exacta:
+- Salidas esperadas y ubicación:
+- Tolerancia numérica y justificación; elementos que deben coincidir exactamente:
+
+No entregues rutas personales absolutas ni dependas de objetos guardados sólo en la sesión de RStudio. No edites manualmente las salidas para hacerlas coincidir. Si el entorno requiere instalación inicial, indícalo: ejecutar sin conexión requiere haber preparado las dependencias.
+
+# Dependencias y decisiones
+
+| Paso | Entradas y configuración | Transformación | Salidas | Comprobación |
+|---|---|---|---|---|
+| Generar o importar | | | | |
+| Validar | | | | |
+| Estimar | | | | |
+| Comunicar | | | | |
+
+Adjunta el DAG computacional y, por separado, el DAG causal. Explica qué significa una flecha en cada uno. Vincula la especificación estadística elegida con el estimando y los supuestos.
+
+# Prueba de cambio
+
+**Cambio declarado:**
+
+**Predicción antes de ejecutar:** qué pasos deben repetirse y por qué.
+
+**Resultado observado:** qué se ejecutó, qué cambió y qué evidencia conservaste. Indica si reconstruiste todo el documento o comprobaste actualización selectiva con un motor; son pruebas distintas.
+
+**Interpretación:** ¿cambió el mecanismo simulado, la realización aleatoria, la especificación analítica o sólo la presentación? ¿Qué implica para tu afirmación?
+
+# Acta de reconstrucción por otro equipo
+
+**Equipo autor / equipo revisor:**
+
+**Fecha y versión auditada / registro de ejecución:**
+
+1. Trabajen sobre una copia de la versión entregada. Conserven el original.
+2. Restauren el entorno según las instrucciones y registren dificultades.
+3. Utilicen una sesión nueva y una copia sin salidas ni cachés reutilizables; conserven las entradas necesarias.
+4. Ejecuten las instrucciones y comparen el resultado con el criterio acordado.
+5. Registren el comando, las versiones efectivas y la evidencia obtenida.
+
+| Resultado auditado | Esperado | Obtenido | Diferencia y criterio | Estado |
+|---|---|---|---|---|
+| Resultado principal y valores de comprobación | | | | Coincide / discrepancia / no ejecutado |
+
+**Incidencia y paso donde ocurrió:**
+
+**Ayuda del equipo autor que fue necesaria:**
+
+**Diagnóstico:** dato, código, entorno, documentación o discrepancia todavía no explicada.
+
+**Corrección, nueva versión y resultado de la nueva prueba:**
+
+# Auditoría científica separada
+
+- ¿Qué dato o resultado respalda la afirmación?
+- ¿Qué supuesto permite pasar del resultado a la inferencia?
+- ¿Qué permanece plausible, pero no establecido por evidencia?
+- ¿Qué amenaza causal persiste aunque la ejecución sea reproducible?
+- Si son simulaciones, ¿qué limita su transferencia al sistema real?
+
+# IA y bitácora
+
+Esta ficha organiza la entrega final. Durante el trabajo lleva tu **bitácora analítica del estudiante** según la [guía con plantilla y ejemplo](guia-bitacora-analitica.qmd). No reconstruyas al final toda la historia de memoria.
+
+- Archivo de tu bitácora:
+- Entrada de partida:
+- Entrada de decisión analítica y ejecución relacionada:
+- Entrada de auditoría por pares y corrección, si procede:
+
+Indica qué fragmento o decisión recibió apoyo de IA, qué aceptaste y cómo lo comprobaste. Si no utilizaste IA, documenta la revisión por pares o las pistas utilizadas. Conserva como archivo cualquier respuesta de IA que actúe como entrada del análisis.
+
+Utiliza esos enlaces para explicar el proceso; no copies el historial completo de ejecución.

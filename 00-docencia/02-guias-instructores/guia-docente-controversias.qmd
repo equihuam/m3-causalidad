@@ -1,0 +1,176 @@
+---
+title: "Guía docente para controversias con respuestas prefabricadas de IA"
+subtitle: "Progresión, revelación de información y criterios de observación"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+---
+
+# Función de los prototipos
+
+Estas actividades desarrollan capacidades que después se aplicarán al texto inicial, al proyecto propio y a consultas en vivo con IA.
+
+La respuesta prefabricada garantiza que todo el grupo encuentre una combinación deliberada de aciertos, ambigüedades, omisiones y excesos inferenciales. No se presenta como ejemplo representativo de una plataforma determinada.
+
+# Secuencia común
+
+```text
+respuesta prefabricada
+        ↓
+descomposición de afirmaciones
+        ↓
+defensa y auditoría
+        ↓
+información nueva
+        ↓
+actualización de confianza
+        ↓
+decisión y reformulación
+```
+
+En germinación se revela información por etapas. En ajuste se vuelve sobre datos del protocolo que ya estaban presentes. En pseudorreplicación se comparan dos escenarios alternativos de asignación. Explicitar esta diferencia evita que una contradicción narrativa parezca nueva evidencia.
+
+# Trabajo en parejas
+
+En la primera ronda se asignan posiciones distintas:
+
+- **defensa:** reconstruir la versión más fuerte de la respuesta;
+- **auditoría:** buscar supuestos, alternativas y exceso de confianza.
+
+Después se intercambian los papeles. No se busca que una persona represente “estar a favor de la IA” y otra “estar en contra”. Ambas deben comprender y mejorar las dos posiciones.
+
+# Protocolo de deliberación
+
+Cuando la discusión se vuelva general, regresar a:
+
+1. ¿cuál es la afirmación exacta?;
+2. ¿qué estatus tiene?;
+3. ¿qué supuesto necesita?;
+4. ¿qué evidencia existe?;
+5. ¿qué explicación alternativa compite?;
+6. ¿qué prueba permitiría discriminar?;
+7. ¿qué decisión provisional adoptamos?;
+8. ¿con qué confianza?
+
+# Controversia 1 — Germinación
+
+## Habilidad principal
+
+Separar magnitud observada, azar muestral, validez del diseño e inferencia causal.
+
+## Aspectos sólidos de la respuesta
+
+- calcula correctamente las proporciones y la diferencia;
+- reconoce tamaño de muestra limitado;
+- propone repetición;
+- advierte que una prueba estadística puede ser pertinente.
+
+## Problemas deliberados
+
+- salta del resultado a causalidad antes de conocer la asignación;
+- utiliza la magnitud como sustituto de validez;
+- sugiere que significancia establece eficacia;
+- recomienda más semillas sin especificar qué incertidumbre resolverían.
+
+## Revelación
+
+Entregar A después de la primera defensa y auditoría. Solicitar confianza. Entregar B sólo después de que las parejas hayan declarado qué problemas consideran resueltos.
+
+## Cierre esperado
+
+Una conclusión causal acotada puede ser defendible tras A, pero B introduce incertidumbres de calidad basal y medición. No existe un número único obligatorio de confianza; se evalúa la justificación de su actualización.
+
+# Controversia 2 — Controlar todas las variables
+
+## Habilidad principal
+
+Relacionar ajuste con DAG y estimando.
+
+## Aspectos sólidos de la respuesta
+
+- reconoce la posibilidad de confusión;
+- sugiere representar variación de sitio;
+- busca evitar atribuir al dosel diferencias producidas por otros procesos.
+
+## Problemas deliberados
+
+- regla universal de incluir todo;
+- ambigüedad entre efecto total y directo;
+- ajuste por mediador para un efecto total;
+- condicionamiento sobre supervivencia o selección de sobrevivientes;
+- selección por significancia;
+- interpretación causal automática del coeficiente restante.
+
+## DAG mínimo
+
+La humedad funciona como antecedente de dosel y vigor. El vigor afecta daño. Los compuestos defensivos median parte del efecto. La supervivencia es descendiente de vigor y daño; observar daño sólo entre sobrevivientes introduce selección.
+
+## Precaución
+
+El DAG propuesto no es “la verdad”. Preguntar qué conocimiento sustantivo respalda cada flecha y qué relaciones omitidas cambiarían el conjunto de ajuste.
+
+# Controversia 3 — Muchas observaciones
+
+## Habilidad principal
+
+Distinguir observación, unidad experimental, asignación y réplica.
+
+## Aspectos sólidos de la respuesta
+
+- reconoce mediciones repetidas;
+- considera modelos jerárquicos;
+- observa balance en número de registros.
+
+## Problemas deliberados
+
+- llama tamaño de muestra causal a 280 filas;
+- interpreta 140 contra 140 como replicación del tratamiento;
+- supone que efectos aleatorios corrigen una asignación confundida con sitio;
+- promete potencia sin reconocer que para iluminación existen cuatro unidades experimentales.
+
+## Revelación
+
+El escenario A confunde iluminación y tipo de sitio por selección deliberada. El B es un diseño alternativo con cuatro sitios, dos por tratamiento, y dos decisiones aleatorias —una por par—. No deben contarse cuatro asignaciones independientes en ese esquema restringido. Sólo hay dos pares: la precisión, la generalización y la estimación de componentes de varianza siguen limitadas.
+
+## Cierre esperado
+
+Las mediciones repetidas mejoran la caracterización de cada sitio y permiten estudiar variación temporal. No sustituyen sitios adicionales para estimar el efecto de una intervención asignada al sitio.
+
+# Evaluación formativa
+
+No evaluar si la pareja coincide con una conclusión docente exacta. Observar si puede:
+
+- citar la frase que está evaluando;
+- distinguir hecho, inferencia y recomendación;
+- formular un supuesto comprobable;
+- construir una alternativa causal;
+- modificar su confianza con información pertinente;
+- proponer una prueba que corresponda al problema;
+- producir una decisión conjunta más precisa que la respuesta inicial.
+
+# Indicadores para probar los tiempos
+
+Registrar en cada prototipo:
+
+- minutos empleados en descomponer la respuesta;
+- tiempo de defensa antes del intercambio de papel;
+- número de parejas que actualiza confianza sin justificar;
+- confusiones que requieren intervención plenaria;
+- duración de la reformulación final;
+- conexión espontánea con el proyecto propio.
+
+No ajustar todavía todos los tiempos del curso. Primero conviene observar cuál de los tres expedientes produce discusión sustantiva y cuál requiere simplificación.
+
+# Paso posterior: consulta en vivo
+
+Cuando el grupo domine el protocolo, puede plantear la misma situación a una o dos plataformas y comparar:
+
+- qué supuestos añade cada una;
+- qué incertidumbre reconoce;
+- si cambia ante una objeción;
+- qué respuesta suena más convincente;
+- cuál resulta más defendible después de verificar.
+
+La respuesta prefabricada permanece como referencia común. La consulta en vivo amplía la comparación, pero no determina la conclusión.

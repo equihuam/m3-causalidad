@@ -1,0 +1,83 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - "01-estudiantes/03-lecturas/*.pdf"
+    - "00-docencia/90-antecedentes/vevox/*.xlsx"
+    - "00-docencia/00-bitacora/*.json"
+    - "00-docencia/99-archivo/*.zip"
+    - "00-docencia/99-archivo/*.qmd"
+    - "00-docencia/99-archivo/reporte_conversacion_agentes.md"
+
+book:
+  title: "Causalidad, diseño experimental e inteligencia artificial"
+  subtitle: "Curso intensivo de nueve días · Edición integral de trabajo"
+  language: es
+  search: true
+  page-navigation: true
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - part: 00-docencia/README.md
+      chapters:
+        # Diseño pedagógico y didáctico
+        - 00-docencia/01-diseno-curso/diseno-general-curso.qmd
+        - 00-docencia/01-diseno-curso/marco-epistemologico-ia-causalidad.qmd
+        - 00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd
+        - 00-docencia/01-diseno-curso/arquitectura-actividades-rstudio.qmd
+        - 00-docencia/01-diseno-curso/competencia-reproducibilidad-analitica.qmd
+        - 00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.qmd
+        # Decisiones del responsable del curso
+        - 00-docencia/00-bitacora/bitacora-maestra.qmd
+        - 00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso.qmd
+        # Preparación de instructores
+        - 00-docencia/02-guias-instructores/ensenar-bitacora-analitica.qmd
+        - 00-docencia/02-guias-instructores/guia-docente-prototipos.qmd
+        - 00-docencia/02-guias-instructores/guia-docente-controversias.qmd
+        - 00-docencia/02-guias-instructores/preparar-auditoria-reproducibilidad.qmd
+        # Desarrollo, antecedentes y organización del proyecto
+        - 00-docencia/03-desarrollo/README.md
+        - 00-docencia/90-antecedentes/index.qmd
+        - 00-docencia/00-bitacora/migracion-estructura-2026-09-10.md
+        - "00-docencia/00-bitacora/Prompt de arrastre para m3-causalidad.md"
+        - 00-docencia/99-archivo/README.md
+        - README.md
+    - part: 01-estudiantes/README.md
+      chapters:
+        # Programa y guías de trabajo
+        - 01-estudiantes/00-curso/programa-del-curso.qmd
+        - 01-estudiantes/01-guias/guia-bitacora-analitica.qmd
+        - 01-estudiantes/01-guias/guia-continuidad-ia-free-tier.qmd
+        - 01-estudiantes/01-guias/ficha-entrega-reproducible.qmd
+        # Actividades y talleres
+        - 01-estudiantes/02-actividades/README.md
+        - 01-estudiantes/02-actividades/talleres-rstudio/README.md
+        - 01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/01-factorial-completamente-aleatorizado.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/02-bloques-aleatorizados.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/03-parcela-dividida.qmd
+        # Controversias y auditorías
+        - 01-estudiantes/02-actividades/controversias-ia/README.md
+        - 01-estudiantes/02-actividades/controversias-ia/01-germinacion-y-causalidad.qmd
+        - 01-estudiantes/02-actividades/controversias-ia/02-controlar-todas-las-variables.qmd
+        - 01-estudiantes/02-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.qmd
+        - 01-estudiantes/02-actividades/auditoria-epistemologica-ia.qmd
+        - 01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.qmd
+        # Lecturas y evaluación
+        - 01-estudiantes/03-lecturas/README.md
+        - 01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd
+
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-copy: true
+
+execute:
+  freeze: false
+  error: false

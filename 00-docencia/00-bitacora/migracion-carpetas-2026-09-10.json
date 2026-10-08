@@ -1,0 +1,772 @@
+[
+  {
+    "origen": "AGENTS.md",
+    "destino": "AGENTS.md",
+    "sha256_antes": "83b3fa826258b6e6d2f7d3fedc9dd62c908b49515bfd15858f6cdefdf08a4dfe"
+  },
+  {
+    "origen": "README.md",
+    "destino": "README.md",
+    "sha256_antes": "1b5eb1a01125d8adead99e98af203cb6e9b9cc2f568fb74bf02aac31e8394cb8"
+  },
+  {
+    "origen": "00-bitacora/bitacora-maestra.html",
+    "destino": "00-docencia/00-bitacora/bitacora-maestra.html",
+    "sha256_antes": "c3637a14e81896712e0656f38ddd71fc048795c7a7ea222fcfe0b6b953904d2f"
+  },
+  {
+    "origen": "00-bitacora/bitacora-maestra.qmd",
+    "destino": "00-docencia/00-bitacora/bitacora-maestra.qmd",
+    "sha256_antes": "d9dbd56bbd1c720aabfbe0e447f0c65b6a9f5e3b271dae67be14c05fc9bd742d"
+  },
+  {
+    "origen": "00-bitacora/Prompt de arrastre para m3-causalidad.md",
+    "destino": "00-docencia/00-bitacora/Prompt de arrastre para m3-causalidad.md",
+    "sha256_antes": "809c87096d306078cc9d21acca37525db2726e44e88d2c1e2459bcfc2da6a60f"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio.html",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio.html",
+    "sha256_antes": "b76bf0b32a9894856f97f7106c5b3db8094948b206fa74521ca9045e7c192778"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio.qmd",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio.qmd",
+    "sha256_antes": "cb12217332138f91c5a19388844c09306dc458f657ff891847bfed7a05c97fcf"
+  },
+  {
+    "origen": "01-diseno-curso/competencia-reproducibilidad-analitica.html",
+    "destino": "00-docencia/01-diseno-curso/competencia-reproducibilidad-analitica.html",
+    "sha256_antes": "94a1bc855bc5e9f2336091caa4f17973f0b1ad8ca6e38ccf1e57adc3e77aef76"
+  },
+  {
+    "origen": "01-diseno-curso/competencia-reproducibilidad-analitica.qmd",
+    "destino": "00-docencia/01-diseno-curso/competencia-reproducibilidad-analitica.qmd",
+    "sha256_antes": "839ceea76c1762dffd1703378cf0585c3ad6edde5e439d8dcb5bce3b75d40ee4"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.html",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.html",
+    "sha256_antes": "640907855b470af8f3a845f9e4c3f69f4074be7a038a896b70908afcdf54e1f5"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje.qmd",
+    "sha256_antes": "529b77453dee5e39b71826d4f7fd3db096431e8e18c862475c6a40d51f40a861"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso.html",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso.html",
+    "sha256_antes": "358e33fed29d46a5924868e0c6134dd28f610127846830c2860e9859a30218e5"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso.qmd",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso.qmd",
+    "sha256_antes": "7c867f5bd72c4da1e8f22539554839b1f974441f82cc5a6c523efaba7703375d"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso.html",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso.html",
+    "sha256_antes": "49097cfdae7eccdb470e01029565266d392b7dd13b70a534c6386e109b952938"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso.qmd",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso.qmd",
+    "sha256_antes": "c301765d62389352fccfd7bae3b25e18cf635fa40c8f892135e15ad4de11934d"
+  },
+  {
+    "origen": "01-diseno-curso/marco-epistemologico-ia-causalidad.qmd",
+    "destino": "00-docencia/01-diseno-curso/marco-epistemologico-ia-causalidad.qmd",
+    "sha256_antes": "484d6c82f6e00cac21035f93db7efbc1792d8570fa78de10faa7381ba5dbbf0b"
+  },
+  {
+    "origen": "02-materiales-docente/ensenar-bitacora-analitica.html",
+    "destino": "00-docencia/02-guias-instructores/ensenar-bitacora-analitica.html",
+    "sha256_antes": "12220b90becd5776877e1f884df738b90710dcc3951f5beed135ceea1048b393"
+  },
+  {
+    "origen": "02-materiales-docente/ensenar-bitacora-analitica.qmd",
+    "destino": "00-docencia/02-guias-instructores/ensenar-bitacora-analitica.qmd",
+    "sha256_antes": "04bf97617b66f95123f2c0265e00a029e5d12c988a3962195a9b32e25a32329a"
+  },
+  {
+    "origen": "03-materiales-estudiantes/ficha-entrega-reproducible.html",
+    "destino": "01-estudiantes/01-guias/ficha-entrega-reproducible.html",
+    "sha256_antes": "6b0a556302081d77f47c67dcce449ea4cff686ef5d9269bc9310dd436daf4343"
+  },
+  {
+    "origen": "03-materiales-estudiantes/ficha-entrega-reproducible.qmd",
+    "destino": "01-estudiantes/01-guias/ficha-entrega-reproducible.qmd",
+    "sha256_antes": "c135927814070d3c81750c2f518774f429513417a6612366c07dbac757cb6058"
+  },
+  {
+    "origen": "03-materiales-estudiantes/guia-bitacora-analitica.html",
+    "destino": "01-estudiantes/01-guias/guia-bitacora-analitica.html",
+    "sha256_antes": "a24fcc4e1048b612ff9868b476ace470d7bea87a8d5e8af4532256acf30c0925"
+  },
+  {
+    "origen": "03-materiales-estudiantes/guia-bitacora-analitica.qmd",
+    "destino": "01-estudiantes/01-guias/guia-bitacora-analitica.qmd",
+    "sha256_antes": "ba8662cd176dc4630b726617983c7c62fe20d1878c09a99ef22823dae9d7996d"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier.html",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier.html",
+    "sha256_antes": "41279a15e4be627175ab1c5f9cf97f7be9fe626cfc0991078f8c907236719eb4"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier.qmd",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier.qmd",
+    "sha256_antes": "b7bcd61f61d829480b93eddd54ae4ecb9513606d037835f5bb98dfc38d0f09ed"
+  },
+  {
+    "origen": "05-actividades/2026-m3-bienvenida_2026-02-07_12-00-0600.xlsx",
+    "destino": "00-docencia/90-antecedentes/vevox/2026-m3-bienvenida_2026-02-07_12-00-0600.xlsx",
+    "sha256_antes": "a5fe68daac89c2d514beb695f2906c950e5211a005c3bbd3fe96fd995264f20c"
+  },
+  {
+    "origen": "05-actividades/2026-m3-epistemología_2026-01-31_12-59-0600.xlsx",
+    "destino": "00-docencia/90-antecedentes/vevox/2026-m3-epistemología_2026-01-31_12-59-0600.xlsx",
+    "sha256_antes": "bdc9a492f7ed7fdfe589a90bfb06eaea5c35ec1d06bfc6fbf388762a4ef6d607"
+  },
+  {
+    "origen": "05-actividades/2026-m3-Prueba_estadística_de_hipótesis_2026-01-27_15-41-0600.xlsx",
+    "destino": "00-docencia/90-antecedentes/vevox/2026-m3-Prueba_estadística_de_hipótesis_2026-01-27_15-41-0600.xlsx",
+    "sha256_antes": "b521af68ec252fdecb61baaa2c6246bb01633c484efe02842a11a9329fc063a6"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia.html",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia.html",
+    "sha256_antes": "4ec618182a1971fb0c66c6ca9d50434fbfe0fa4d0b79650827bcff3fdd37b19c"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia.qmd",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia.qmd",
+    "sha256_antes": "e230e584990dab98054af49713600bde8727c02b3036d3f6c0152566020b20f6"
+  },
+  {
+    "origen": "05-actividades/auditoria-reproducibilidad-analitica.html",
+    "destino": "01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.html",
+    "sha256_antes": "2a2608d9b1c66db2660f01d2adb5231e1a0840dc9d8f0d884edcf56afa949bec"
+  },
+  {
+    "origen": "05-actividades/auditoria-reproducibilidad-analitica.qmd",
+    "destino": "01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.qmd",
+    "sha256_antes": "14962c08e26524927d1f0ad1de2ed0546dff711a37cf972f0fbad13e973b9e02"
+  },
+  {
+    "origen": "05-actividades/lectura-1.pdf",
+    "destino": "01-estudiantes/03-lecturas/lectura-1.pdf",
+    "sha256_antes": "f446e210069232ba0106d6a59c955c6749b928b0bf9b99f1863ed58d81118127"
+  },
+  {
+    "origen": "05-actividades/lectura-2.pdf",
+    "destino": "01-estudiantes/03-lecturas/lectura-2.pdf",
+    "sha256_antes": "d2dd6a1261d16ef7327303a382386b0111a870136d1fa20398a2fc7e5fb33970"
+  },
+  {
+    "origen": "05-actividades/lectura-3.pdf",
+    "destino": "01-estudiantes/03-lecturas/lectura-3.pdf",
+    "sha256_antes": "59b54b50b7230d903f3bef4a359e646a3b5cad5a6005d8f1b17cd29ddcae5c7e"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion.html",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.html",
+    "sha256_antes": "758fc5edebb5bae5a57064fd9277f1ea70a1eeb9de725df9d13824ad19bfef6a"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion.qmd",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion.qmd",
+    "sha256_antes": "6ea99821569340267927e4995c2a64ea831b4394590883fa26b82573d144c734"
+  },
+  {
+    "origen": "99-archivo/bitacora-mixta-antes-separacion-2026-09-10.qmd",
+    "destino": "00-docencia/99-archivo/bitacora-mixta-antes-separacion-2026-09-10.qmd",
+    "sha256_antes": "3e8f2df94e5de1c4b66e3bbbf88b48d7312f7043459ce7553f52cf3b67bba5a6"
+  },
+  {
+    "origen": "99-archivo/reporte_conversacion_agentes.md",
+    "destino": "00-docencia/99-archivo/reporte_conversacion_agentes.md",
+    "sha256_antes": "9ca07cc6e878e4dfb28a6b0cd1894a8ac3be852c9a0baaa622bf6b8ec5c707cc"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/01-diseno-curso/arquitectura-actividades-rstudio_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/01-diseno-curso/contenido-tematico-y-experiencia-de-aprendizaje_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/01-diseno-curso/decisiones-y-evolucion-del-curso_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/01-diseno-curso/diseno-general-curso_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/clipboard/clipboard.min.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/anchor.min.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/popper.min.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/quarto.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/tippy.css",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "04-guias-cheatsheets/guia-continuidad-ia-free-tier_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "01-estudiantes/01-guias/guia-continuidad-ia-free-tier_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/01-germinacion-y-causalidad.html",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/01-germinacion-y-causalidad.html",
+    "sha256_antes": "0c0f9ac3aa1c7d07510608f85c7a224a855c40a691db034db020e2fc112a9a0b"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/01-germinacion-y-causalidad.qmd",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/01-germinacion-y-causalidad.qmd",
+    "sha256_antes": "265dec716305ac0e0ab34efdb07cfd4fa5bbaa1a57cbe512c3d3ff1a1c4354f1"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/02-controlar-todas-las-variables.html",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/02-controlar-todas-las-variables.html",
+    "sha256_antes": "ac3a8ca30d5325e60b186dbd990d897b7433b49660c351d7be96fc6a53d1fa9b"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/02-controlar-todas-las-variables.qmd",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/02-controlar-todas-las-variables.qmd",
+    "sha256_antes": "f1e04961a86f0735d6eeb3841e5d963ca874b621bb00b1cf21182a145f327b3e"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.html",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.html",
+    "sha256_antes": "1bf97602bb8b9aac88c651698459cdba35b934c6dd6c62611f1d016c4b96bbc5"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.qmd",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.qmd",
+    "sha256_antes": "0133851779455b0abeeabd9faa5562140e96cf185d4a7d543ba2f0af42410b92"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/guia-docente-controversias.html",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-controversias.html",
+    "sha256_antes": "e7096ab3698e62784cc6ed109816f1ec9235d2ff7668b9b9e5fadc4397e85024"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/guia-docente-controversias.qmd",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-controversias.qmd",
+    "sha256_antes": "e9ad64b76e174e9bc2eebbd0edb032ed5249a4b41f55712e910d22e7d0ef7d7a"
+  },
+  {
+    "origen": "05-actividades/controversias-ia/README.md",
+    "destino": "01-estudiantes/02-actividades/controversias-ia/README.md",
+    "sha256_antes": "9f5de93115b2519d2e752e9b989fd7f1a31550274e465b9109c221cc35ae4c27"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/00-introduccion-dagitty-web-r.html",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.html",
+    "sha256_antes": "d7d3b299cd8068606c8169b501bc0a339159aad190f4efd91c9293cec85054f2"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/00-introduccion-dagitty-web-r.qmd",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.qmd",
+    "sha256_antes": "3ebad3b487841cb89a3e5001a257460e8e3e22faff1bd25077c1441710a80d5e"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/01-factorial-completamente-aleatorizado.html",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/01-factorial-completamente-aleatorizado.html",
+    "sha256_antes": "466173e2eb19af6bcda395145020bfc891274a8d9ea82d343a8fc3de54497ed3"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/01-factorial-completamente-aleatorizado.qmd",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/01-factorial-completamente-aleatorizado.qmd",
+    "sha256_antes": "1fe2219aeeab7c245065f538d98c637fbab223df13476be386107e3de97b36fe"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/02-bloques-aleatorizados.html",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/02-bloques-aleatorizados.html",
+    "sha256_antes": "51ab98cb4407281a789915b6fb5b041a757347042970398c0b32feb1f456e891"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/02-bloques-aleatorizados.qmd",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/02-bloques-aleatorizados.qmd",
+    "sha256_antes": "8bd5623e56a465f395ca36681cdefc2c0844086c6bc2d87eab514fa69e1a42f2"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/03-parcela-dividida.html",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/03-parcela-dividida.html",
+    "sha256_antes": "858cdeb461b5395afb09332be7d2744130f098aa57b781163df39cf312be38d2"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/03-parcela-dividida.qmd",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/03-parcela-dividida.qmd",
+    "sha256_antes": "54ff3e6d1d2b28d69d9feb00a1bbccd9a060ddf0541668bcdadb8a22ff8b12b1"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos.html",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos.html",
+    "sha256_antes": "d4b6c506fe0a8093d52e60ab05920da052226b0f30405f9f7057ca63653dc25e"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos.qmd",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos.qmd",
+    "sha256_antes": "cb37c64aa29d05f458d8ebcbb4e9f986cb9082a8bdd79412e2badbe0113a2e04"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/README.md",
+    "destino": "01-estudiantes/02-actividades/talleres-rstudio/README.md",
+    "sha256_antes": "f95142b2340f860287ca90022edaa0704fbabdba237c3ad6471c8cd87e7a3638"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/clipboard/clipboard.min.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/anchor.min.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/popper.min.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/quarto.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tippy.css",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "05-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "01-estudiantes/02-actividades/auditoria-epistemologica-ia_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "05-actividades/prototipos-rstudio/guia-docente-prototipos_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/02-guias-instructores/guia-docente-prototipos_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css",
+    "sha256_antes": "15d8d4a2f7b12f91650c8c47ccec29ff38add56acc6881bcdc9993e7242cca41"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-icons.css",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-icons.css",
+    "sha256_antes": "01253947f506e030589e4f33fc7ec7ccdfb9505e2e596dedf16445f12e243c0a"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-icons.woff",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap-icons.woff",
+    "sha256_antes": "f55513b7b591cb84a3b87ff0e34ea24d4831d6fedc22e54b911ca64b5b544a15"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap.min.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/bootstrap/bootstrap.min.js",
+    "sha256_antes": "d2ea6c1e0cabca20d18e924b25a1cd0187c38ba7c33f60ab06e1b0402b9bcdb5"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/clipboard/clipboard.min.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/clipboard/clipboard.min.js",
+    "sha256_antes": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/anchor.min.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/anchor.min.js",
+    "sha256_antes": "69098e105d990f834cff1b7886d873444228ff63c590e5ff834d568f1115ed8b"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/popper.min.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/popper.min.js",
+    "sha256_antes": "4d50586b184724d39ddfe0f6582861664eddd5e806e5a79e0dbaa832361414d0"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css",
+    "sha256_antes": "34a771139d2d6c0740604b3afa6058dcbe1509743b19cb322147cdb2d57d343c"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/quarto.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/quarto.js",
+    "sha256_antes": "4ecb60f215d96b2af0fe9d985c71e32863b1c993a64725a416ac18b5991c59c6"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tippy.css",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tippy.css",
+    "sha256_antes": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tippy.umd.min.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tippy.umd.min.js",
+    "sha256_antes": "41181eeec6d7ba64cb9165f0e95563e34e026bde79e7c13aeec83270429b6fae"
+  },
+  {
+    "origen": "06-rubricas/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tabsets/tabsets.js",
+    "destino": "00-docencia/01-diseno-curso/evaluacion/rubrica-proyecto-y-reflexion_files/libs/quarto-html/tabsets/tabsets.js",
+    "sha256_antes": "a9c226bf70e82eaf5476f619cecfb70b4446b87ce4d1634d6404b0b2ba006d15"
+  }
+]

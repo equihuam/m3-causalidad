@@ -1,0 +1,195 @@
+---
+title: "Guía docente de Dagitty y talleres de análisis"
+subtitle: "Propósitos, pistas, soluciones orientativas y observación didáctica"
+format:
+  html:
+    toc: true
+lang: es
+---
+
+# Decisión sobre el minirreporte Quarto
+
+El minirreporte puede fortalecer el aprendizaje si reduce, en lugar de aumentar, la carga extrínseca.
+
+Se adopta una sola plantilla conceptual para los tres talleres:
+
+1. pregunta causal;
+2. predicción previa;
+3. diseño y unidades;
+4. resultado seleccionado;
+5. interpretación;
+6. límite y transferencia.
+
+No se califican diseño visual, complejidad del documento, cantidad de código ni dominio de opciones de Quarto. Durante el primer taller se entrega el documento preparado; el estudiante sólo escribe en lugares señalados y ejecuta bloques. En los siguientes talleres la interfaz permanece estable.
+
+# Criterios comunes de observación
+
+Durante cada prototipo conviene registrar:
+
+- tiempo hasta la primera predicción;
+- proporción de parejas que ejecuta código antes de predecir;
+- solicitudes de pistas por nivel;
+- errores técnicos que interrumpen el razonamiento;
+- decisiones sustantivas discutidas entre estudiantes;
+- capacidad para distinguir parámetro generador y estimación;
+- calidad del vínculo entre resultado y afirmación causal;
+- tiempo invertido en Quarto que no aporta al argumento.
+
+# Prototipo introductorio — Dagitty web y RStudio
+
+## Decisión de interfaz
+
+No se obliga a elegir entre la interfaz web y RStudio. Se utilizan de manera secuencial:
+
+- la interfaz web reduce fricción durante la primera construcción y permite manipular el DAG visualmente;
+- RStudio conserva el modelo como texto reproducible, permite compararlo y lo integra al minirreporte.
+
+Existen rutas de contingencia sólo web y sólo R. La actividad no debe detenerse por conectividad.
+
+## Idea que no debe perderse
+
+Dagitty deriva consecuencias de un modelo causal declarado por el usuario. No establece si las flechas corresponden al mundo.
+
+## Resultado esperado
+
+Para el efecto total de `D` sobre `Y` en el DAG propuesto, la causa común `H` debe formar parte del ajuste. El mediador `M` no se ajusta si interesa conservar el camino mediado.
+
+## Pistas escalonadas
+
+1. **Narrativa:** buscar qué variable antecede tanto al dosel como al daño.
+2. **Camino:** identificar `D <- H -> Y`.
+3. **Operación:** declarar `D` exposición, `Y` resultado y consultar `adjustmentSets()`.
+
+## Errores productivos
+
+- dibujar una flecha porque existe correlación;
+- aceptar un conjunto de ajuste sin poder explicar el camino que cierra;
+- interpretar la salida como descubrimiento automático;
+- ajustar por `M` sin distinguir efecto total y directo;
+- agregar todas las variables porque fueron medidas.
+
+## Criterio de cierre
+
+Cada pareja debe poder completar verbalmente: “Dagitty concluye esto porque nosotros declaramos estas flechas”.
+
+# Prototipo 1 — Factorial completamente aleatorizado
+
+## Idea que no debe perderse
+
+En este micromundo experimental, la interacción en escala aditiva expresa que el contraste causal de un tratamiento depende del nivel del otro. En otros datos, una interacción estadística no adquiere interpretación causal sin justificar diseño y supuestos. No equivale simplemente a “dos factores significativos”.
+
+## Resultados verdaderos del micromundo
+
+| Agua | Sin fertilización | Con fertilización | Efecto de fertilizar |
+|---|---:|---:|---:|
+| Baja | 20 | 25 | 5 |
+| Alta | 28 | 40 | 12 |
+
+La interacción es (12 - 5 = 7).
+
+## Pistas escalonadas
+
+1. **Conceptual:** calcula por separado el efecto de fertilizar con agua baja y alta.
+2. **Fórmula:** utiliza `respuesta ~ factor1 * factor2`.
+3. **Código:** `lm(biomasa ~ fertilizante * agua, data = diseno)`.
+
+## Errores productivos
+
+- interpretar el coeficiente de fertilización como efecto universal;
+- concluir ausencia de efecto porque una comparación particular no es significativa;
+- confundir variabilidad muestral con cambio del mecanismo verdadero;
+- afirmar generalidad para otras especies o condiciones.
+
+## Cierre docente
+
+Reconstruir los cuatro promedios desde los coeficientes y regresar a la pregunta causal. Mostrar que cambiar el ruido modifica precisión, no los parámetros que generaron los datos.
+
+# Prototipo 2 — Bloques aleatorizados
+
+## Idea que no debe perderse
+
+El bloqueo es una propiedad de la asignación. Incluir una etiqueta en una fórmula no crea retrospectivamente un diseño en bloques.
+
+## Pistas escalonadas
+
+1. **Conceptual:** compara tratamientos dentro de cada franja.
+2. **Fórmula:** el modelo contiene tratamiento y bloque sin interacción para este micromundo aditivo.
+3. **Código:** `lm(cobertura ~ tratamiento + bloque, data = diseno)`.
+
+## Resultado esperado
+
+Cuando las diferencias entre bloques son grandes, representarlas reduce la variación residual y mejora la precisión de los contrastes de tratamiento. Cuando el efecto de bloque es cero, se reduce o desaparece esa ventaja.
+
+## Errores productivos
+
+- escoger el modelo por el menor valor de $p$;
+- llamar bloque a cualquier covariable;
+- interpretar diferencias entre bloques como efecto manipulable;
+- olvidar que la aleatorización ocurre dentro de cada bloque.
+
+## Pregunta de consolidación
+
+¿Qué conocimiento previo justificó crear los bloques antes de observar la respuesta?
+
+# Prototipo 3 — Parcela dividida
+
+## Idea que no debe perderse
+
+Cada factor hereda la escala de incertidumbre de la unidad a la que fue asignado. Las subparcelas aumentan información sobre fertilización, pero no crean nuevas asignaciones independientes de riego.
+
+## Estructura verdadera
+
+```text
+bloque: desviación estándar 3
+└── parcela completa: desviación estándar 6; recibe riego
+    └── subparcela: desviación estándar 3; recibe fertilización
+```
+
+## Pistas escalonadas
+
+1. **Conceptual:** identifica qué observaciones comparten la misma asignación de riego.
+2. **Modelo:** representa un intercepto de parcela anidado en bloque.
+3. **Código:** `lme(..., random = ~ 1 | bloque/parcela, data = diseno)`.
+
+## Errores productivos
+
+- contar 30 unidades experimentales para riego;
+- usar `lm()` y confiar en errores independientes;
+- describir el efecto aleatorio como corrección automática de cualquier dependencia;
+- centrar la discusión en la sintaxis de `lme` y perder la asignación.
+
+## Cierre docente
+
+Dibujar nuevamente el diseño físico, localizar cada fuente de variación en el dibujo y sólo después volver a la salida del modelo.
+
+# Pauta formativa del minirreporte
+
+## Evidencia adicional de reproducibilidad
+
+Iniciar la [ficha técnica de entrega](../../01-estudiantes/01-guias/ficha-entrega-reproducible.qmd) para el análisis elegido como anexo final, sin duplicarla en cada taller ni alterar los seis apartados argumentales. En el factorial, pedir reconstrucción desde una sesión nueva; en bloques, conservar los datos al comparar especificaciones; en parcela dividida, separar la ejecución correcta de la justificación de la unidad experimental.
+
+Registrar si el resultado pudo reconstruirse, qué instrucciones orales fueron necesarias y qué dependencias faltaron. No ocultar mensajes relevantes para diagnosticar una ejecución: aunque el material de lectura suprima mensajes rutinarios, el registro técnico debe conservar fallos y advertencias pertinentes.
+
+La incorporación de Snakemake requiere una plantilla ejecutable y un entorno preparados y pilotados antes del curso. La contingencia con un Quarto completo permite practicar reconstrucción, pero la ejecución incremental debe comprobarse separadamente en un equipo preparado.
+
+## Retroalimentación del argumento
+
+Puede utilizarse una retroalimentación breve de tres estados:
+
+- **Logrado:** la cadena pregunta–diseño–modelo–resultado–inferencia puede reconstruirse.
+- **En revisión:** la cadena está presente, pero confunde una unidad, un contraste o el alcance de la afirmación.
+- **Rehacer una pieza:** falta una decisión que impide interpretar el resto.
+
+No conviene asignar una calificación numérica separada a cada minirreporte durante la fase de prototipo. Su función es producir evidencia de aprendizaje y permitir revisión antes del proyecto final.
+
+# Criterio para decidir si Quarto ayuda
+
+Después de los tres talleres, comparar:
+
+1. ¿los estudiantes producen interpretaciones más coherentes que en una hoja de código aislada?;
+2. ¿pueden reconstruir por qué eligieron un modelo días después?;
+3. ¿la plantilla reduce la dispersión entre resultados, notas y argumentos?;
+4. ¿cuánto tiempo se perdió por renderizado, rutas, paquetes o sintaxis documental?;
+5. ¿los estudiantes modificaron ideas o sólo rellenaron espacios?
+
+Si el costo técnico domina durante la práctica, se conserva la estructura de seis apartados en una hoja proporcionada y se ofrece apoyo posterior en un entorno preparado. Esa contingencia sostiene la discusión, pero no acredita por sí sola la reconstrucción computacional del anexo. Quarto permanece como formato de los materiales disponibles; el piloto debe evaluar la carga que introduce.

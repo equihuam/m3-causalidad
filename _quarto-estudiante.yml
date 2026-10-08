@@ -1,0 +1,34 @@
+project:
+  output-dir: _book/estudiante
+  resources:
+    - "01-estudiantes/03-lecturas/*.pdf"
+    - "01-estudiantes/**/*.qmd"
+
+book:
+  subtitle: "Curso intensivo de nueve días · Edición estudiante"
+  chapters:
+    - index.qmd
+    - part: 01-estudiantes/README.md
+      chapters:
+        # Programa y guías de trabajo
+        - 01-estudiantes/00-curso/programa-del-curso.qmd
+        - 01-estudiantes/01-guias/guia-bitacora-analitica.qmd
+        - 01-estudiantes/01-guias/guia-continuidad-ia-free-tier.qmd
+        - 01-estudiantes/01-guias/ficha-entrega-reproducible.qmd
+        # Actividades y talleres
+        - 01-estudiantes/02-actividades/README.md
+        - 01-estudiantes/02-actividades/talleres-rstudio/README.md
+        - 01-estudiantes/02-actividades/talleres-rstudio/00-introduccion-dagitty-web-r.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/01-factorial-completamente-aleatorizado.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/02-bloques-aleatorizados.qmd
+        - 01-estudiantes/02-actividades/talleres-rstudio/03-parcela-dividida.qmd
+        # Controversias y auditorías
+        - 01-estudiantes/02-actividades/controversias-ia/README.md
+        - 01-estudiantes/02-actividades/controversias-ia/01-germinacion-y-causalidad.qmd
+        - 01-estudiantes/02-actividades/controversias-ia/02-controlar-todas-las-variables.qmd
+        - 01-estudiantes/02-actividades/controversias-ia/03-muchas-observaciones-pocas-replicas.qmd
+        - 01-estudiantes/02-actividades/auditoria-epistemologica-ia.qmd
+        - 01-estudiantes/02-actividades/auditoria-reproducibilidad-analitica.qmd
+        # Lecturas y evaluación
+        - 01-estudiantes/03-lecturas/README.md
+        - 01-estudiantes/04-evaluacion/rubrica-proyecto-y-reflexion.qmd

@@ -1,0 +1,181 @@
+---
+title: "Taller 2: diseño en bloques aleatorizados"
+subtitle: "Controlar heterogeneidad conocida antes de experimentar"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+execute:
+  warning: false
+  message: false
+---
+
+# Propósito
+
+Comprender el bloqueo como una decisión de diseño: restringe la aleatorización para comparar tratamientos bajo condiciones semejantes y puede mejorar la precisión cuando el bloque representa heterogeneidad importante.
+
+**Duración sugerida:** 100 minutos.  
+**Prerrequisito:** modelo lineal con factores.
+
+# Situación
+
+Se estudia el efecto de tres tratamientos de restauración (`control`, `mulch`, `mulch_semilla`) sobre cobertura vegetal. El terreno presenta seis franjas que siguen un gradiente de humedad. En cada bloque se asignan al azar los tres tratamientos, uno a cada parcela.
+
+# 1. Pregunta y unidades
+
+- pregunta causal:
+- unidad experimental:
+- factor de tratamiento:
+- factor de bloqueo:
+- ¿por qué no asignar libremente los tres tratamientos a las 18 parcelas ignorando el gradiente?:
+
+# 2. Predicción previa
+
+Ordena estos escenarios de mayor a menor precisión esperada para comparar tratamientos:
+
+- bloquear por un gradiente fuertemente relacionado con la respuesta;
+- bloquear por una etiqueta sin relación con la respuesta;
+- ignorar un gradiente fuerte;
+
+Justifica el orden bajo un mecanismo y tamaños de muestra comparables. Distingue cambiar el diseño de cambiar sólo el análisis: en este taller se mantienen los datos de una asignación en bloques para comparar modelos. No se prueba aquí una comparación completa entre diseños de asignación.
+
+> **Predicción:** Escribe aquí.
+
+# 3. Construir y aleatorizar el diseño
+
+```{r}
+set.seed(2402)
+
+bloques <- factor(paste0("B", 1:6))
+tratamientos <- c("control", "mulch", "mulch_semilla")
+
+diseno <- do.call(rbind, lapply(bloques, function(b) {
+  data.frame(
+    bloque = b,
+    parcela = seq_len(3),
+    tratamiento = sample(tratamientos)
+  )
+}))
+
+diseno$bloque <- factor(diseno$bloque, levels = bloques)
+diseno$tratamiento <- factor(
+  diseno$tratamiento,
+  levels = tratamientos
+)
+
+diseno
+with(diseno, table(bloque, tratamiento))
+```
+
+Explica qué se aleatorizó y qué se restringió.
+
+# 4. Micromundo
+
+Definimos:
+
+- cobertura media del control: 30;
+- efecto de `mulch`: 6;
+- efecto de `mulch_semilla`: 12;
+- diferencias sistemáticas entre bloques: de -12 a 13;
+- desviación residual: 4.
+
+```{r}
+efecto_trat <- c(control = 0, mulch = 6, mulch_semilla = 12)
+efecto_bloque <- c(B1 = -12, B2 = -7, B3 = -2, B4 = 3, B5 = 8, B6 = 13)
+
+diseno$media_verdadera <- 30 +
+  efecto_trat[diseno$tratamiento] +
+  efecto_bloque[diseno$bloque]
+
+diseno$cobertura <- rnorm(nrow(diseno), diseno$media_verdadera, sd = 4)
+```
+
+# 5. Explorar
+
+```{r}
+library(ggplot2)
+
+ggplot(diseno, aes(tratamiento, cobertura, group = bloque, colour = bloque)) +
+  geom_point(size = 2.5) +
+  geom_line(alpha = 0.7) +
+  labs(x = "Tratamiento", y = "Cobertura vegetal") +
+  theme_minimal(base_size = 12)
+```
+
+- ¿qué comparación realiza cada línea?
+- ¿hay bloques sistemáticamente altos o bajos?
+- ¿por qué comparar parcelas dentro de un bloque puede ser más informativo?
+
+# 6. Dos análisis
+
+Antes de ejecutarlos, predice cuál tendrá intervalos más estrechos para tratamientos.
+
+```{r}
+modelo_ignora_bloque <- lm(cobertura ~ tratamiento, data = diseno)
+modelo_con_bloque <- lm(cobertura ~ tratamiento + bloque, data = diseno)
+
+summary(modelo_ignora_bloque)
+summary(modelo_con_bloque)
+```
+
+Compara los errores estándar:
+
+```{r}
+coef(summary(modelo_ignora_bloque))
+coef(summary(modelo_con_bloque))[grep("tratamiento", rownames(coef(summary(modelo_con_bloque)))), ]
+```
+
+No elijas el modelo sólo porque produce valores de $p$ menores. Explica la estructura del diseño que justifica incluir `bloque`.
+
+# 7. Intervenir en el micromundo
+
+Realiza dos cambios por separado:
+
+1. sustituye todos los efectos de bloque por cero;
+2. aumenta la magnitud de los efectos de bloque al doble.
+
+Antes de cada cambio, predice cómo se modificará la ventaja de modelar los bloques. Mantén iguales los efectos de tratamiento.
+
+> **Predicción de la intervención:** Escribe aquí.
+
+# 8. Un bloqueo irrelevante
+
+Crea al azar una etiqueta de seis grupos que no corresponda al gradiente y ajústala como si fuera bloque.
+
+```{r}
+set.seed(99)
+diseno$bloque_irrelevante <- factor(sample(rep(1:6, each = 3)))
+modelo_bloque_irrelevante <- lm(
+  cobertura ~ tratamiento + bloque_irrelevante,
+  data = diseno
+)
+
+summary(modelo_bloque_irrelevante)
+```
+
+¿Por qué “agregar un bloque” al modelo después de observar los datos no equivale a haber bloqueado el experimento?
+
+# 9. Interpretación
+
+Redacta una conclusión que incluya:
+
+- comparación causal principal;
+- papel de la aleatorización dentro de bloques;
+- efecto del bloqueo sobre precisión;
+- diferencia entre el efecto de bloque y el efecto de tratamiento;
+- límite de generalización.
+
+> **Interpretación:** Escribe aquí.
+
+# 10. Transferencia
+
+Propón para tu proyecto:
+
+- una fuente de heterogeneidad que podría justificar bloqueo;
+- evidencia previa necesaria para decidirlo;
+- costo de crear demasiados bloques o bloques incompletos.
+
+# Minirreporte
+
+Sigue la [pauta común](README.md): pregunta, predicción, diseño, resultado, interpretación y límite. Conserva las fuentes y los mismos datos para la comparación de modelos. Incluye una sola comparación visual entre el análisis que ignora el bloque y el que representa el diseño.

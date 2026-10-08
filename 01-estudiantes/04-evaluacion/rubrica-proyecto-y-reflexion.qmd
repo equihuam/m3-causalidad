@@ -1,0 +1,123 @@
+---
+title: "Rúbrica de evaluación del proyecto y la reflexión final"
+subtitle: "Causalidad, diseño experimental e inteligencia artificial"
+format: html
+lang: es
+---
+
+# Qué se evalúa
+
+Se revisan tres productos complementarios: tu propuesta final, el anexo analítico reproducible y la reflexión individual. La cuartilla inicial y la [bitácora](../01-guias/guia-bitacora-analitica.qmd) permiten reconstruir el proceso. El [programa](../00-curso/programa-del-curso.qmd) describe sus componentes.
+
+Se valora que relaciones pregunta, supuestos, diseño, evidencia e interpretación, y que otra persona pueda reconstruir tu análisis. La reflexión se evalúa por su argumentación: puedes mantener tu hipótesis inicial si explicas por qué resiste la revisión. No se califican revelaciones personales, emociones, coincidencia con el docente, decoración ni velocidad de programación.
+
+# Ponderación orientativa
+
+El equipo docente comunicará los pesos definitivos antes de la evaluación. Mientras tanto, utiliza los niveles para revisar tu trabajo.
+
+| Criterio | Peso propuesto |
+|---|---:|
+| Formulación del problema y pregunta causal | 10 % |
+| Modelo causal y explicitación de supuestos | 15 % |
+| Diseño e identificación causal | 15 % |
+| Evidencia, verificación e incertidumbre | 15 % |
+| Uso crítico de inteligencia artificial | 5 % |
+| Trazabilidad del proceso | 10 % |
+| Reflexión sobre el aprendizaje | 15 % |
+| Reproducibilidad analítica | 15 % |
+
+# Niveles de desempeño
+
+## 1. Formulación del problema y pregunta causal
+
+**4 — Integrado:** delimitas exposición o intervención, resultado, unidades y comparación; la pregunta es causal y coherente con el problema.
+
+**3 — Adecuado:** la pregunta causal se comprende, con alguna ambigüedad menor que no impide reconocer el contraste.
+
+**2 — En desarrollo:** hay intención causal, pero se mezcla con asociación o predicción y quedan ambiguos elementos centrales.
+
+**1 — Inicial:** la pregunta es principalmente descriptiva o asociativa y no se reconoce qué afirmación causal examinar.
+
+## 2. Modelo causal y explicitación de supuestos
+
+**4 — Integrado:** justificas mecanismos, funciones de las variables y supuestos. El DAG u otra representación concuerda con el argumento y se reconoce como hipótesis revisable.
+
+**3 — Adecuado:** identificas las relaciones principales y propones un modelo razonable, aunque algunos supuestos quedan implícitos.
+
+**2 — En desarrollo:** identificas variables, pero confundes sus funciones o no justificas las relaciones entre ellas.
+
+**1 — Inicial:** no hay un modelo causal reconocible; se enumeran variables sin explicar su papel.
+
+## 3. Diseño e identificación causal
+
+**4 — Integrado:** explicas qué comparación responde a la pregunta, qué contrafactual representa, qué supuestos necesita y qué amenazas limitan la inferencia. Puedes justificar que el efecto no es identificable con el diseño disponible y proponer cómo acotar la pregunta o mejorar la evidencia.
+
+**3 — Adecuado:** el diseño responde a la pregunta bajo supuestos identificables, con limitaciones que requieren mayor desarrollo.
+
+**2 — En desarrollo:** propones un diseño o técnicas relacionadas con la pregunta, pero su función en la identificación queda poco justificada.
+
+**1 — Inicial:** planteas recopilar o analizar datos sin una estrategia de comparación causal.
+
+## 4. Evidencia, verificación e incertidumbre
+
+**4 — Integrado:** distingues plausibilidad, evidencia, inferencia y alcance causal; enlazas afirmaciones con fuentes o resultados, propones pruebas pertinentes y explicas qué sigue incierto.
+
+**3 — Adecuado:** hay correspondencia general entre afirmación y respaldo; reconoces las principales incertidumbres, con algunas verificaciones por completar.
+
+**2 — En desarrollo:** aportas fuentes o datos, pero no siempre se sabe qué sostienen; la incertidumbre se menciona sin integrarla al argumento.
+
+**1 — Inicial:** presentas afirmaciones como ciertas sin examinar su respaldo ni diferenciar plausibilidad e inferencia.
+
+## 5. Uso crítico de inteligencia artificial
+
+Puedes demostrar este criterio con aportes de IA en vivo o con las respuestas preparadas del curso. Se evalúa juicio crítico, no acceso tecnológico.
+
+**4 — Integrado:** explicas la función de la contribución examinada, distingues contenido generado y evidencia, verificas lo relevante y justificas qué aceptas, corriges o descartas.
+
+**3 — Adecuado:** reconoces límites y realizas verificaciones pertinentes, aunque parte del proceso queda poco documentada.
+
+**2 — En desarrollo:** reconoces riesgos, pero usas o evalúas respuestas con verificación irregular.
+
+**1 — Inicial:** incorporas respuestas como autoridad o no examinas su respaldo.
+
+## 6. Trazabilidad del proceso
+
+**4 — Integrado:** la bitácora permite seguir decisiones, alternativas, predicciones, evidencia y cambios de confianza. Identifica autor, momento y versión, y enlaza ejecuciones cuando corresponde. Las correcciones conservan relación con el registro previo.
+
+**3 — Adecuado:** se reconstruyen las decisiones principales, con vacíos menores.
+
+**2 — En desarrollo:** predomina una lista de actividades, con pocas relaciones entre acciones, evidencia e interpretación.
+
+**1 — Inicial:** la documentación no permite reconstruir el razonamiento seguido.
+
+## 7. Reflexión sobre el aprendizaje
+
+**4 — Integrado:** comparas el punto de partida y la propuesta final mediante ejemplos concretos de cambios o continuidades en pregunta, supuestos, evidencia, incertidumbre y confianza. Distingues transformación conceptual de mejora de redacción.
+
+**3 — Adecuado:** identificas cambios o continuidades relevantes y los relacionas con experiencias del curso, aunque algunas conexiones son generales.
+
+**2 — En desarrollo:** describes aprendizajes con pocos ejemplos o sin explicar por qué ocurrieron.
+
+**1 — Inicial:** te limitas a impresiones generales sin examinar la evolución del razonamiento.
+
+## 8. Reproducibilidad analítica
+
+Se revisan el resultado principal, las fuentes ejecutables, el entorno, las instrucciones y el acta incluidos en la [ficha de entrega](../01-guias/ficha-entrega-reproducible.qmd).
+
+**4 — Integrado:** otro equipo reconstruye desde una copia limpia bajo el criterio acordado. Explicas dependencias, anticipas y compruebas un cambio, identificas versiones y documentas incidencias y reparaciones. Distingues reconstrucción, robustez y justificación causal. No se exige éxito al primer intento.
+
+**3 — Adecuado:** el resultado se reconstruye con aclaraciones menores incorporadas a la documentación. Explicas dependencias y límites; la prueba de cambio o el registro tiene omisiones menores.
+
+**2 — En desarrollo:** funciona en tu entorno, pero la reconstrucción independiente queda incompleta por pasos, dependencias o parámetros no documentados. Propones una corrección comprobable.
+
+**1 — Inicial:** entregas resultados o fragmentos sin entradas y procedimiento recuperables, o sustituyes la comprobación por afirmar que el código funciona.
+
+La prueba de cambio identifica qué debe ejecutarse de nuevo. Comprobar actualización selectiva de un motor sólo se exige si se ha enseñado y practicado con un flujo preparado. Si reconstruyes un Quarto completo, declara ese alcance. Una dificultad de infraestructura ajena a tu trabajo se atiende con un entorno preparado y otra oportunidad de ejecución.
+
+# Autoevaluación y entrega
+
+Para cada criterio indica el nivel que consideras alcanzado, un archivo o pasaje que lo demuestra y un aspecto por mejorar. Tu valoración puede diferir de la docente; su función es hacer examinable tu juicio.
+
+La trazabilidad explica **por qué decidiste**; reproducibilidad comprueba **cómo se reconstruye el cálculo**; reflexión explica **qué aprendiste al revisar el proceso**. Enlaza una evidencia cuando sirva para varias dimensiones, sin copiarla repetidamente.
+
+Si el equipo docente adopta la conversión numérica propuesta, para cada nivel \(n_i\) entre 1 y 4 y peso \(w_i\), se utiliza \(P_i=(n_i/4)w_i\), y se suman los puntos. Con este método el nivel 1 recibe la cuarta parte del peso; no define por sí mismo el tratamiento de una entrega ausente. La regla definitiva se comunicará antes de evaluar.

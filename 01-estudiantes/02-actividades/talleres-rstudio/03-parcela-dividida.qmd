@@ -1,0 +1,221 @@
+---
+title: "Taller 3: diseño de parcela dividida"
+subtitle: "Dos niveles de aleatorización y dos escalas de incertidumbre"
+format:
+  html:
+    toc: true
+    embed-resources: true
+lang: es
+execute:
+  warning: false
+  message: false
+---
+
+# Propósito
+
+Reconocer que en una parcela dividida los factores se asignan en niveles distintos y, por ello, no comparten la misma unidad experimental ni la misma escala de incertidumbre.
+
+**Duración sugerida:** 120 minutos.  
+**Prerrequisito:** factorial y bloques.
+
+# Situación
+
+Se evalúa biomasa de pasto bajo:
+
+- dos regímenes de riego, difíciles de aplicar y asignados a parcelas completas;
+- tres niveles de fertilización, asignados a subparcelas dentro de cada parcela.
+
+Hay cinco bloques. Cada bloque contiene dos parcelas completas; dentro de cada parcela hay tres subparcelas.
+
+# 1. Antes de usar R
+
+Dibuja la jerarquía física:
+
+```text
+bloque
+└── parcela completa: riego
+    └── subparcela: fertilización
+```
+
+Completa:
+
+- unidad experimental para riego:
+- unidad experimental para fertilización:
+- número de réplicas independientes de cada nivel de riego:
+- número total de observaciones:
+- ¿por qué 30 observaciones no representan 15 réplicas independientes por riego?:
+
+# 2. Predicción previa
+
+¿Qué fuente de variación afecta a la comparación de riego y cuál a la de fertilización? Anticipa las consecuencias para la precisión bajo el micromundo propuesto. No ordenes coeficientes de contrastes distintos sólo por su error estándar ni deduzcas precisión a partir del número de filas.
+
+> **Predicción:** Escribe aquí.
+
+# 3. Construir la asignación
+
+```{r}
+set.seed(2403)
+
+bloques <- paste0("B", 1:5)
+fertilizantes <- c("F0", "F1", "F2")
+
+diseno <- do.call(rbind, lapply(bloques, function(b) {
+  riegos <- sample(c("bajo", "alto"))
+  do.call(rbind, lapply(seq_along(riegos), function(p) {
+    data.frame(
+      bloque = b,
+      parcela = paste0(b, "_P", p),
+      riego = riegos[p],
+      subparcela = seq_along(fertilizantes),
+      fertilizante = sample(fertilizantes)
+    )
+  }))
+}))
+
+diseno$bloque <- factor(diseno$bloque)
+diseno$parcela <- factor(diseno$parcela)
+diseno$riego <- factor(diseno$riego, levels = c("bajo", "alto"))
+diseno$fertilizante <- factor(diseno$fertilizante, levels = fertilizantes)
+
+with(diseno, table(bloque, riego))
+with(diseno, table(parcela, fertilizante))
+```
+
+Explica por separado cómo se asignó riego y cómo se asignó fertilización.
+
+# 4. Micromundo jerárquico
+
+La respuesta contiene:
+
+- media basal: 40;
+- efecto de riego alto: 8;
+- efectos de fertilización: 0, 5 y 11;
+- interacción adicional entre riego alto y `F2`: 4;
+- variación entre bloques;
+- variación entre parcelas completas;
+- variación residual entre subparcelas.
+
+```{r}
+efecto_fert <- c(F0 = 0, F1 = 5, F2 = 11)
+
+u_bloque <- rnorm(nlevels(diseno$bloque), 0, 3)
+names(u_bloque) <- levels(diseno$bloque)
+
+u_parcela <- rnorm(nlevels(diseno$parcela), 0, 6)
+names(u_parcela) <- levels(diseno$parcela)
+
+R <- as.integer(diseno$riego == "alto")
+F2 <- as.integer(diseno$fertilizante == "F2")
+
+diseno$media_verdadera <- 40 +
+  8 * R +
+  efecto_fert[diseno$fertilizante] +
+  4 * R * F2 +
+  u_bloque[diseno$bloque] +
+  u_parcela[diseno$parcela]
+
+diseno$biomasa <- rnorm(nrow(diseno), diseno$media_verdadera, 3)
+```
+
+Señala qué términos varían entre bloques, entre parcelas y entre subparcelas.
+
+# 5. Explorar la jerarquía
+
+```{r}
+library(ggplot2)
+
+ggplot(diseno, aes(fertilizante, biomasa, colour = riego, group = parcela)) +
+  geom_point() +
+  geom_line(alpha = 0.55) +
+  facet_wrap(~ bloque) +
+  labs(x = "Fertilización", y = "Biomasa", colour = "Riego") +
+  theme_minimal(base_size = 11)
+```
+
+- ¿qué observaciones comparten parcela?
+- ¿qué patrón representa variación entre parcelas completas?
+- ¿qué comparación informa sobre fertilización dentro de una parcela?
+
+# 6. Modelo ingenuo
+
+Este modelo trata las 30 observaciones como independientes:
+
+```{r}
+modelo_ingenuo <- lm(biomasa ~ riego * fertilizante + bloque, data = diseno)
+summary(modelo_ingenuo)
+```
+
+Antes de continuar, explica qué término del proceso generador quedó sin representar.
+
+# 7. Modelo que representa la parcela completa
+
+Usaremos el paquete de R `nlme`, que debe estar instalado en el entorno preparado para la clase.
+
+```{r}
+library(nlme)
+
+modelo_parcela <- lme(
+  biomasa ~ riego * fertilizante,
+  random = ~ 1 | bloque/parcela,
+  data = diseno,
+  method = "REML"
+)
+
+summary(modelo_parcela)
+anova(modelo_parcela)
+summary(modelo_parcela)$tTable
+```
+
+Compara con cautela:
+
+- estimaciones de los coeficientes;
+- errores estándar asociados con riego;
+- errores estándar asociados con fertilización;
+- estimaciones de variación entre bloques, parcelas y residuos.
+
+No reduzcas la comparación a cuál modelo produce significancia.
+
+# 8. Intervenir en el micromundo
+
+Modifica por separado:
+
+1. la desviación entre parcelas completas de 6 a 0;
+2. la desviación entre parcelas completas de 6 a 12;
+3. el número de bloques de 5 a 3;
+4. el número de bloques de 5 a 10.
+
+Antes de simular, predice qué estimación o error estándar cambiará más. Explica por qué el número de subparcelas no sustituye automáticamente al número de parcelas completas.
+
+> **Predicción de la intervención:** Escribe aquí.
+
+# 9. Error deliberado
+
+Imagina que alguien asigna riego a una parcela por bloque, pero registra cada subparcela como si hubiera recibido una asignación independiente.
+
+- ¿qué cantidad está inflando?
+- ¿qué inferencia sobre riego resultaría demasiado segura?
+- ¿cómo lo revelarían el protocolo y el DAG del diseño?
+
+# 10. Interpretación
+
+Redacta una conclusión que distinga:
+
+- efecto del riego;
+- efecto de fertilización;
+- posible interacción;
+- incertidumbre a nivel de parcela completa;
+- alcance ecológico del experimento.
+
+> **Interpretación:** Escribe aquí.
+
+# 11. Transferencia
+
+En tu proyecto, identifica una posible jerarquía de unidades. Si no existe, inventa un ejemplo plausible y distingue:
+
+- dónde se asignaría cada intervención;
+- dónde se mediría la respuesta;
+- qué observaciones compartirían condiciones no observadas.
+
+# Minirreporte
+
+Utiliza la [estructura común de seis apartados](README.md), conservando las fuentes ejecutables. Incluye el esquema de asignación y una comparación breve entre el modelo ingenuo y el jerárquico. La calidad se evalúa por la explicación de las unidades y la incertidumbre, no por usar terminología sofisticada.
